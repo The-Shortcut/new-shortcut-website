@@ -1,0 +1,360 @@
+@import "../index.scss";
+
+.container {
+  @include container;
+  @include page-transitions;
+  padding: 100px 0;
+
+  // Header
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 60em;
+
+    h2 {
+      font-family: $medium;
+      font-size: 3rem;
+      max-width: 10em;
+      display: flex;
+      flex-direction: column;
+
+      span {
+        font-size: 2rem;
+        max-width: 25rem;
+        color: $yellow;
+      }
+
+      @include tablet {
+        font-size: 2.5rem;
+
+        span {
+          font-size: 2rem;
+        }
+      }
+
+      @include phone {
+        font-size: 2rem;
+
+        span {
+          font-size: 1.5rem;
+        }
+      }
+
+      @include big-desktop {
+        font-size: 3.5rem;
+
+        span {
+          font-size: 2.5rem;
+        }
+      }
+    }
+
+    > div {
+      width: 350px;
+
+      @include phone {
+        width: 50vw;
+      }
+    }
+  }
+
+  // Text
+  section {
+    //border: 1px solid red;
+    width: 100%;
+    padding: 50px 0;
+
+    p {
+      font-size: 1.25rem;
+      line-height: 1.5;
+
+      @include phone {
+        font-size: 1.15rem;
+      }
+
+      @include big-desktop {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  // Heading
+  h3 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-family: $medium;
+    font-size: 2rem;
+    padding: 25px 0 50px;
+  }
+
+  // Toolbar
+  .toolbar {
+    ul {
+      //border: 1px solid red;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+
+      li {
+        font-family: $medium;
+        font-size: 1.25rem;
+        margin: 0 10px 10px 0;
+        padding: 5px 10px;
+        cursor: pointer;
+
+        // Box border/shadow effect
+        border: 1px solid #e5e5e5;
+        border-radius: 10px;
+        box-shadow: 5px 5px 50px #f5f5f5;
+        transition: box-shadow 0.5s ease;
+        &:hover {
+          box-shadow: 0 2px 14px #d3d3d3;
+          border: 1px solid $yellow;
+        }
+      }
+
+      // Input container
+      .search {
+        margin: 0;
+        padding: 0;
+
+        input {
+          font-family: $medium;
+          font-size: 1.25rem;
+          border: none;
+          outline: none;
+
+          &::placeholder {
+            font-family: $book;
+            color: gray;
+          }
+
+          // Search icon
+          background-image: url("../../assets/icons/search.png");
+          background-position: 185px 5px;
+          background-size: 10%;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+
+  // Events
+  .list {
+    width: 100%;
+    margin-top: 5%;
+
+    // Event container
+    .event {
+      width: 100%;
+      max-width: 60em;
+      margin: 25px auto;
+      display: flex;
+      flex-direction: row;
+      background-color: white;
+      border: 1px solid #e5e5e5;
+      border-radius: 10px;
+      box-shadow: 5px 5px 50px #f5f5f5;
+      padding: 25px 15px;
+      overflow: hidden;
+      transition: all 0.5s ease;
+
+      .single {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 50px;
+        margin-right: 25px;
+        border-right: 1px solid #e5e5e5;
+        min-width: 200px;
+
+        p {
+          font-family: $medium;
+          margin: 0;
+
+          // Day of week
+          &:first-of-type {
+            font-family: $book;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            //color: $red;
+          }
+
+          // Date
+          &:nth-of-type(2) {
+            font-family: $medium;
+            font-size: 3rem;
+          }
+
+          // Month
+          &:nth-of-type(3) {
+            font-family: $book;
+            font-size: 1.25rem;
+            //color: $red;
+          }
+        }
+
+        // Visual
+        > div {
+          display: none;
+        }
+      }
+
+      .continuous {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 50px;
+        margin-right: 25px;
+        border-right: 1px solid #e5e5e5;
+        min-width: 200px;
+
+        p {
+          font-family: $medium;
+          margin: 0;
+
+          // Date
+          &:nth-of-type(1) {
+            font-family: $medium;
+            font-size: 2rem;
+          }
+
+          &:nth-of-type(4) {
+            font-family: $medium;
+            font-size: 2rem;
+          }
+
+          // Month
+          &:nth-of-type(2) {
+            font-family: $book;
+            font-size: 1.25rem;
+            //color: $red;
+          }
+
+          &:nth-of-type(5) {
+            font-family: $book;
+            font-size: 1.25rem;
+            //color: $red;
+          }
+        }
+
+        @include phone {
+          display: none;
+        }
+
+        // Visual
+        > div {
+          display: none;
+        }
+      }
+
+      > div {
+        .date {
+          font-family: $book;
+          color: $gray;
+          margin: 0;
+        }
+
+        .title {
+          font-family: $medium;
+          font-size: 1.5rem;
+          line-height: 1;
+          margin: 10px 0;
+        }
+
+        .summary {
+          margin: 0;
+        }
+
+        .online {
+          font-family: $medium;
+          font-size: 1.25rem;
+          margin: 5px 0;
+        }
+
+        a {
+          color: $black;
+          font-family: $book;
+          text-decoration: underline;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+
+      &:hover {
+        box-shadow: 0 2px 14px #d3d3d3;
+        transform: scale(1.025);
+        border: 1px solid $yellow;
+
+        .single,
+        .continuous {
+          border-right: 1px solid $yellow;
+        }
+      }
+
+      @include desktop {
+        padding: 10px;
+        .single,
+        .continuous {
+          width: 50%;
+          min-width: 50%;
+          align-items: flex-start;
+          padding: 0;
+          margin: 0;
+          margin-right: 50px;
+          border-right: none;
+
+          img {
+            border-radius: 10px;
+            overflow: hidden;
+          }
+
+          p {
+            display: none;
+          }
+
+          // Visual
+          > div {
+            display: block;
+          }
+        }
+
+        &:hover {
+          .single,
+          .continuous {
+            border-right: none;
+          }
+        }
+      }
+
+      @include phone {
+        .single,
+        .continuous {
+          display: none;
+        }
+
+        > div {
+          .title {
+            font-size: 1.25rem;
+          }
+
+          .online {
+            font-size: 1rem;
+          }
+
+          .summary {
+            line-height: 1;
+          }
+        }
+      }
+    }
+  }
+}

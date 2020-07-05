@@ -1,0 +1,121 @@
+@import "../../index.scss";
+
+.hero {
+  width: 100%;
+  height: 80vh;
+  background-image: linear-gradient(
+      rgba(253, 200, 30, 0.1),
+      rgba(0, 0, 0, 0.25)
+    ),
+    url("../../../assets/photos/hero-img.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  > div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    text-align: left;
+    font-family: $book;
+    padding: 10px 25px;
+    border-radius: 10px;
+
+    h1 {
+      font-family: $medium;
+      font-size: 5rem;
+      margin: 0;
+      position: relative;
+      left: -10px;
+      color: $black;
+      color: white;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin: 10px 0;
+      max-width: 19em;
+      color: white;
+    }
+
+    // Buttons
+    > div {
+      //border: 1px solid red;
+      display: flex;
+      position: relative;
+      top: 20px;
+
+      a {
+        display: block;
+        width: 225px;
+        margin-right: 10px;
+        font-family: $book;
+        font-size: 1.25rem;
+        color: $black;
+        text-align: center;
+        text-decoration: none;
+        padding: 8px 0px;
+        border: none;
+        border-radius: 10px;
+        transition: all 0.25s ease;
+
+        &:first-of-type {
+          background-color: $yellow;
+        }
+
+        &:nth-of-type(2) {
+          border: 1px solid white;
+          background-color: transparent;
+          color: white;
+        }
+
+        &:hover {
+          background-color: $black;
+          color: white;
+          border: 1px solid $black;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 1000px) {
+      width: 90%;
+
+      h1 {
+        font-size: 4rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1.25rem;
+      }
+      > div {
+        a {
+          font-size: 1.25rem;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 500px) {
+      h1 {
+        font-size: 4rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      > div {
+        flex-direction: column;
+
+        a {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

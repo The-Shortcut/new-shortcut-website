@@ -1,0 +1,140 @@
+@import "../../index.scss";
+
+.container {
+  @include container;
+  padding: 100px 0;
+
+  header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+
+    > div:first-of-type {
+      width: 50%;
+      max-width: 30em;
+
+      h2 {
+        font-family: $medium;
+        font-size: 3rem;
+        margin-bottom: 25px;
+      }
+
+      p {
+        font-size: 1.25rem;
+      }
+    }
+
+    > div:nth-of-type(2) {
+      width: 40%;
+      max-width: 22em;
+      img {
+        width: 100%;
+      }
+    }
+
+    @include phone {
+      > div:first-of-type {
+        width: 100%;
+        max-width: 100vw;
+
+        h2 {
+          font-size: 2.5rem;
+          margin-bottom: 25px;
+        }
+
+        p {
+          font-size: 1.25rem;
+        }
+      }
+      > div:nth-of-type(2) {
+        display: none;
+      }
+    }
+
+    @include tablet {
+      > div:first-of-type {
+        width: 50%;
+        max-width: 30em;
+
+        h2 {
+          font-size: 2.5rem;
+          margin-bottom: 25px;
+        }
+
+        p {
+          font-size: 1.25rem;
+        }
+      }
+      > div:nth-of-type(2) {
+        border: 1px solid red;
+        width: 40%;
+        max-width: 20em;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .links {
+    max-width: 60em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    > div {
+      width: 50%;
+      margin-bottom: 25px;
+
+      p {
+        max-width: 15em;
+      }
+
+      @include phone {
+        margin-bottom: 0;
+        p {
+          max-width: 50em;
+        }
+      }
+
+      @include tablet {
+        max-width: 22em;
+      }
+
+      @include desktop {
+        max-width: 28em;
+      }
+      padding: 25px 0;
+    }
+
+    @include phone {
+      flex-direction: column;
+
+      > div {
+        width: 100%;
+      }
+    }
+  }
+
+  h3 {
+    font-family: "CircularStd-Medium", sans-serif;
+    margin-bottom: 25px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  p,
+  a {
+    font-size: 1.25rem;
+    color: $black;
+  }
+
+  .contact {
+    a {
+      font-family: "CircularStd-Medium", sans-serif;
+    }
+  }
+}

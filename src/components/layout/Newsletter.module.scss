@@ -1,0 +1,104 @@
+@import "../index.scss";
+
+.container {
+  background-color: #f3f3f3;
+
+  > div {
+    @include container;
+    display: flex;
+    justify-content: space-between;
+    padding: 150px 0;
+
+    aside {
+      width: 40%;
+
+      h3 {
+        font-family: $medium;
+        font-size: 2.5rem;
+        margin-bottom: 25px;
+      }
+
+      p {
+        font-family: $book;
+        font-size: 1.25rem;
+      }
+    }
+
+    form {
+      width: 50%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      input[type="email"] {
+        font-size: 1.5rem;
+        border: none;
+        border-bottom: 2px solid $black;
+        width: 17vw;
+        padding: 5px 0;
+        background-color: transparent;
+        transition: all 0.25s ease;
+        outline: none;
+        &::placeholder {
+          color: gray;
+        }
+      }
+
+      input[type="submit"] {
+        font-size: 1.5rem;
+        border: 2px solid $black;
+        border-radius: 10px;
+        width: 200px;
+        padding: 5px 0;
+        background-color: transparent;
+        transition: all 0.25s ease;
+
+        &:hover {
+          color: white;
+          background-color: $black;
+        }
+      }
+    }
+
+    @include tablet {
+      flex-direction: column;
+
+      aside {
+        width: 60%;
+        margin-bottom: 25px;
+      }
+
+      form {
+        width: 80%;
+
+        input[type="email"] {
+          width: 35vw;
+        }
+      }
+    }
+
+    @include phone {
+      flex-direction: column;
+
+      aside {
+        width: 70%;
+        margin-bottom: 25px;
+      }
+
+      form {
+        width: 95%;
+        flex-direction: column;
+        align-items: flex-start;
+
+        input[type="email"] {
+          width: 15em;
+          margin-bottom: 50px;
+        }
+        input[type="submit"] {
+          background-color: $black;
+          color: white;
+        }
+      }
+    }
+  }
+}

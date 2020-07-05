@@ -1,0 +1,233 @@
+@import "../../index.scss";
+
+.container {
+  padding: 50px 0;
+  //background-color: rgba(77, 204, 229, 0.25);
+
+  > div {
+    @include container;
+  }
+
+  // Header
+  header {
+    text-align: center;
+    padding: 25px 0 5px;
+
+    p {
+      font-family: $medium;
+      font-size: 2rem;
+    }
+
+    @include phone {
+      p {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  // Event container
+  .event {
+    img {
+      width: 300px;
+      margin-right: 25px;
+      object-fit: cover;
+    }
+
+    width: 100%;
+    max-width: 60em;
+    margin: 25px auto;
+    display: flex;
+    background-color: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    box-shadow: 5px 5px 50px #f5f5f5;
+    padding: 25px 15px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+
+    .single {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 50px;
+      margin-right: 25px;
+      border-right: 1px solid #e5e5e5;
+      min-width: 200px;
+
+      p {
+        font-family: $medium;
+        margin: 0;
+
+        // Day of week
+        &:first-of-type {
+          font-family: $book;
+          text-transform: uppercase;
+          font-size: 1.5rem;
+          //color: $red;
+        }
+
+        // Date
+        &:nth-of-type(2) {
+          font-family: $medium;
+          font-size: 3rem;
+        }
+
+        // Month
+        &:nth-of-type(3) {
+          font-family: $book;
+          font-size: 1.25rem;
+          //color: $red;
+        }
+      }
+
+      // mobile
+      @include phone {
+        display: none;
+      }
+
+      // Visual
+      > div {
+        display: none;
+      }
+    }
+
+    .continuous {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 50px;
+      margin-right: 25px;
+      border-right: 1px solid #e5e5e5;
+      min-width: 200px;
+
+      p {
+        font-family: $medium;
+        margin: 0;
+
+        // Date
+        &:nth-of-type(1) {
+          font-family: $medium;
+          font-size: 2rem;
+        }
+
+        &:nth-of-type(4) {
+          font-family: $medium;
+          font-size: 2rem;
+        }
+
+        // Month
+        &:nth-of-type(2) {
+          font-family: $book;
+          font-size: 1.25rem;
+          //color: $red;
+        }
+
+        &:nth-of-type(5) {
+          font-family: $book;
+          font-size: 1.25rem;
+          //color: $red;
+        }
+      }
+
+      @include phone {
+        display: none;
+      }
+
+      // Visual
+      > div {
+        display: none;
+      }
+    }
+
+    > div {
+      .date {
+        font-family: $book;
+        color: $gray;
+        margin: 0;
+      }
+
+      .title {
+        font-family: $medium;
+        font-size: 1.5rem;
+        line-height: 1;
+        margin: 10px 0;
+      }
+
+      .summary {
+        margin: 0;
+      }
+
+      .online {
+        font-family: $medium;
+        font-size: 1.25rem;
+        margin: 5px 0;
+      }
+
+      a {
+        color: $black;
+        font-family: $book;
+        text-decoration: underline;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+
+    &:hover {
+      box-shadow: 0 2px 14px #d3d3d3;
+      transform: scale(1.025);
+      border: 1px solid $yellow;
+
+      .single,
+      .continuous {
+        border-right: 1px solid $yellow;
+      }
+    }
+
+    @include phone {
+      .single,
+      .continuous {
+        display: none;
+      }
+
+      > div {
+        .title {
+          font-size: 1.25rem;
+        }
+
+        .online {
+          font-size: 1rem;
+        }
+
+        .summary {
+          line-height: 1;
+        }
+      }
+    }
+  }
+
+  // Footer
+  footer {
+    width: 100%;
+    background-color: transparent;
+    text-align: center;
+    padding: 25px 0;
+
+    a {
+      font-size: 1.5rem;
+      color: $black;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    @include phone {
+      a {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}

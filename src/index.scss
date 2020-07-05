@@ -1,0 +1,163 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: auto;
+  font-family: "Calibri", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: rgb(32, 32, 32);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+img {
+  width: 100%;
+}
+
+/*-------------Circular Std Font Family-------------*/
+
+@font-face {
+  font-family: "CircularStd-Black";
+  font-style: normal;
+  src: local("CircularStd-Black"), local("CircularStd-Black"),
+    url("./assets/fonts/CircularStd-Black.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/CircularStd-Black.otf") format("otf"),
+    url("./assets/fonts/CircularStd-Black.svg") format("svg"),
+    url("./assets/fonts/CircularStd-Black.woff2") format("woff2"),
+    url("./assets/fonts/CircularStd-Black.woff") format("woff"),
+    url("./assets/fonts/CircularStd-Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "CircularStd-BlackItalic";
+  font-style: normal;
+  src: local("CircularStd-BlackItalic"), local("CircularStd-BlackItalic"),
+    url("./assets/fonts/CircularStd-BlackItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/CircularStd-BlackItalic.otf") format("otf"),
+    url("./assets/fonts/CircularStd-BlackItalic.svg") format("svg"),
+    url("./assets/fonts/CircularStd-BlackItalic.woff2") format("woff2"),
+    url("./assets/fonts/CircularStd-BlackItalic.woff") format("woff"),
+    url("./assets/fonts/CircularStd-BlackItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "CircularStd-Bold";
+  font-style: normal;
+  src: local("CircularStd-Bold"), local("CircularStd-Bold"),
+    url("./assets/fonts/CircularStd-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/CircularStd-Bold.otf") format("otf"),
+    url("./assets/fonts/CircularStd-Bold.svg") format("svg"),
+    url("./assets/fonts/CircularStd-Bold.woff2") format("woff2"),
+    url("./assets/fonts/CircularStd-Bold.woff") format("woff"),
+    url("./assets/fonts/CircularStd-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "CircularStd-BoldItalic";
+  font-style: normal;
+  src: local("CircularStd-BoldItalic"), local("CircularStd-BoldItalic"),
+    url("./assets/fonts/CircularStd-BoldItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/CircularStd-BoldItalic.otf") format("otf"),
+    url("./assets/fonts/CircularStd-BoldItalic.svg") format("svg"),
+    url("./assets/fonts/CircularStd-BoldItalic.woff2") format("woff2"),
+    url("./assets/fonts/CircularStd-BoldItalic.woff") format("woff"),
+    url("./assets/fonts/CircularStd-BoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "CircularStd-Book";
+  font-style: normal;
+  src: local("CircularStd-Book"), local("CircularStd-Book"),
+    url("./assets/fonts/CircularStd-Book.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/CircularStd-Book.otf") format("otf"),
+    url("./assets/fonts/CircularStd-Book.svg") format("svg"),
+    url("./assets/fonts/CircularStd-Book.woff2") format("woff2"),
+    url("./assets/fonts/CircularStd-Book.woff") format("woff"),
+    url("./assets/fonts/CircularStd-Book.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "CircularStd-BookItalic";
+  font-style: normal;
+  src: local("CircularStd-BookItalic"), local("CircularStd-BookItalic"),
+    url("./assets/fonts/CircularStd-BookItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/CircularStd-BookItalic.otf") format("otf"),
+    url("./assets/fonts/CircularStd-BookItalic.svg") format("svg"),
+    url("./assets/fonts/CircularStd-BookItalic.woff2") format("woff2"),
+    url("./assets/fonts/CircularStd-BookItalic.woff") format("woff"),
+    url("./assets/fonts/CircularStd-BookItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "CircularStd-Medium";
+  font-style: normal;
+  src: local("CircularStd-Medium"), local("CircularStd-Medium"),
+    url("./assets/fonts/CircularStd-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/CircularStd-Medium.otf") format("otf"),
+    url("./assets/fonts/CircularStd-Medium.svg") format("svg"),
+    url("./assets/fonts/CircularStd-Medium.woff2") format("woff2"),
+    url("./assets/fonts/CircularStd-Medium.woff") format("woff"),
+    url("./assets/fonts/CircularStd-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "CircularStd-MediumItalic";
+  font-style: normal;
+  src: local("CircularStd-MediumItalic"), local("CircularStd-MediumItalic"),
+    url("./assets/fonts/CircularStd-MediumItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/CircularStd-MediumItalic.otf") format("otf"),
+    url("./assets/fonts/CircularStd-MediumItalic.svg") format("svg"),
+    url("./assets/fonts/CircularStd-MediumItalic.woff2") format("woff2"),
+    url("./assets/fonts/CircularStd-MediumItalic.woff") format("woff"),
+    url("./assets/fonts/CircularStd-MediumItalic.ttf") format("truetype");
+}
+
+/*-------------Calibri Font Family-------------*/
+
+@font-face {
+  font-family: "Calibri";
+  font-style: normal;
+  src: local("Calibri"), local("Calibri"),
+    url("./assets/fonts/Calibri.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Calibri-Bold";
+  font-style: normal;
+  src: local("Calibri-Bold"), local("Calibri-Bold"),
+    url("./assets/fonts/Calibri-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Calibri-Italic";
+  font-style: normal;
+  src: local("Calibri-Italic"), local("Calibri-Italic"),
+    url("./assets/fonts/Calibri-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Calibri-Bold-Italic";
+  font-style: normal;
+  src: local("Calibri Bold Italic"), local("Calibri Bold Italic"),
+    url("./assets/fonts/Calibri-Bold-Italic.ttf") format("truetype");
+}

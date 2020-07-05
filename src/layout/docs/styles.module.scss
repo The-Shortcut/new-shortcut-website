@@ -1,0 +1,84 @@
+@import "../index.scss";
+
+.container {
+  @include container;
+  @include page-transitions;
+  padding: 100px 0;
+
+  header {
+    display: flex;
+    align-items: center;
+
+    h2 {
+      font-family: "CircularStd-Medium", sans-serif;
+      font-size: 3rem;
+      padding: 50px 0;
+
+      @include phone {
+        font-size: 2.5rem;
+      }
+
+      @include big-desktop {
+        font-size: 3.5rem;
+      }
+    }
+
+    > div {
+      width: 100px;
+      margin-left: 25px;
+
+      @include phone {
+        width: 75px;
+        margin-left: 5px;
+      }
+    }
+  }
+
+  h3 {
+    font-family: "CircularStd-Medium", sans-serif;
+    font-size: 1.5rem;
+    padding: 50px 0 25px;
+
+    span {
+      background-color: $yellow;
+      box-shadow: none;
+      padding: 2px 5px 2px 10px;
+      border: 2px;
+    }
+
+    @include big-desktop {
+      font-size: 2rem;
+    }
+  }
+
+  h4 {
+    font-family: "CircularStd-BookItalic", sans-serif;
+    font-size: 1.25rem;
+    margin: 50px 0 25px;
+
+    @include big-desktop {
+      font-size: 1.5rem;
+    }
+  }
+
+  p {
+    font-size: 1.25rem;
+    line-height: 1.5;
+
+    span {
+      font-family: "CircularStd-Medium", sans-serif;
+    }
+
+    @include big-desktop {
+      font-size: 1.5rem;
+    }
+  }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
