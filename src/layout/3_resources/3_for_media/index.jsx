@@ -203,24 +203,10 @@ export default function Press() {
             </ul>
           </div>
 
+          {/* Section for any miscellaneous mentions
           <div className={css.other}>
             <h3>About us around the web</h3>
-
-            <a
-              href="https://schoolofstartups.net/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span>
-                <img
-                  src={require("../../../assets/icons/link.png")}
-                  alt="illustration"
-                  style={{ width: "20px", marginRight: "3px" }}
-                />
-              </span>{" "}
-              The Shortcut School of Startups
-            </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
