@@ -214,7 +214,7 @@ const ForPartners = () => {
             were approachable, professional and client orientated. They took the
             time to listen and accommodate all of our requests. We’re looking
             forward to collaborating with them again in the future.
-            <cite>Melanie Downer, Relocation & Onboarding, Supercell</cite>
+            <cite>Melanie Dower, Relocation & Onboarding, Supercell</cite>
           </blockquote>
           <p>
             Are you looking to enhance your relocation experience & increase
