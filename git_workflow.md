@@ -1,14 +1,14 @@
 # Git work flow
 
-* Project repository for the new website is present here https://github.com/OlSavMe/React-Shortcut-Website.
+* Project repository for the new website is present here https://github.com/itistheshortcut/new-shortcut-website.
 
 * Clone the project on your dev machine:
 
-  `git clone git@github.com:OlSavMe/React-Shortcut-Website.git`.
+  `git clone git@github.com:itistheshortcut/new-shortcut-website.git`.
 
 * Navigate to the project directory: 
 
-  `cd React-Shortcut-Website/`
+  `cd new-shortcut-website/`
 
 * We develop new features from `development` branch and make pull requests to `development` branch.
 
