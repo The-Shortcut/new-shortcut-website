@@ -12,7 +12,7 @@ const SuccessStories = () => {
 
       <section>
         <h3>
-          <span>1.</span> Ekaterina
+          <span>1.</span> Ekaterina Larigyna
         </h3>
         <p>
           Originally from Russia, Ekaterina is a professional in International

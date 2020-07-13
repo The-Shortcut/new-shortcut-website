@@ -6,7 +6,7 @@ import Nav from "./components/layout/Nav";
 import Footer from "./components/layout/Footer";
 
 //Functional components
-import ScrollToTop from "./components/functional/ScrollToTop";
+import ScrollTopArrow from "./components/functional/ScrollTopArrow";
 
 // Home
 import Home from "./layout/_home/index.jsx";
@@ -36,7 +36,7 @@ export class App extends Component {
   render() {
     return (
       <Router>
-        <ScrollToTop />
+        <ScrollTopArrow />
         <Nav />
         <Switch>
           {/* Home */}

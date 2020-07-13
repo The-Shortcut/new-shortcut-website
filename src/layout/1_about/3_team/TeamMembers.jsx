@@ -20,6 +20,7 @@ const TeamMembers = () => {
   const getTeammates = async () => {
     await Axios.get(URL).then((response) => {
       setTeammates(response.data);
+      setLoading(true); // Hacky approach to fix teammates order
       setLoading(false);
     });
   };
