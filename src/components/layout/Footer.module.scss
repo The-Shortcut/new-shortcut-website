@@ -57,7 +57,7 @@ $black: rgb(32, 32, 32);
       display: flex;
       justify-content: space-between;
 
-      >div {
+      > div {
         width: 13%;
       }
 
@@ -76,7 +76,7 @@ $black: rgb(32, 32, 32);
       max-width: 30vw;
       justify-content: space-between;
 
-      >div {
+      > div {
         display: flex;
         flex-direction: column;
         margin: 0 1em 0.5em 0;
@@ -86,6 +86,7 @@ $black: rgb(32, 32, 32);
         font-size: 1rem;
         margin-bottom: 1.5em;
         color: #c0c0c0;
+        font-weight: bold;
       }
 
       a,
@@ -195,11 +196,10 @@ $black: rgb(32, 32, 32);
     }
 
     .info {
-
       p {
         font-size: 0.75rem;
         line-height: 0.25;
-        
+
         @include phone {
           text-align: center;
         }
@@ -217,7 +217,7 @@ $black: rgb(32, 32, 32);
     }
 
     @include phone {
-      >div {
+      > div {
         display: flex;
         flex-direction: column;
         justify-content: center;

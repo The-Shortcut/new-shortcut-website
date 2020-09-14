@@ -15,7 +15,10 @@ $red: rgb(232, 89, 46);
 .navigation {
   width: 100vw;
   //Appear on top of all content
-  position: relative;
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+
   z-index: 1;
 
   // Change style on hover
