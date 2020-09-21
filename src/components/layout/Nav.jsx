@@ -51,7 +51,7 @@ const Nav = () => {
                 id="about"
                 onClick={(e) => toggleSubnav(e)}
               >
-                About
+                About Us
               </p>
               <ul className="submenu">
                 <Link to="/story" className="submenu-item" onClick={toggleNav}>
@@ -209,6 +209,11 @@ const Nav = () => {
               >
                 Join
               </a>
+            </li>
+             <li className="menu-item" id="events">
+              <Link className="btn" to="/code" onClick={toggleNav}>
+                Values & Principles
+              </Link>
             </li>
           </ul>
         </nav>

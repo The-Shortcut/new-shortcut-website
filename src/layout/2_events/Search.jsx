@@ -2,6 +2,7 @@ import React from "react";
 
 // Styles
 import css from "./styles.module.scss";
+import { FaSearch } from "react-icons/fa";
 
 const Search = ({ setSearch }) => {
   const handleKeyDown = (e) => {
@@ -13,6 +14,7 @@ const Search = ({ setSearch }) => {
   };
   return (
     <div className={css.search}>
+      <FaSearch style={{ margin: 10 }} />
       <input
         type="text"
         onKeyDown={handleKeyDown}
