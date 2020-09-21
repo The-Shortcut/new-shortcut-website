@@ -82,7 +82,7 @@ const Code = () => {
             </ul>
           </li>
           <li>
-            &mdash; Protect & respect the The Shortcut’s property including The
+            &mdash; Protect &amp; respect the The Shortcut’s property including The
             Shortcut’s office space
           </li>
           <li>
