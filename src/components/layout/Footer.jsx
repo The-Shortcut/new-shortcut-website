@@ -1,10 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 // Styles
 import css from "./Footer.module.scss";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const API_TOKEN = `${process.env.REACT_APP_SEND_IN_BLUE_TOKEN}`;
+
+  const handleEmail = (e) => {
+    e.preventDefault();
+    console.log("Email entered is ", email);
+    let config = {
+      method: "post",
+      url: "https://api.sendinblue.com/v3/contacts",
+      headers: {
+        "Content-Type": "application/json",
+        "api-key": API_TOKEN,
+      },
+      data: JSON.stringify({ email: email }),
+    };
+
+    axios(config)
+      .then(function (response) {
+        console.log(JSON.stringify(response.data));
+        document.getElementById("email").value = "";
+        setEmail("");
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
+
   return (
     <footer className={css.footer}>
       <div className={css.container}>
@@ -129,9 +157,14 @@ const Footer = () => {
               We equip talent with the skills and networks they need to become
               an entrepreneur or work for a high-growth company/startup.
             </p>
-            <form>
+            <form onSubmit={handleEmail}>
               <h4>Subscribe to our newsletter</h4>
-              <input type="email" />
+              <input
+                type="email"
+                placeholder="Email"
+                id="email"
+                onChange={(e) => setEmail(e.target.value)}
+              />
               <input type="submit" value="Go" />
             </form>
             <div>
