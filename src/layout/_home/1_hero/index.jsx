@@ -14,7 +14,7 @@ const Hero = () => {
         </h2>
         <div className={css.buttons}>
           <Link to="/story">For talents</Link>
-          <Link to="/forpartners">For partners</Link>
+          <Link to="/forpartners">Collaborate with us</Link>
         </div>
       </div>
     </div>

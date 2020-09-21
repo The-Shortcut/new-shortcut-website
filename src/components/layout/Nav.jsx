@@ -51,7 +51,7 @@ const Nav = () => {
                 id="about"
                 onClick={(e) => toggleSubnav(e)}
               >
-                About
+                About Us
               </p>
               <ul className="submenu">
                 <Link to="/story" className="submenu-item" onClick={toggleNav}>
@@ -61,7 +61,7 @@ const Nav = () => {
                       alt="icon"
                     />
                   </div>
-                  <span>About us</span>
+                  <span>About Us</span>
                 </Link>
                 <Link
                   to="/success"
@@ -74,7 +74,7 @@ const Nav = () => {
                       alt="icon"
                     />
                   </div>
-                  <span>Success stories</span>
+                  <span>Success Stories</span>
                 </Link>
                 <Link to="/team" className="submenu-item" onClick={toggleNav}>
                   <div>
@@ -83,7 +83,7 @@ const Nav = () => {
                       alt="icon"
                     />
                   </div>
-                  <span>Our team</span>
+                  <span>Our Team</span>
                 </Link>
                 <Link to="/code" className="submenu-item" onClick={toggleNav}>
                   <div>
@@ -92,7 +92,17 @@ const Nav = () => {
                       alt="icon"
                     />
                   </div>
-                  <span>Code of conduct</span>
+                  <span>Code of Conduct</span>
+                </Link>
+
+                <Link to="/values" className="submenu-item" onClick={toggleNav}>
+                  <div>
+                    <img
+                      src={require("../../assets/icons/nav/code.png")}
+                      alt="icon"
+                    />
+                  </div>
+                  <span>Values &amp; Principles</span>
                 </Link>
 
                 <Link to="/faq" className="submenu-item" onClick={toggleNav}>
@@ -179,7 +189,7 @@ const Nav = () => {
                       alt="icon"
                     />
                   </div>
-                  <span>White paper</span>
+                  <span>White Paper</span>
                 </a>
                 <Link to="/media" className="submenu-item" onClick={toggleNav}>
                   <div>
@@ -188,14 +198,14 @@ const Nav = () => {
                       alt="icon"
                     />
                   </div>
-                  <span>For media</span>
+                  <span>For Media</span>
                 </Link>
               </ul>
             </li>
 
             <li className="menu-item" id="forpartners">
               <Link className="btn" to="/forpartners" onClick={toggleNav}>
-                For partners
+                For Partners
               </Link>
             </li>
 

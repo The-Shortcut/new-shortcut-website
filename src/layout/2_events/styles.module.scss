@@ -122,23 +122,27 @@
       .search {
         margin: 0;
         padding: 0;
+        position: relative;
+        display: flex;
+        min-width: 100px;
+        width: 60vw;
+        height: 5vh;
 
         input {
           font-family: $medium;
           font-size: 1.25rem;
           border: none;
           outline: none;
-
+          flex: 1;
           &::placeholder {
             font-family: $book;
             color: gray;
           }
 
           // Search icon
-          background-image: url("../../assets/icons/search.png");
-          background-position: 185px 5px;
-          background-size: 10%;
-          background-repeat: no-repeat;
+          // background-image: url("../../assets/icons/search.png");
+          // background-size: 10%;
+          // background-repeat: no-repeat;
         }
       }
     }

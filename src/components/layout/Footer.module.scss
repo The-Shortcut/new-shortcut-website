@@ -22,9 +22,10 @@ $black: rgb(32, 32, 32);
   .container {
     width: 90%;
     margin: 0 auto;
-    padding: 50px 0;
+    padding: 3em 0;
     display: flex;
     justify-content: space-between;
+
     @include phone {
       flex-direction: column;
     }
@@ -39,7 +40,7 @@ $black: rgb(32, 32, 32);
     }
 
     .logo {
-      width: 225px;
+      width: 20vh;
 
       img {
         filter: invert(100%);
@@ -51,7 +52,7 @@ $black: rgb(32, 32, 32);
     }
 
     .icons {
-      width: 250px;
+      width: 25vh;
       padding: 50px 0;
       display: flex;
       justify-content: space-between;
@@ -72,27 +73,30 @@ $black: rgb(32, 32, 32);
 
     .menu {
       display: flex;
-      max-width: 400px;
+      max-width: 30vw;
       justify-content: space-between;
 
       > div {
         display: flex;
         flex-direction: column;
-        margin-bottom: 10px;
+        margin: 0 1em 0.5em 0;
       }
 
       h4 {
         font-size: 1rem;
-        margin-bottom: 20px;
+        margin-bottom: 1.5em;
         color: #c0c0c0;
+        font-weight: bold;
       }
 
       a,
       p {
         font-size: 1rem;
-        line-height: 0.75;
+        //line-height: 0.75;
+        margin-bottom: 0.2em;
         color: white;
         cursor: pointer;
+
         &:hover {
           text-decoration: underline;
         }
@@ -107,9 +111,7 @@ $black: rgb(32, 32, 32);
     }
 
     .copyright {
-      padding: 25px 0;
       font-size: 0.75rem;
-      line-height: 0.25;
 
       @include phone {
         display: none;
@@ -136,6 +138,7 @@ $black: rgb(32, 32, 32);
       font-size: 1.25rem;
       max-width: 20em;
       min-height: 125px;
+
       @include phone {
         display: none;
       }
@@ -170,6 +173,7 @@ $black: rgb(32, 32, 32);
         padding: 5px 10px;
         border-radius: 0 2px 2px 0;
         background-color: #f3f3f3;
+
         &:hover {
           background-color: #d8d8d8;
         }
@@ -178,23 +182,24 @@ $black: rgb(32, 32, 32);
 
     button {
       font-family: "CircularStd-Medium", sans-serif;
-      margin: 25px 0;
-      padding: 5px 50px;
+      margin: 0.7em 0 2em 0;
+      padding: 0.2em 1em;
       font-size: 1.5rem;
       background-color: white;
       border: 1px solid #d3d3d3;
-      border-radius: 10px;
-      width: 250px;
+      border-radius: 0.8rem;
+      width: 16rem;
+
       &:hover {
         background-color: #f3f3f3;
       }
     }
 
     .info {
-      padding: 25px 0;
       p {
         font-size: 0.75rem;
         line-height: 0.25;
+
         @include phone {
           text-align: center;
         }
@@ -202,6 +207,7 @@ $black: rgb(32, 32, 32);
 
       .copyright {
         display: none;
+
         @include phone {
           display: flex;
           justify-content: center;
