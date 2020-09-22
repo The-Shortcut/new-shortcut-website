@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"
 
 // Styles
 import css from "./styles.module.scss";
@@ -31,14 +32,9 @@ const AboutUs = () => {
           community – we just might be the shortcut to your dream career.{" "}
         </p>
 
-        <a
-          href="https://www.facebook.com/theshortcut/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {" "}
-          <button>Join now</button>
-        </a>
+        <Link to="/contact">
+          <button>Join Now</button>
+        </Link>
       </div>
     </div>
   );
