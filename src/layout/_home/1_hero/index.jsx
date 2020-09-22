@@ -10,7 +10,7 @@ const Hero = () => {
       <div>
         <h1>The Shortcut</h1>
         <h2>
-          Accelerating talent through tech startups & high growth companies
+          Accelerating talent through tech startups &amp; high growth companies
         </h2>
         <div className={css.buttons}>
           <Link to="/events">For talents</Link>
