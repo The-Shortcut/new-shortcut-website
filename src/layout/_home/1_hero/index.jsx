@@ -13,7 +13,7 @@ const Hero = () => {
           Accelerating talent through tech startups & high growth companies
         </h2>
         <div className={css.buttons}>
-          <Link to="/story">For talents</Link>
+          <Link to="/events">For talents</Link>
           <Link to="/forpartners">Collaborate with us</Link>
         </div>
       </div>
