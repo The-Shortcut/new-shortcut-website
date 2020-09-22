@@ -50,7 +50,7 @@ const Events = () => {
           )}
         <footer>
           <Link to="/events">
-            <span>See all events</span>
+            <span>See All Events</span>
           </Link>
         </footer>
       </div>
