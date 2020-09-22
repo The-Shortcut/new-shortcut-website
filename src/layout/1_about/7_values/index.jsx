@@ -39,7 +39,7 @@ const Values = () => {
           <span>4.</span> We Have A Hungry Attitude For Growth
         </h3>
         <p>
-          We are ambitious and welcome change as an opportunity to realise our goals. 
+          We are ambitious and welcome change as an opportunity to realize our goals. 
           We are realistic in our approach, ensuring our growth is of high quality and maintained.
         </p>
       </section>
@@ -48,7 +48,9 @@ const Values = () => {
           <span>5.</span> We Help Individuals Reach Their Full Potential
         </h3>
         <p>
-          We strive to reach our full potential and support others in doing the same.
+          We strive to reach our full potential and support others in doing the same. 
+          We provide you the opportunities to network, unleash your hidden talents and 
+          thrive within the startup community.
         </p>
       </section>
     </div>
