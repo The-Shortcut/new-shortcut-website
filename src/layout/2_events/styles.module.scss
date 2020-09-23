@@ -92,21 +92,21 @@
   // Toolbar
   .toolbar {
     ul {
-      //border: 1px solid red;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
       padding: 0;
       margin: 0;
       list-style: none;
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-
       li {
+        flex: 1;
+        flex-basis: 49%;
         font-family: $medium;
-        font-size: 1.25rem;
+        // font-size: calc(8px + 1vw);
         margin: 0 10px 10px 0;
         padding: 5px 10px;
         cursor: pointer;
-
         // Box border/shadow effect
         border: 1px solid #e5e5e5;
         border-radius: 10px;
@@ -121,12 +121,12 @@
       // Input container
       .search {
         margin: 0;
-        padding: 0;
-
+        padding: 6px 0;
         input {
+          width: 100%;
           font-family: $medium;
-          font-size: 1.25rem;
           border: none;
+          padding: 0 10px;
           outline: none;
 
           &::placeholder {
@@ -136,8 +136,8 @@
 
           // Search icon
           background-image: url("../../assets/icons/search.png");
-          background-position: 185px 5px;
-          background-size: 10%;
+          background-position: 95% 40%;
+          background-size: 1em;
           background-repeat: no-repeat;
         }
       }
