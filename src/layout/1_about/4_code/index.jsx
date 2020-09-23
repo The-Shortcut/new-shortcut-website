@@ -122,6 +122,7 @@ const Code = () => {
           <a href="mailto:hr@theshortcut.org">hr@theshortcut.org</a>
         </p>
       </section>
+      <img src="https://theshortcut.org/wp-content/uploads/2019/11/white-paper-snapshot-scaled-scaled.png" alt="" />
     </div>
   );
 };
