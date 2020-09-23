@@ -26,7 +26,7 @@ const Events = () => {
       </header>
       <section>
         <p>
-          The Shortcut organises a huge range of events and there’s always
+          The Shortcut organizes a huge range of events and there’s always
           something on. From workshops to training programs, our events connect
           you with experts ready to offer you the skills and knowledge you need
           to make it in the Finnish tech industry and the startup ecosystem –
@@ -37,7 +37,7 @@ const Events = () => {
           calendar.
         </p>
       </section>
-      <h3>Search events</h3>
+      <h3>Search Events</h3>
       <Toolbar setSearch={setSearch} />
       <EventsList search={search} />
     </div>

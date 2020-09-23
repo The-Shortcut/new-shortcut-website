@@ -160,7 +160,7 @@ const Nav = () => {
                   </div>
                   <span>Blog</span>
                 </a>
-                <a
+                {/* <a
                   className="submenu-item"
                   onClick={toggleNav}
                   href="https://www.instagram.com/theshortcutorg/"
@@ -174,7 +174,7 @@ const Nav = () => {
                     />
                   </div>
                   <span>Gallery</span>
-                </a>
+                </a> */}
 
                 <a
                   className="submenu-item"

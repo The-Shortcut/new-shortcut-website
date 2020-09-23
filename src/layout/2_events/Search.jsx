@@ -18,7 +18,7 @@ const Search = ({ setSearch }) => {
       <input
         type="text"
         onKeyDown={handleKeyDown}
-        placeholder="Search events"
+        placeholder="Search Events"
       />{" "}
     </div>
   );

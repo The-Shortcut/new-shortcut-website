@@ -23,6 +23,7 @@ const Toolbar = ({ setSearch }) => {
       <ul>
         <li onClick={() => setSearch("my startup debut")}>#mystartupdebut</li>
         <li onClick={() => setSearch("python")}>#python</li>
+        <li onClick={() => setSearch("javascript")}>#javascript</li>
         <li onClick={() => setSearch("talent heist")}>#talentheist</li>
         <li onClick={() => setSearch("school of startup")}>
           #schoolofstartups
