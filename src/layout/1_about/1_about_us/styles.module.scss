@@ -39,6 +39,26 @@
     }
   }
 
+  // Image
+  .image {
+    background-image: url("../../../assets/photos/about-us.jpg");
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include phone {
+      height: 30vh;
+    }
+
+    @include desktop {
+      height: 70vh;
+    }
+
+    @include big-desktop {
+      height: 80vh;
+    }
+  }
+
   // Button
   button {
     width: 200px;

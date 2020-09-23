@@ -54,7 +54,7 @@ const Nav = () => {
                 About Us
               </p>
               <ul className="submenu">
-                <Link to="/story" className="submenu-item" onClick={toggleNav}>
+                <Link to="/about" className="submenu-item" onClick={toggleNav}>
                   <div>
                     <img
                       src={require("../../assets/icons/nav/about.png")}

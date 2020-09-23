@@ -44,7 +44,7 @@ export class App extends Component {
           <Route exact path="/" component={Home} />
 
           {/* About */}
-          <Route path="/story" component={AboutUs} />
+          <Route path="/about" component={AboutUs} />
           <Route path="/success" component={SuccessStories} />
           <Route path="/team" component={Team} />
           <Route path="/code" component={Code} />

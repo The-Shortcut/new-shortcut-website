@@ -31,6 +31,8 @@ const AboutUs = () => {
           entry into the startup world; so what are you waiting for? Join our
           community – we just might be the shortcut to your dream career.{" "}
         </p>
+        <div className={css.image}>
+        </div>
 
         <Link to="/contact">
           <button>Join Now</button>
