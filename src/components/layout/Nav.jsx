@@ -98,7 +98,7 @@ const Nav = () => {
                 <Link to="/values" className="submenu-item" onClick={toggleNav}>
                   <div>
                     <img
-                      src={require("../../assets/icons/nav/code.png")}
+                      src={require("../../assets/icons/nav/values.png")}
                       alt="icon"
                     />
                   </div>
@@ -129,6 +129,7 @@ const Nav = () => {
                 </Link>
               </ul>
             </li>
+
             <li className="menu-item" id="events">
               <Link className="btn" to="/events" onClick={toggleNav}>
                 Events
@@ -209,17 +210,49 @@ const Nav = () => {
               </Link>
             </li>
 
-            <li className="menu-item" id="join">
-              <a
+            <li className="menu-item" id="resources">
+              <p
                 className="btn"
-                onClick={toggleNav}
-                href="https://www.facebook.com/theshortcut/"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#resources"
+                id="resources"
+                onClick={(e) => toggleSubnav(e)}
               >
-                Join
-              </a>
+                Join Us
+              </p>
+              <ul className="submenu">
+                <a
+                  className="submenu-item"
+                  onClick={toggleNav}
+                  href="https://www.facebook.com/theshortcut/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div>
+                    <img
+                      src={require("../../assets/icons/nav/blog.png")}
+                      alt="icon"
+                    />
+                  </div>
+                  <span>Join Community</span>
+                </a>
+                <a
+                  className="submenu-item"
+                  onClick={toggleNav}
+                  href="https://thehub.io/jobs?search=the%20shortcut&countryCode=FI"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div>
+                    <img
+                      src={require("../../assets/icons/nav/blog.png")}
+                      alt="icon"
+                    />
+                  </div>
+                  <span>Work with Us</span>
+                </a>
+              </ul>
             </li>
+
           </ul>
         </nav>
 

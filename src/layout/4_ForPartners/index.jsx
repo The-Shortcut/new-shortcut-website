@@ -6,7 +6,7 @@ const ForPartners = () => {
   return (
     <div className={css.container}>
       <header>
-        <h2>For partners</h2>
+        <h2>For Partners</h2>
       </header>
       <main>
         <p>
@@ -14,9 +14,11 @@ const ForPartners = () => {
           services, The Shortcut’s main objective is to scale our offering to
           allow partners to acquire the right talent, retain the best people,
           and expand employees’ skill sets to facilitate entrepreneurship,
-          growth and innovation. If you are intrested in partnering with us, get
-          in touch with <a href="mailto:piia@theshortcut.org">Piia Kuosmanen</a>
-          .
+          growth and innovation. Our partners range from leading tech companies
+          to governmental organisations and NGOs. With their help, we’re able to
+          train and connect talent to the tech industry. <br /> 
+          If you are intrested in partnering with us, get in touch with{" "}
+          <a href="mailto:piia@theshortcut.org">Piia Kuosmanen</a>.
         </p>
         <div>
           <div>
@@ -34,7 +36,7 @@ const ForPartners = () => {
               <li>
                 {" "}
                 <AnchorLink href="#startupdoers">
-                  Skills Training, Workshops & Webinars by Startup Doers
+                  Skills Training, Workshops &amp; Webinars by Startup Doers
                 </AnchorLink>
               </li>
               <li>
@@ -55,7 +57,7 @@ const ForPartners = () => {
 
       <section id="talentpool">
         <h3>
-          <span>1.</span>
+          {/* <span>1.</span> */}
           Talent Pool / Recruitment Service
         </h3>
         <div>
@@ -77,7 +79,8 @@ const ForPartners = () => {
 
       <section id="talentheist">
         <h3>
-          <span>2.</span>Talent Heist
+          {/* <span>2.</span> */}
+          Talent Heist
         </h3>
         <div>
           <p>
@@ -89,7 +92,7 @@ const ForPartners = () => {
             skilled talent to companies. It is a unique opportunity to
             diversify, bring innovative ideas to your company, and tap into
             Talent in a cost-effective way. In 2019, among others, Smartly,
-            Sievo, Hoxhunt and Supermetrics successfully screened & hired
+            Sievo, Hoxhunt and Supermetrics successfully screened &amp; hired
             candidates.{" "}
           </p>
 
@@ -109,7 +112,8 @@ const ForPartners = () => {
       </section>
       <section id="startupdoers">
         <h3>
-          <span>3.</span>Skills Training, Workshops & Webinars by Startup Doers
+          {/* <span>3.</span> */}
+          Skills Training, Workshops &amp; Webinars by Startup Doers
         </h3>
 
         <div>
@@ -132,7 +136,7 @@ const ForPartners = () => {
             organised and available to answer any questions that we had. Thank
             you!
             <cite>
-              Myunggi Suh, Head of Brand & Marketing, AVP (Aalto Venture
+              Myunggi Suh, Head of Brand &amp; Marketing, AVP (Aalto Venture
               Program)
             </cite>
           </blockquote>
@@ -140,7 +144,8 @@ const ForPartners = () => {
       </section>
       <section id="tech">
         <h3>
-          <span>4.</span>Tech Training
+          {/* <span>4.</span> */}
+          Tech Training
         </h3>
         <div>
           <p>
@@ -156,18 +161,19 @@ const ForPartners = () => {
       </section>
       <section id="entrepreneur">
         <h3>
-          <span>5.</span>Entrepreneurial Mindset
+          {/* <span>5.</span> */}
+          Entrepreneurial Mindset
         </h3>
         <div>
           <p>
             From Idea Development to Digital Prototyping, an entrepreneurial
             mindset is an innovation asset that each company fosters in their
-            organisation. As a sister organisation to Junction & Slush, we are
-            deeply rooted in the Finnish startup ecosystem. We have been
+            organisation. As a sister organisation to Junction &amp; Slush, we
+            are deeply rooted in the Finnish startup ecosystem. We have been
             innovative, thinking lean and disruptive since our inception. With
             our well-curated programs, we immerse our participants in the
-            entrepreneurial mindset, to think big, to work for hands-on & to be
-            lean!
+            entrepreneurial mindset, to think big, to work for hands-on &amp; to
+            be lean!
           </p>
 
           <blockquote>
@@ -183,7 +189,8 @@ const ForPartners = () => {
       </section>
       <section id="retention">
         <h3>
-          <span>6.</span>Integration Success Program
+          {/* <span>6.</span> */}
+          Integration Success Program
         </h3>
         <div>
           <p>
@@ -214,10 +221,10 @@ const ForPartners = () => {
             were approachable, professional and client orientated. They took the
             time to listen and accommodate all of our requests. We’re looking
             forward to collaborating with them again in the future.
-            <cite>Melanie Dower, Relocation & Onboarding, Supercell</cite>
+            <cite>Melanie Dower, Relocation &amp; Onboarding, Supercell</cite>
           </blockquote>
           <p>
-            Are you looking to enhance your relocation experience & increase
+            Are you looking to enhance your relocation experience &amp; increase
             your ROI with employee retention?{" "}
             <a href="/">Get in touch with us!</a>{" "}
           </p>
