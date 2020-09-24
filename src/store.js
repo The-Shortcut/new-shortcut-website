@@ -3,9 +3,11 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 import thunk from 'redux-thunk'
 
 import eventReducer from './reducers/eventsReducer'
+import teamReducer from './reducers/teamsReducer'
 
 const reducer = combineReducers({
-    events: eventReducer
+    events: eventReducer,
+    team: teamReducer
 })
 
 const store = createStore(

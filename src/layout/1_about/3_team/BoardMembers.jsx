@@ -1,5 +1,8 @@
-import React, { useState, useEffect } from "react";
-import Axios from "axios";
+import React, { useEffect } from "react";
+
+// Redux
+import { useSelector, useDispatch } from 'react-redux'
+import { boardMembers } from '../../../actions/teamActions'
 
 //Styles
 import css from "./styles.module.scss";
@@ -8,23 +11,18 @@ import css from "./styles.module.scss";
 import Profile from "./Profile";
 
 const BoardMembers = () => {
-  const [board, setBoard] = useState([]);
-  const URL = "https://theshortcut.org/wp-json/wp/v2/board/?per_page=100";
+  const board = useSelector(state => state.team.boards)
+
+  const dispatch = useDispatch()
 
   useEffect(() => {
-    getBoard();
-  }, []);
-
-  const getBoard = async () => {
-    await Axios.get(URL).then((response) => {
-      setBoard(response.data);
-    });
-  };
+    dispatch(boardMembers())
+  }, [dispatch]);
 
   return (
     <div className={css.board}>
       <h3>Board</h3>
-      {board.reverse().map((person, i) => (
+      {board?.reverse().map((person, i) => (
         <Profile key={i} {...person} />
       ))}
       <i aria-hidden={true}></i>
