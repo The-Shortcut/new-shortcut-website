@@ -72,26 +72,38 @@ const Footer = () => {
               <Link to="/faq">
                 <p>FAQ</p>
               </Link>
+              <a
+                href="https://thehub.io/jobs?search=the%20shortcut&countryCode=FI"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Careers
+              </a>
               <Link to="/code">
-                <p>Code of coduct</p>
+                <p>Code of Coduct</p>
               </Link>
-              <Link to="/">
-                <p>Careers</p>
+              <Link to="/values">
+                <p>Values &amp; Principles</p>
               </Link>
               <Link to="/">
                 <p>Terms of use</p>
               </Link>
               <Link to="/privacy">
-                <p href="/privacy">Privacy policy</p>
+                <p href="/privacy">Privacy Policy</p>
               </Link>
             </div>
+            
             <div>
               <h4>Programs</h4>
-              <p>Events</p>
+              {/* <p>Events</p> */}
+              <Link to="/events">
+                <p>Events</p>
+              </Link>
               <p>Trainings</p>
               <p>Certifications</p>
               <p>Clubs</p>
             </div>
+
             <div>
               <h4>Resources</h4>
               <Link to="/forpartners">
