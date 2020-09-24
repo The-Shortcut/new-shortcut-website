@@ -101,7 +101,7 @@ const Footer = () => {
                 <p>FAQ</p>
               </Link>
               <Link to="/code">
-                <p>Code of coduct</p>
+                <p>Code of conduct</p>
               </Link>
               <Link to="/">
                 <p>Careers</p>
@@ -168,7 +168,9 @@ const Footer = () => {
               <input type="submit" value="Go" />
             </form>
             <div>
-              <button>Contact us</button>
+              <Link to="/contact">
+                <button className={css.button}>Contact us</button>
+              </Link>
             </div>
           </div>
           <div className={css.info}>

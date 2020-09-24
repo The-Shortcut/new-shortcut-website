@@ -1,14 +1,37 @@
-import React from "react";
-
+import React, { useState } from "react";
+import ReactNotification, { store } from "react-notifications-component";
+import helper from "./handlerFunction";
 // Styles
 import css from "./styles.module.scss";
+import "react-notifications-component/dist/theme.css";
 
 // Children
 import Map from "./Map";
 
 const Contact = () => {
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+  const API = `${process.env.REACT_APP_CONTACT_US_API}`;
+
+  const handleContactUs = (e) => {
+    e.preventDefault();
+    let sub = document.getElementById("subjects");
+    let invalid = sub.value === "DEFAULT";
+    const result = helper(email, message, subject, name, API, invalid);
+    let check = result ? clear() : "";
+  };
+  const clear = () => {
+    document.getElementById("contactForm").reset();
+    setEmail("");
+    setSubject("");
+    setMessage("");
+    setName("");
+  };
   return (
     <div className={css.container}>
+      <ReactNotification />
       <section>
         <header>
           <h2>Get in touch</h2>
@@ -36,16 +59,33 @@ const Contact = () => {
           </div>
         </aside>
 
-        <form>
+        <form id="contactForm" onSubmit={handleContactUs}>
           {" "}
           <label htmlFor="name">
-            Name: <input type="text" name="name" />
+            Name:{" "}
+            <input
+              id="name"
+              type="text"
+              name="name"
+              onChange={({ target }) => setName(target.value)}
+            />
           </label>
           <label htmlFor="email">
             {" "}
-            Email: <input type="email" name="email" />
+            Email:{" "}
+            <input
+              id="email"
+              type="email"
+              name="email"
+              onChange={({ target }) => setEmail(target.value)}
+            />
           </label>
-          <select name="subjects" defaultValue={"DEFAULT"}>
+          <select
+            name="subjects"
+            defaultValue={"DEFAULT"}
+            onChange={({ target }) => setSubject(target.value)}
+            id="subjects"
+          >
             <option value="DEFAULT">Choose subject</option>
             <option value="1">Trainings and clubs</option>
             <option value="2">Events and workshops</option>
@@ -53,7 +93,12 @@ const Contact = () => {
             <option value="4">Becoming a part of the community </option>
           </select>
           <label htmlFor="message">
-            Message:<textarea type="message"></textarea>
+            Message:
+            <textarea
+              id="message"
+              type="message"
+              onChange={({ target }) => setMessage(target.value)}
+            ></textarea>
           </label>
           <div>
             <input type="submit" value="Submit" />
@@ -63,7 +108,10 @@ const Contact = () => {
 
       <section>
         <div>
-          <h3>Where to find us:</h3>
+          <div>
+            <h3>Where to find us:</h3>
+            <Map />
+          </div>
           <div>
             <p> The Shortcut Lab</p>
             <p>+358 46 640 3900</p>
@@ -73,10 +121,6 @@ const Contact = () => {
             <p>(or until the last event of the day is over)</p>
           </div>
         </div>
-      </section>
-
-      <section>
-        <Map />
       </section>
     </div>
   );
