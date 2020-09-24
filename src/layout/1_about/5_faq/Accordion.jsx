@@ -38,7 +38,7 @@ const Accordion = () => {
       </AccItem>
       <AccItem
         key={4}
-        question="I’m looking to start a career in Finland. What can The Shortcut do for me?"
+        question="I’m looking to start a career in Finland. How can The Shortcut help me?"
       >
         <p>
           We aim to help you optimise your skills and accelerate your entry into
@@ -73,7 +73,7 @@ const Accordion = () => {
           networking opportunities.
         </p>
       </AccItem>
-      <AccItem key={6} question="How can you support my company?">
+      <AccItem key={6} question="How can The Shortcut support my venture?">
         <p>
           We aim to help Finnish tech companies tap into the international
           talent pool. Through collaborating with The Shortcut, we are not only
@@ -209,7 +209,10 @@ const Accordion = () => {
           <a href="/">contact form</a>.{" "}
         </p>
       </AccItem>
-      <AccItem key={13} question="Can my startup use it as an office space?">
+      <AccItem
+        key={13}
+        question="Can my startup use The Shortcut as an office space?"
+      >
         <p>
           Everyone is welcome at our lab and free to work there free of charge.
           However, it all depends on the availability of space - we are a

@@ -7,12 +7,13 @@ const SuccessStories = () => {
   return (
     <div className={css.container}>
       <header>
-        <h2>Success stories</h2>
+        <h2>Success Stories</h2>
       </header>
 
       <section>
         <h3>
-          <span>1.</span> Ekaterina Larigyna
+          {/* <span>1.</span>  */}
+          Ekaterina Larigyna
         </h3>
         <p>
           Originally from Russia, Ekaterina is a professional in International
@@ -27,12 +28,14 @@ const SuccessStories = () => {
           my thing, I didn’t know it was something I could try.
           <cite>Ekaterina</cite>
         </blockquote>
+        <img src="https://theshortcut.org/wp-content/uploads/2019/01/Ekaterina.jpeg" alt=""/>
       </section>
 
       <section>
         <h3>
           {" "}
-          <span>2.</span>Nguyen Le
+          {/* <span>2.</span> */}
+          Nguyen Le
         </h3>
         <p>
           After moving to Finland from Vietnam and studying marketing at Hanken
@@ -47,15 +50,17 @@ const SuccessStories = () => {
           and were always there for me. I appreciated their encouragement,
           support and how they acknowledged my contributions. I mean, isn’t it
           amazing to have someone at work telling you that you are awesome? I
-          heard that often.
+          heard that often
           <cite>Nguyen Le</cite>
         </blockquote>
+        <img src="https://theshortcut.org/wp-content/uploads/2017/03/wing-277x300.png" alt=""/>
       </section>
 
       <section>
         <h3>
           {" "}
-          <span>3.</span>Thomas
+          {/* <span>3.</span> */}
+          Thomas
         </h3>
         <p>
           Two years ago, Thomas moved from his native Czech Republic to Finland
@@ -74,12 +79,14 @@ const SuccessStories = () => {
           to me eventually finding a job.
           <cite>Thomas</cite>
         </blockquote>
+        <img src="https://theshortcut.org/wp-content/uploads/2020/09/ThomasRocca.jpg" alt=""/>
       </section>
 
       <section>
         <h3>
           {" "}
-          <span>4.</span>Maya Kristina
+          {/* <span>4.</span> */}
+          Maya Kristina
         </h3>
         <p>
           Originally from Syria, Maya Kristina came to Finland in 2016. Through
@@ -99,12 +106,14 @@ const SuccessStories = () => {
           really appreciated about The Shortcut.
           <cite>Maya Kristina</cite>
         </blockquote>
+        <img src="https://theshortcut.org/wp-content/uploads/2019/01/Ekaterina.jpeg" alt=""/>
       </section>
 
       <section>
         <h3>
           {" "}
-          <span>5.</span>Noemi
+          {/* <span>5.</span> */}
+          Noemi
         </h3>
         <p>
           The Swiss-born Noemi came to Finland in 2018 with a resume full of
@@ -113,7 +122,7 @@ const SuccessStories = () => {
           International Committee of the Red Cross, and later saved lives
           working as a paramedic. After coming to Finland, she took on the odd
           number of jobs including waitressing and cleaning and eventually made
-          her way to The Shortcut as a Marketing & Communications intern,
+          her way to The Shortcut as a Marketing &amp; Communications intern,
           bringing inspiring content to our blog. Now, she’s a full-time
           Community Manager at Maria 01!
         </p>
@@ -124,11 +133,67 @@ const SuccessStories = () => {
           to learn their stories. When I moved to Finland, I discovered that I
           was good at networking. At The Shortcut, I had the chance to meet and
           connect with so many great people. But maybe the most meaningful thing
-          I learned from The Shortcut was confidence. <br />I finally felt like
-          all the previous work I had done mattered and was important, and that
-          has really made a big difference.
+          I learned from The Shortcut was confidence.
+          <br />I finally felt like all the previous work I had done mattered
+          and was important, and that has really made a big difference.
           <cite>Noemi</cite>
         </blockquote>
+        <img src="https://theshortcut.org/wp-content/uploads/2020/09/Noemi.png" alt="" />
+      </section>
+
+      <section>
+        <h3>
+          {" "}
+          {/* <span>6.</span> */}
+          Esmeé
+        </h3>
+        <p>
+          From being a Catalyst Programme participant to an active Marketing
+          intern at The Shortcut, Esmeé showed great dedication and true
+          professionalism. We are not surprised that she soon found a job in her
+          own field. During her internship, Esmeé handled the marketing of our
+          talent matchmaking event Talent Heist as a Marketing Coordinator.
+          Throughout her work, she realized that there was a lot of room in the
+          tech startup world for her skill set, which is a mix of a journalism
+          background and newfound love for marketing. Determined to thrive in
+          the startup ecosystem, she pivoted her competencies, then found
+          herself an opportunity at AppGyver with a Content Marketing Manager
+          role.
+        </p>
+        <blockquote>
+          I was blown away by how diverse it is — and not just people from
+          different countries, but also a huge variety of professional
+          backgrounds! It made the whole learning experience more enriching and
+          extremely valuable
+          <cite>Esmeé</cite>
+        </blockquote>
+        <img src="https://theshortcut.org/wp-content/uploads/2019/01/Ekaterina.jpeg" alt=""/>
+      </section>
+
+      <section>
+        <h3>
+          {" "}
+          {/* <span>6.</span> */}
+          Chengjing Jounio
+        </h3>
+        <p>
+          Chengjing Jounio, associated with The Shortcut as a student intern,
+          has recently got her well-deserved job at Beneq Oy as a Controller.
+          For the last two years, she has also been running her own travel
+          agency with a partner in Finland. Chengjing was very inspired by the
+          success as well as challenging stories of real practitioners being
+          shared in our workshops and events. Even after the internship,
+          Chengjing continued as a volunteer at The Shortcut and participated in
+          several events to continuously upskill herself.
+        </p>
+        <blockquote>
+          All core team members were like mentors to me, especially Anne. I was
+          heard, and I was supported. There was a good circle of positive
+          feedback on the team as well. All these recognitions and positive
+          feedbacks still give me the power to go forward.
+          <cite>Chengjing Jounio</cite>
+        </blockquote>
+        <img src="https://theshortcut.org/wp-content/uploads/2020/09/chengjing.jpg" alt=""/>
       </section>
     </div>
   );
