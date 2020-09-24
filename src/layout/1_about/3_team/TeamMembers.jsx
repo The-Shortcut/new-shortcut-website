@@ -1,5 +1,8 @@
-import React, { useState, useEffect } from "react";
-import Axios from "axios";
+import React, { useEffect } from "react";
+
+// Redux
+import { useSelector, useDispatch } from 'react-redux'
+import { teamMembers } from '../../../actions/teamActions'
 
 // Styles
 import css from "./styles.module.scss";
@@ -9,26 +12,19 @@ import Profile from "./Profile";
 import SkeletonGrid from "../../../components/functional/SkeletonGrid";
 
 const TeamMembers = () => {
-  const [teammates, setTeammates] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const URL = "https://theshortcut.org/wp-json/wp/v2/team/?per_page=100";
+  const teammates = useSelector(state => state.team.members)
+  const isLoading = useSelector(state => state.team.isLoading)
+
+   const dispatch = useDispatch()
 
   useEffect(() => {
-    getTeammates();
-  }, []);
-
-  const getTeammates = async () => {
-    await Axios.get(URL).then((response) => {
-      setTeammates(response.data);
-      setLoading(true); // Hacky approach to fix teammates order
-      setLoading(false);
-    });
-  };
+    dispatch(teamMembers())
+  }, [dispatch]);
 
   return (
     <div className={css.team}>
-      {loading && <SkeletonGrid />}
-      {teammates.reverse().map((person, i) => (
+      {isLoading && <SkeletonGrid />}
+      {teammates?.reverse().map((person, i) => (
         <Profile key={i} {...person} />
       ))}
       <i aria-hidden={true}></i>

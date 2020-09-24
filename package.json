@@ -24,12 +24,20 @@
     "react-icons": "^3.10.0",
     "react-loading-skeleton": "^2.0.1",
     "react-map-gl": "^5.2.3",
+<<<<<<< HEAD
+    "react-redux": "^7.2.1",
+=======
     "react-notifications-component": "^2.4.1",
+>>>>>>> development
     "react-router-dom": "^5.1.2",
     "react-router-hash-link": "^1.2.2",
     "react-scripts": "^3.4.1",
+    "react-select": "^3.1.0",
     "react-skeleton-loading": "^1.0.0",
     "reactstrap": "^8.4.1",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0",
     "strip-attributes": "^0.2.0",
     "striptags": "^3.1.1",
     "update": "^0.7.4",
