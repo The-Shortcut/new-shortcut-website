@@ -32,6 +32,7 @@ import Events from "./layout/2_events/index.jsx";
 
 // Footer
 import PrivacyPolicies from "./layout/docs/PrivacyPolicies";
+import TermsOfServices from "./layout/docs/TermsOfServices"
 
 export class App extends Component {
   render() {
@@ -64,6 +65,7 @@ export class App extends Component {
 
           {/* Footer */}
           <Route path="/privacy" component={PrivacyPolicies} />
+          <Route path="/terms" component={TermsOfServices} />
         </Switch>
         <Footer />
       </Router>
