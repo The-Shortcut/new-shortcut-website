@@ -37,7 +37,7 @@ const Events = () => {
     <div className={css.container}>
       <div>
         <header>
-          <p>Upcoming events:</p>
+          <p>Upcoming Events</p>
         </header>
         {loading && <SkeletonList />}
         {events
@@ -50,7 +50,7 @@ const Events = () => {
           )}
         <footer>
           <Link to="/events">
-            <span>See all events</span>
+            <span>See All Events</span>
           </Link>
         </footer>
       </div>

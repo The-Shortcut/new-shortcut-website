@@ -82,7 +82,7 @@ const Code = () => {
             </ul>
           </li>
           <li>
-            &mdash; Protect & respect the The Shortcut’s property including The
+            &mdash; Protect &amp; respect the The Shortcut’s property including The
             Shortcut’s office space
           </li>
           <li>
@@ -122,6 +122,7 @@ const Code = () => {
           <a href="mailto:hr@theshortcut.org">hr@theshortcut.org</a>
         </p>
       </section>
+      <img src="https://theshortcut.org/wp-content/uploads/2019/11/white-paper-snapshot-scaled-scaled.png" alt="" />
     </div>
   );
 };

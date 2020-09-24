@@ -16,6 +16,7 @@ import AboutUs from "./layout/1_about/1_about_us/index.jsx";
 import SuccessStories from "./layout/1_about/2_success_stories/index.jsx";
 import Team from "./layout/1_about/3_team/index.jsx";
 import Code from "./layout/1_about/4_code/index.jsx";
+import Values from "./layout/1_about/7_values/index.jsx"
 import FAQ from "./layout/1_about/5_faq/index.jsx";
 import Contact from "./layout/1_about/6_contact/index.jsx";
 
@@ -43,10 +44,11 @@ export class App extends Component {
           <Route exact path="/" component={Home} />
 
           {/* About */}
-          <Route path="/story" component={AboutUs} />
+          <Route path="/about" component={AboutUs} />
           <Route path="/success" component={SuccessStories} />
           <Route path="/team" component={Team} />
           <Route path="/code" component={Code} />
+          <Route path="/values" component={Values} />
           <Route path="/faq" component={FAQ} />
           <Route path="/contact" component={Contact} />
 

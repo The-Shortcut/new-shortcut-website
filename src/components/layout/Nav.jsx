@@ -54,14 +54,14 @@ const Nav = () => {
                 About Us
               </p>
               <ul className="submenu">
-                <Link to="/story" className="submenu-item" onClick={toggleNav}>
+                <Link to="/about" className="submenu-item" onClick={toggleNav}>
                   <div>
                     <img
                       src={require("../../assets/icons/nav/about.png")}
                       alt="icon"
                     />
                   </div>
-                  <span>About us</span>
+                  <span>About Us</span>
                 </Link>
                 <Link
                   to="/success"
@@ -74,7 +74,7 @@ const Nav = () => {
                       alt="icon"
                     />
                   </div>
-                  <span>Success stories</span>
+                  <span>Success Stories</span>
                 </Link>
                 <Link to="/team" className="submenu-item" onClick={toggleNav}>
                   <div>
@@ -83,7 +83,7 @@ const Nav = () => {
                       alt="icon"
                     />
                   </div>
-                  <span>Our team</span>
+                  <span>Our Team</span>
                 </Link>
                 <Link to="/code" className="submenu-item" onClick={toggleNav}>
                   <div>
@@ -92,7 +92,17 @@ const Nav = () => {
                       alt="icon"
                     />
                   </div>
-                  <span>Code of conduct</span>
+                  <span>Code of Conduct</span>
+                </Link>
+
+                <Link to="/values" className="submenu-item" onClick={toggleNav}>
+                  <div>
+                    <img
+                      src={require("../../assets/icons/nav/values.png")}
+                      alt="icon"
+                    />
+                  </div>
+                  <span>Values &amp; Principles</span>
                 </Link>
 
                 <Link to="/faq" className="submenu-item" onClick={toggleNav}>
@@ -119,6 +129,7 @@ const Nav = () => {
                 </Link>
               </ul>
             </li>
+
             <li className="menu-item" id="events">
               <Link className="btn" to="/events" onClick={toggleNav}>
                 Events
@@ -150,7 +161,7 @@ const Nav = () => {
                   </div>
                   <span>Blog</span>
                 </a>
-                <a
+                {/* <a
                   className="submenu-item"
                   onClick={toggleNav}
                   href="https://www.instagram.com/theshortcutorg/"
@@ -164,7 +175,7 @@ const Nav = () => {
                     />
                   </div>
                   <span>Gallery</span>
-                </a>
+                </a> */}
 
                 <a
                   className="submenu-item"
@@ -179,7 +190,7 @@ const Nav = () => {
                       alt="icon"
                     />
                   </div>
-                  <span>White paper</span>
+                  <span>White Paper</span>
                 </a>
                 <Link to="/media" className="submenu-item" onClick={toggleNav}>
                   <div>
@@ -188,33 +199,60 @@ const Nav = () => {
                       alt="icon"
                     />
                   </div>
-                  <span>For media</span>
+                  <span>For Media</span>
                 </Link>
               </ul>
             </li>
 
             <li className="menu-item" id="forpartners">
               <Link className="btn" to="/forpartners" onClick={toggleNav}>
-                For partners
+                For Partners
               </Link>
             </li>
 
-            <li className="menu-item" id="join">
-              <a
+            <li className="menu-item" id="resources">
+              <p
                 className="btn"
-                onClick={toggleNav}
-                href="https://www.facebook.com/theshortcut/"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#resources"
+                id="resources"
+                onClick={(e) => toggleSubnav(e)}
               >
-                Join
-              </a>
+                Join Us
+              </p>
+              <ul className="submenu">
+                <a
+                  className="submenu-item"
+                  onClick={toggleNav}
+                  href="https://www.facebook.com/theshortcut/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div>
+                    <img
+                      src={require("../../assets/icons/nav/blog.png")}
+                      alt="icon"
+                    />
+                  </div>
+                  <span>Join Community</span>
+                </a>
+                <a
+                  className="submenu-item"
+                  onClick={toggleNav}
+                  href="https://thehub.io/jobs?search=the%20shortcut&countryCode=FI"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div>
+                    <img
+                      src={require("../../assets/icons/nav/blog.png")}
+                      alt="icon"
+                    />
+                  </div>
+                  <span>Work with Us</span>
+                </a>
+              </ul>
             </li>
-             <li className="menu-item" id="events">
-              <Link className="btn" to="/code" onClick={toggleNav}>
-                Values & Principles
-              </Link>
-            </li>
+
           </ul>
         </nav>
 
