@@ -5,8 +5,8 @@ import css from "./styles.module.scss";
 export default function Map() {
   const TOKEN = `${process.env.REACT_APP_MAPBOX_ACCESS_TOKEN}`;
   const [viewport, setViewport] = useState({
-    width: "100%",
-    height: "500px",
+    width: "400px",
+    height: "400px",
     latitude: 60.16723,
     longitude: 24.92175,
     zoom: 12,
