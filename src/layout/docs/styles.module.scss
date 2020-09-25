@@ -34,16 +34,17 @@
     }
   }
 
+  // Heading
   h3 {
-    font-family: "CircularStd-Medium", sans-serif;
+    font-family: $book;
     font-size: 1.5rem;
-    padding: 50px 0 25px;
+    margin-bottom: 25px;
 
     span {
       background-color: $yellow;
-      box-shadow: none;
-      padding: 2px 5px 2px 10px;
-      border: 2px;
+      border-radius: 5px;
+      padding: 2px 7px 2px 10px;
+      margin-right: 10px;
     }
 
     @include big-desktop {
@@ -72,6 +73,19 @@
     @include big-desktop {
       font-size: 1.5rem;
     }
+  }
+
+  ul {
+    list-style: none;
+    font-size: 1.15rem;
+
+    @include big-desktop {
+      font-size: 1.5rem;
+    }
+  }
+
+  ul.parent {
+    padding: 0;
   }
 
   a {
