@@ -195,7 +195,7 @@ const Nav = () => {
                 >
                   <div>
                     <img
-                      src={require("../../assets/icons/nav/blog.png")}
+                      src={require("../../assets/icons/nav/join-community.png")}
                       alt="icon"
                     />
                   </div>
@@ -210,7 +210,7 @@ const Nav = () => {
                 >
                   <div>
                     <img
-                      src={require("../../assets/icons/nav/blog.png")}
+                      src={require("../../assets/icons/nav/work-with-us.png")}
                       alt="icon"
                     />
                   </div>
@@ -218,7 +218,6 @@ const Nav = () => {
                 </a>
               </ul>
             </li>
-
           </ul>
         </nav>
 
