@@ -95,24 +95,17 @@ const Footer = () => {
 
           <div className={css.menu}>
             <div>
-              <h4>About</h4>
+              <h4>About Us</h4>
               <Link to="/faq">
                 <p>FAQ</p>
               </Link>
-              <a
-                href="https://thehub.io/jobs?search=the%20shortcut&countryCode=FI"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Careers
-              </a>
               <Link to="/code">
                 <p>Code of Conduct</p>
               </Link>
               <Link to="/values">
                 <p>Values &amp; Principles</p>
               </Link>
-              <Link to="/">
+              <Link to="/terms">
                 <p>Terms of use</p>
               </Link>
               <Link to="/privacy">
@@ -121,14 +114,25 @@ const Footer = () => {
             </div>
 
             <div>
-              <h4>Programs</h4>
+              <h4>Join Us</h4>
               {/* <p>Events</p> */}
               <Link to="/events">
                 <p>Events</p>
               </Link>
-              <p>Trainings</p>
-              <p>Certifications</p>
-              <p>Clubs</p>
+              <a
+                href="https://www.facebook.com/theshortcut/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Join Community
+              </a>
+              <a
+                href="https://thehub.io/jobs?search=the%20shortcut&countryCode=FI"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Work with Us
+              </a>
             </div>
 
             <div>
