@@ -27,11 +27,11 @@
 
   // Event container
   .event {
-    img {
-      width: 300px;
-      margin-right: 25px;
-      object-fit: cover;
-    }
+    // img {
+    //   width: 300px;
+    //   margin-right: 25px;
+    //   object-fit: cover;
+    // }
 
     width: 100%;
     max-width: 60em;
@@ -183,6 +183,41 @@
       .single,
       .continuous {
         border-right: 1px solid $yellow;
+      }
+    }
+
+    @include desktop {
+      padding: 10px;
+      .single,
+      .continuous {
+        width: 50%;
+        min-width: 50%;
+        align-items: flex-start;
+        padding: 0;
+        margin: 0;
+        margin-right: 50px;
+        border-right: none;
+
+        img {
+          border-radius: 10px;
+          overflow: hidden;
+        }
+
+        p {
+          display: none;
+        }
+
+        // Visual
+        > div {
+          display: block;
+        }
+      }
+
+      &:hover {
+        .single,
+        .continuous {
+          border-right: none;
+        }
       }
     }
 
