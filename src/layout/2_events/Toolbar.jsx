@@ -11,7 +11,6 @@ import css from "./styles.module.scss";
 // Children
 import Search from "./Search";
 
-<<<<<<< HEAD
 const Toolbar = ({setSearch}) => {
   const dispatch = useDispatch()
 
@@ -46,37 +45,11 @@ const Toolbar = ({setSearch}) => {
             options={options} 
             onChange={(e) => handleSearch(e.label)} 
             placeholder="search terms"
+            styles={{control: () => ({display:'flex', border:'none'})}}
         /> 
       </li>
     </ul>
   </div>
-=======
-const Toolbar = ({ setSearch }) => {
-  return (
-    <div className={css.toolbar}>
-      <ul>
-        <li>
-          <Search setSearch={setSearch} />
-        </li>
-      </ul>
-      <ul>
-        <li onClick={() => setSearch("workshop")}>Workshops</li>
-        <li onClick={() => setSearch("training")}>Trainings</li>
-        <li onClick={() => setSearch("certification")}>Certifications</li>
-        <li onClick={() => setSearch("club")}>Clubs</li>
-      </ul>
-      <ul>
-        <li onClick={() => setSearch("my startup debut")}>#mystartupdebut</li>
-        <li onClick={() => setSearch("python")}>#python</li>
-        <li onClick={() => setSearch("javascript")}>#javascript</li>
-        <li onClick={() => setSearch("talent heist")}>#talentheist</li>
-        <li onClick={() => setSearch("school of startup")}>
-          #schoolofstartups
-        </li>
-      </ul>
-    </div>
-  );
->>>>>>> development
 };
 
 export default Toolbar;
