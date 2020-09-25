@@ -17,14 +17,15 @@ const Toolbar = ({setSearch}) => {
   // Search terms
   const options = [
     {value: 'All', label: 'All'},
-    {value: 'workshop', label: 'workshop'},
-    {value: 'training', label: 'training'},
-    {value: 'certification', label:'certification'},
-    {value: 'club', label:'club'},
-    {value:'my startup debut', label:'my startup debut'},
-    {value:'python', label:'python'},
-    {value:'talent heist', label:'talent heist'},
-    {value:'school of startup', label:'school of startup'}
+    {value: 'workshop', label: 'Workshop'},
+    {value: 'training', label: 'Training'},
+    {value: 'certification', label:'Certification'},
+    {value: 'club', label:'Clubs'},
+    {value:'my startup debut', label:'My Startup Debut'},
+    {value:'python', label:'Python'},
+    {value:'javascript', label:'JavaScript'},
+    {value:'talent heist', label:'Talent Heist'},
+    {value:'school of startup', label:'School of Startups'}
   ]
 
   const handleSearch = term => {
@@ -44,7 +45,7 @@ const Toolbar = ({setSearch}) => {
         <Select 
             options={options} 
             onChange={(e) => handleSearch(e.label)} 
-            placeholder="search terms"
+            placeholder="Search Category"
         /> 
       </li>
     </ul>
