@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux'
 import { searchEvents, paginate } from '../../actions/eventActions'
 // Styles
 import css from "./styles.module.scss";
-import { FaSearch } from "react-icons/fa";
+// import { FaSearch } from "react-icons/fa";
 
 const Search = ({ setSearch }) => {
   const dispatch = useDispatch()
@@ -17,7 +17,7 @@ const Search = ({ setSearch }) => {
   };
   return (
     <div className={css.search}>
-      <FaSearch style={{ margin: 10 }} />
+      {/* <FaSearch style={{ margin: 10 }} /> */}
       <input
         type="text"
         onKeyDown={handleKeyDown}

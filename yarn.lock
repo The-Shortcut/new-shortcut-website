@@ -4614,7 +4614,7 @@ colorful@^2.1.0:
   resolved "https://registry.yarnpkg.com/colorful/-/colorful-2.1.0.tgz#6a8bdcbc2da42a50db3b4882fa25263aaa1f2d8e"
   integrity sha1-aovcvC2kKlDbO0iC+iUmOqofLY4=
 
-combined-stream@^1.0.6, combined-stream@~1.0.6:
+combined-stream@^1.0.6, combined-stream@^1.0.8, combined-stream@~1.0.6:
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/combined-stream/-/combined-stream-1.0.8.tgz#c3d45a8b34fd730631a110a8a2520682b31d5a7f"
   integrity sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==
@@ -6864,6 +6864,15 @@ fork-ts-checker-webpack-plugin@3.1.1:
     semver "^5.6.0"
     tapable "^1.0.0"
     worker-rpc "^0.1.0"
+
+form-data@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/form-data/-/form-data-3.0.0.tgz#31b7e39c85f1355b7139ee0c647cf0de7f83c682"
+  integrity sha512-CKMFDglpbMi6PyN+brwB9Q/GOw0eAnsrEZDgcsH5Krhz5Od/haKHAX0NmQfha2zPPz0JpWzA7GJHGSnvCRLWsg==
+  dependencies:
+    asynckit "^0.4.0"
+    combined-stream "^1.0.8"
+    mime-types "^2.1.12"
 
 form-data@~2.3.2:
   version "2.3.3"
@@ -12678,6 +12687,13 @@ react-map-gl@^5.2.3:
     prop-types "^15.7.2"
     react-virtualized-auto-sizer "^1.0.2"
     viewport-mercator-project "^6.2.3 || ^7.0.1"
+
+react-notifications-component@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/react-notifications-component/-/react-notifications-component-2.4.1.tgz#b59b043130bbf61458e7be0b909288ae72f4dbec"
+  integrity sha512-RloHzm15egnuPihf8PvldIEvPQoT9+5BE9UxCNTt+GfsWeI3SEZKyaX9mq90v899boqteLiOI736Zd4tXtl7Tg==
+  dependencies:
+    prop-types "^15.6.2"
 
 react-overlays@^3.2.0:
   version "3.2.0"
