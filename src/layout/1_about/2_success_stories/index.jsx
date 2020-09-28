@@ -106,7 +106,7 @@ const SuccessStories = () => {
           really appreciated about The Shortcut.
           <cite>Maya Kristina</cite>
         </blockquote>
-        <img src="https://theshortcut.org/wp-content/uploads/2019/01/Ekaterina.jpeg" alt=""/>
+        <img src="https://theshortcut.org/wp-content/uploads/2020/09/maya.jpeg" alt=""/>
       </section>
 
       <section>
@@ -167,7 +167,7 @@ const SuccessStories = () => {
           extremely valuable
           <cite>Esmeé</cite>
         </blockquote>
-        <img src="https://theshortcut.org/wp-content/uploads/2019/01/Ekaterina.jpeg" alt=""/>
+        <img src="https://theshortcut.org/wp-content/uploads/2020/09/esmee.png" alt=""/>
       </section>
 
       <section>

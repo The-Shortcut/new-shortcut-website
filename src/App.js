@@ -32,6 +32,8 @@ import Events from "./layout/2_events/index.jsx";
 
 // Footer
 import PrivacyPolicies from "./layout/docs/PrivacyPolicies";
+import TermsOfServices from "./layout/docs/TermsOfServices"
+import DataDescription from "./layout/docs/DataDescription";
 
 export class App extends Component {
   render() {
@@ -47,8 +49,6 @@ export class App extends Component {
           <Route path="/about" component={AboutUs} />
           <Route path="/success" component={SuccessStories} />
           <Route path="/team" component={Team} />
-          <Route path="/code" component={Code} />
-          <Route path="/values" component={Values} />
           <Route path="/faq" component={FAQ} />
           <Route path="/contact" component={Contact} />
 
@@ -64,6 +64,10 @@ export class App extends Component {
 
           {/* Footer */}
           <Route path="/privacy" component={PrivacyPolicies} />
+          <Route path="/code" component={Code} />
+          <Route path="/values" component={Values} />
+          <Route path="/terms" component={TermsOfServices} />
+          <Route path="/data-description" component={DataDescription} />
         </Switch>
         <Footer />
       </Router>

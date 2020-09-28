@@ -11,7 +11,7 @@ export default function Team() {
   return (
     <div className={css.container}>
       <header>
-        <h2>Our team</h2>
+        <h2>Our Team</h2>
       </header>
       <TeamMembers />
       <BoardMembers />

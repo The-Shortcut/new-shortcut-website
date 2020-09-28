@@ -85,25 +85,6 @@ const Nav = () => {
                   </div>
                   <span>Our Team</span>
                 </Link>
-                <Link to="/code" className="submenu-item" onClick={toggleNav}>
-                  <div>
-                    <img
-                      src={require("../../assets/icons/nav/code.png")}
-                      alt="icon"
-                    />
-                  </div>
-                  <span>Code of Conduct</span>
-                </Link>
-
-                <Link to="/values" className="submenu-item" onClick={toggleNav}>
-                  <div>
-                    <img
-                      src={require("../../assets/icons/nav/values.png")}
-                      alt="icon"
-                    />
-                  </div>
-                  <span>Values &amp; Principles</span>
-                </Link>
 
                 <Link to="/faq" className="submenu-item" onClick={toggleNav}>
                   <div>
@@ -161,21 +142,6 @@ const Nav = () => {
                   </div>
                   <span>Blog</span>
                 </a>
-                {/* <a
-                  className="submenu-item"
-                  onClick={toggleNav}
-                  href="https://www.instagram.com/theshortcutorg/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div>
-                    <img
-                      src={require("../../assets/icons/nav/gallery.png")}
-                      alt="icon"
-                    />
-                  </div>
-                  <span>Gallery</span>
-                </a> */}
 
                 <a
                   className="submenu-item"
@@ -229,7 +195,7 @@ const Nav = () => {
                 >
                   <div>
                     <img
-                      src={require("../../assets/icons/nav/blog.png")}
+                      src={require("../../assets/icons/nav/join-community.png")}
                       alt="icon"
                     />
                   </div>
@@ -244,7 +210,7 @@ const Nav = () => {
                 >
                   <div>
                     <img
-                      src={require("../../assets/icons/nav/blog.png")}
+                      src={require("../../assets/icons/nav/work-with-us.png")}
                       alt="icon"
                     />
                   </div>
@@ -252,7 +218,6 @@ const Nav = () => {
                 </a>
               </ul>
             </li>
-
           </ul>
         </nav>
 

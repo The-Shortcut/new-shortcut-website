@@ -1,4 +1,5 @@
 import React from "react";
+import defaultImage from "../../../assets/photos/defaultImage.png";
 
 // Styles
 import css from "./styles.module.scss";
@@ -15,6 +16,8 @@ const Event = ({ event }) => {
   const online = event.online_event;
   const venue = event.venue_id;
   const link = event.url;
+  const img = event.logo;
+
 
   // date
   const formatDate = (e) => {
@@ -85,6 +88,13 @@ const Event = ({ event }) => {
           <p>{formatDay(start)}</p>
           <p>{formatDate(start)}</p>
           <p>{formatMonth(start)}</p>
+          <div>
+            {img !== null ? (
+              <img src={img.original.url} alt="" />
+            ) : (
+              <img src={defaultImage} alt="" />
+            )}
+          </div>
         </aside>
       ) : (
         <aside className={css.continuous}>
@@ -93,6 +103,13 @@ const Event = ({ event }) => {
           <p> - </p>
           <p>{formatDate(end)}</p>
           <p>{formatMonth(end)}</p>
+          <div>
+            {img !== null ? (
+              <img src={img.original.url} alt="" />
+            ) : (
+              <img src={defaultImage} alt="" />
+            )}
+          </div>
         </aside>
       )}
       <div>

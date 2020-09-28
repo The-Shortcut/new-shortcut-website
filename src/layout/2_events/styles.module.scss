@@ -95,8 +95,13 @@
     margin: auto;
     ul {
       display: flex;
+<<<<<<< HEAD
       justify-content: space-between;
       align-items: center;
+=======
+      // align-items: center;
+      justify-content: flex-start;
+>>>>>>> development
       flex-wrap: wrap;
       padding: 0;
       margin: 0;
@@ -109,6 +114,14 @@
         margin: 0 10px 10px 0;
         padding: 5px 10px;
         cursor: pointer;
+<<<<<<< HEAD
+=======
+
+        @include phone {
+          font-size: 1rem;
+        }
+
+>>>>>>> development
         // Box border/shadow effect
         border: 1px solid #e5e5e5;
         border-radius: 0.25rem;
@@ -123,10 +136,28 @@
       // Input container
       .search {
         margin: 0;
+<<<<<<< HEAD
         padding: 6px 0;
         input {
           width: 100%;
           font-family: $medium;
+=======
+        padding: 0;
+        position: relative;
+        display: flex;
+        min-width: 60vw;
+        height: 5vh;
+        width: 100%;
+
+        @include phone {
+          min-width: 80vw;
+        }
+
+        input {
+          width: 100%;
+          font-family: $medium;
+          // font-size: 1.25rem;
+>>>>>>> development
           border: none;
           padding: 0 10px;
           outline: none;
@@ -137,10 +168,16 @@
           }
 
           // Search icon
+<<<<<<< HEAD
           background-image: url("../../assets/icons/search.png");
           background-position: 95% 40%;
           background-size: 1em;
           background-repeat: no-repeat;
+=======
+          // background-image: url("../../assets/icons/search.png");
+          // background-size: 10%;
+          // background-repeat: no-repeat;
+>>>>>>> development
         }
       }
     }
