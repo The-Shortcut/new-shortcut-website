@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+import ReactGA from 'react-ga';
+
 // Layout components
 import Nav from "./components/layout/Nav";
 import Footer from "./components/layout/Footer";
@@ -34,6 +36,10 @@ import Events from "./layout/2_events/index.jsx";
 import PrivacyPolicies from "./layout/docs/PrivacyPolicies";
 import TermsOfServices from "./layout/docs/TermsOfServices"
 import DataDescription from "./layout/docs/DataDescription";
+
+// Google Analytics
+ReactGA.initialize('UA-126129205-1'); 
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 export class App extends Component {
   render() {
