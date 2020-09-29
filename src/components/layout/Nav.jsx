@@ -214,7 +214,7 @@ const Nav = () => {
                       alt="icon"
                     />
                   </div>
-                  <span>Work with Us</span>
+                  <span>Open Positions</span>
                 </a>
               </ul>
             </li>
