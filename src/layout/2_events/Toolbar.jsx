@@ -44,13 +44,9 @@ const Toolbar = ({setSearch}) => {
       <li>
         <Select 
             options={options} 
-            onChange={(e) => handleSearch(e.label)} 
-<<<<<<< HEAD
-            placeholder="search terms"
+            onChange={(e) => handleSearch(e.value)} 
+            placeholder="search tags"
             styles={{control: () => ({display:'flex', border:'none'})}}
-=======
-            placeholder="Search Category"
->>>>>>> development
         /> 
       </li>
     </ul>
