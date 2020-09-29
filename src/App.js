@@ -58,7 +58,7 @@ export class App extends Component {
           {/* About */}
           <Route path="/about" component={AboutUs} />
           <Route path="/success" component={SuccessStories} />
-          <Route path="/talentPool" component={TalentPool} />
+          <Route path="/talent-pool" component={TalentPool} />
           <Route path="/team" component={Team} />
           <Route path="/faq" component={FAQ} />
           <Route path="/contact" component={Contact} />

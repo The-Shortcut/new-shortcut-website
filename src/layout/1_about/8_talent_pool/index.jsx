@@ -11,6 +11,7 @@ const TalentPool = () => {
       <header>
         <h2>Talent Pool </h2>
       </header>
+
       <TalentList />
     </div>
   );

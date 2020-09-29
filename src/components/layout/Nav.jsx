@@ -78,7 +78,7 @@ const Nav = () => {
                   <span>Success Stories</span>
                 </Link>
                 <Link
-                  to="/talentPool"
+                  to="/talent-pool"
                   className="submenu-item"
                   onClick={toggleNav}
                 >

@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Talent from "./Talent";
+import SearchBar from "./SearchBar";
+import searchResult from "./searchResult";
+import NoMatch from "./NoMatch";
+import Pagination from "./Pagination";
 import axios from "axios";
 
 // // Styles
@@ -7,19 +11,45 @@ import css from "./styles.module.scss";
 
 const TalentList = () => {
   const [talents, setTalents] = useState("");
-
+  const [noMatch, setNoMatch] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const [perPage, setPerPage] = useState(12);
+  let results;
   useEffect(() => {
     helper();
   }, []);
+  const lastItem = currentPage * perPage;
+  const firstItem = lastItem - perPage;
+  let currentItems;
 
+  const paginate = (number) => setCurrentPage(number);
+
+  const previousButton = () => {
+    console.log("current page is ", currentPage);
+    const toPage = currentPage - 1;
+    setCurrentPage(toPage <= 1 ? 1 : toPage);
+  };
+
+  const nextButton = () => {
+    console.log("current page is ", currentPage);
+    const toPage = currentPage + 1;
+    setCurrentPage(toPage);
+  };
   const helper = async () => {
     const talentsData = await axios.get(
       `https://theshortcut.org/wp-json/wp/v2/talents?per_page=100&_embed`
     );
-    console.log("Talents are ", talentsData.data);
-
     setTalents(talentsData.data);
-    console.log("helloo");
+  };
+
+  const searchProcess = async (searchValue, type, data) => {
+    results = await searchResult(searchValue, data, type);
+    if (!results) {
+      return setNoMatch(
+        "There is no match, try other keywords or change the filter"
+      );
+    }
+    setNoMatch(null);
   };
 
   const dataFromStore =
@@ -36,12 +66,45 @@ const TalentList = () => {
       return arrayTalents;
     });
   console.log("talents are ", dataFromStore);
-
+  if (results) {
+    currentItems = results.slice(firstItem, lastItem);
+  } else {
+    currentItems = dataFromStore.slice(firstItem, lastItem);
+  }
   return (
-    <div className={css.list}>
-      {dataFromStore &&
-        dataFromStore.map((talent, i) => <Talent key={i} data={talent} />)}
-    </div>
+    <>
+      {dataFromStore && (
+        <SearchBar searchProcess={searchProcess} talents={dataFromStore} />
+      )}
+      {noMatch ? (
+        <NoMatch message={noMatch} />
+      ) : (
+        <React.Fragment>
+          <Pagination
+            perPage={perPage}
+            totalItems={results ? results.length : dataFromStore.length}
+            paginate={paginate}
+            currentPage={currentPage}
+            previousButton={previousButton}
+            nextButton={nextButton}
+          />
+
+          <div className={css.list}>
+            {currentItems &&
+              currentItems.map((talent, i) => <Talent key={i} data={talent} />)}
+          </div>
+
+          <Pagination
+            perPage={perPage}
+            totalItems={results ? results.length : dataFromStore.length}
+            paginate={paginate}
+            currentPage={currentPage}
+            previousButton={previousButton}
+            nextButton={nextButton}
+          />
+        </React.Fragment>
+      )}
+    </>
   );
 };
 
