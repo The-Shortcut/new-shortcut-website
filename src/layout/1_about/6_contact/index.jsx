@@ -108,15 +108,15 @@ const Contact = () => {
 
       <section>
         <div>
-          <div>
-            <h3>Where to find us:</h3>
+          <div className="map-container"> 
+            <h3>Where to find us</h3>
             <Map />
           </div>
-          <div>
-            <p> The Shortcut Lab</p>
+          <div className="address">
+            <p>The Shortcut Lab</p>
             <p>+358 46 640 3900</p>
             <p>info@theshortcut.org</p>
-            <p> Maria01 (entrance 15B), Lapinlahdenkatu 16, 00180, Helsinki</p>
+            <p>Maria01 (entrance 15B),<br/> Lapinlahdenkatu 16, 00180, Helsinki</p>
             <p>Open Monday &mdash; Friday, 9am &mdash; 5pm </p>{" "}
             <p>(or until the last event of the day is over)</p>
           </div>

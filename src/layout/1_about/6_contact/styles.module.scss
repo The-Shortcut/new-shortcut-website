@@ -128,7 +128,6 @@
       header {
         margin-bottom: 50px;
         > div {
-          //border: 1px solid red;
           display: block;
           position: relative;
           top: 25px;
@@ -152,11 +151,11 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      padding: 100px 0;
+      padding: 2em 0 1em 0;
       > div {
+        margin: 0;
         h3 {
           display: block;
-          width: 40%;
           font-size: 2rem;
           font-family: $medium;
         }
@@ -173,7 +172,7 @@
         }
       }
       > div {
-        width: 50%;
+        width: 40%;
 
         p {
           font-family: $book;
@@ -221,15 +220,17 @@
 
         h3 {
           width: 100%;
-          margin-bottom: 25px;
+          margin: 0 0 1em 0;
         }
 
         > div {
           width: 100%;
 
           p {
+            font-size: 1em;
+            margin-bottom: 0.5em;
             &:first-of-type {
-              font-size: 1.5rem;
+              padding: 1em 0 0 0;
             }
           }
         }
