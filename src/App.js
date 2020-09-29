@@ -9,6 +9,7 @@ import Footer from "./components/layout/Footer";
 
 //Functional components
 import ScrollTopArrow from "./components/functional/ScrollTopArrow";
+import ScrollToTop from "./components/functional/ScrollToTop"
 
 // Home
 import Home from "./layout/_home/index.jsx";
@@ -45,6 +46,7 @@ export class App extends Component {
   render() {
     return (
       <Router>
+        <ScrollToTop />
         <ScrollTopArrow />
         <Nav />
         <Switch>
