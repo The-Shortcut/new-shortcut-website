@@ -1,3 +1,9 @@
+@mixin phone {
+  @media only screen and (max-width: 1000px) {
+    @content;
+  }
+}
+
 .scrollTop {
   position: fixed;
   width: 190vw;
@@ -9,6 +15,10 @@
   transition: opacity 0.4s;
   opacity: 0.7;
   color: #fdc81e;
+
+  @include phone {
+    width: 180vw;
+  }
 }
 
 .scrollTop:hover {
