@@ -223,7 +223,7 @@ $red: rgb(232, 89, 46);
     }
 
     @include phone {
-      padding: 0;
+      padding: 0.5em;
       height: auto;
       width: 100%;
     }
