@@ -84,7 +84,7 @@ const Nav = () => {
                 >
                   <div>
                     <img
-                      src={require("../../assets/icons/pool.png")}
+                      src={require("../../assets/icons/icon_Intern.png")}
                       alt="icon"
                     />
                   </div>

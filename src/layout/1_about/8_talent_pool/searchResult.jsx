@@ -1,49 +1,39 @@
-import axios from "axios";
-
-const searchResult = async (searchValue, talents, type) => {
+const searchResult = (search_value, talents, type) => {
+  console.log("within search result, talnets val ", talents);
   try {
-    const search_value = await searchValue;
+    // const search_value = await searchValue;
     const final = [];
     if (type === "All") {
-      await talents.forEach((each) => {
+      talents.forEach((each) => {
         if (
-          each.title.rendered
-            .toLowerCase()
-            .includes(search_value.toLowerCase()) ||
-          each.content.rendered
-            .toLowerCase()
-            .includes(search_value.toLowerCase()) ||
+          each.name.toLowerCase().includes(search_value.toLowerCase()) ||
+          each.content.toLowerCase().includes(search_value.toLowerCase()) ||
           each.hashtags.toLowerCase().includes(search_value.toLowerCase())
         ) {
           final.push(each);
         }
       });
     } else if (type === "Name") {
-      await talents.forEach((each) => {
-        if (
-          each.title.rendered.toLowerCase().includes(search_value.toLowerCase())
-        ) {
+      talents.forEach((each) => {
+        if (each.name.toLowerCase().includes(search_value.toLowerCase())) {
           final.push(each);
         }
       });
     } else if (type === "Content") {
-      await talents.forEach((each) => {
-        if (
-          each.content.rendered
-            .toLowerCase()
-            .includes(search_value.toLowerCase())
-        ) {
+      talents.forEach((each) => {
+        if (each.content.toLowerCase().includes(search_value.toLowerCase())) {
           final.push(each);
         }
       });
     } else {
-      await talents.forEach((each) => {
+      talents.forEach((each) => {
         if (each.hashtags.toLowerCase().includes(search_value.toLowerCase())) {
           final.push(each);
         }
       });
     }
     console.log("final is ", final);
+    console.log("takents array ", talents);
     return [...final];
   } catch (err) {
     console.log(err);

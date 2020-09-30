@@ -46,7 +46,7 @@ const Pagination = ({
                 href="#"
                 className="page-link"
               >
-                {1}
+                {number}
               </button>
             </li>
           )}
