@@ -12,31 +12,11 @@ const SuccessStories = () => {
 
       <section>
         <h3>
-          {/* <span>1.</span>  */}
-          Ekaterina Larigyna
-        </h3>
-        <p>
-          Originally from Russia, Ekaterina is a professional in International
-          Market Development. Two years ago, The Shortcut encouraged her to
-          develop a business idea during the Digital Prototyping Weekend –
-          little did she know that, soon after, she and her team would be
-          distinguished for her business idea at development runway Ultrahack.
-        </p>
-        <blockquote>
-          The Shortcut motivated me to give it a shot. I can’t say that I am not
-          confident about my skills – but entrepreneurship… I didn’t know it was
-          my thing, I didn’t know it was something I could try.
-          <cite>Ekaterina</cite>
-        </blockquote>
-        <img src="https://theshortcut.org/wp-content/uploads/2019/01/Ekaterina.jpeg" alt=""/>
-      </section>
-
-      <section>
-        <h3>
           {" "}
           {/* <span>2.</span> */}
           Nguyen Le
         </h3>
+        <img src="https://theshortcut.org/wp-content/uploads/2017/03/wing-277x300.png" alt=""/>
         <p>
           After moving to Finland from Vietnam and studying marketing at Hanken
           School of Economics, Nguyen Le found her way to The Shortcut. She
@@ -53,7 +33,6 @@ const SuccessStories = () => {
           heard that often
           <cite>Nguyen Le</cite>
         </blockquote>
-        <img src="https://theshortcut.org/wp-content/uploads/2017/03/wing-277x300.png" alt=""/>
       </section>
 
       <section>
@@ -62,6 +41,7 @@ const SuccessStories = () => {
           {/* <span>3.</span> */}
           Thomas
         </h3>
+        <img src="https://theshortcut.org/wp-content/uploads/2020/09/ThomasRocca.jpg" alt=""/>
         <p>
           Two years ago, Thomas moved from his native Czech Republic to Finland
           with his partner. He found his way to The Shortcut through our School
@@ -79,7 +59,6 @@ const SuccessStories = () => {
           to me eventually finding a job.
           <cite>Thomas</cite>
         </blockquote>
-        <img src="https://theshortcut.org/wp-content/uploads/2020/09/ThomasRocca.jpg" alt=""/>
       </section>
 
       <section>
@@ -88,6 +67,7 @@ const SuccessStories = () => {
           {/* <span>4.</span> */}
           Maya Kristina
         </h3>
+        <img src="https://theshortcut.org/wp-content/uploads/2020/09/maya.jpeg" alt=""/>
         <p>
           Originally from Syria, Maya Kristina came to Finland in 2016. Through
           a shared connection on LinkedIn, she came across The Shortcut. She
@@ -106,7 +86,6 @@ const SuccessStories = () => {
           really appreciated about The Shortcut.
           <cite>Maya Kristina</cite>
         </blockquote>
-        <img src="https://theshortcut.org/wp-content/uploads/2020/09/maya.jpeg" alt=""/>
       </section>
 
       <section>
@@ -115,6 +94,7 @@ const SuccessStories = () => {
           {/* <span>5.</span> */}
           Noemi
         </h3>
+        <img src="https://theshortcut.org/wp-content/uploads/2020/09/Noemi.png" alt="" />
         <p>
           The Swiss-born Noemi came to Finland in 2018 with a resume full of
           experiences; holding a degree in Ancient Greek Language and
@@ -138,7 +118,6 @@ const SuccessStories = () => {
           and was important, and that has really made a big difference.
           <cite>Noemi</cite>
         </blockquote>
-        <img src="https://theshortcut.org/wp-content/uploads/2020/09/Noemi.png" alt="" />
       </section>
 
       <section>
@@ -147,6 +126,7 @@ const SuccessStories = () => {
           {/* <span>6.</span> */}
           Esmeé
         </h3>
+        <img src="https://theshortcut.org/wp-content/uploads/2020/09/esmee.png" alt=""/>
         <p>
           From being a Catalyst Programme participant to an active Marketing
           intern at The Shortcut, Esmeé showed great dedication and true
@@ -167,7 +147,6 @@ const SuccessStories = () => {
           extremely valuable
           <cite>Esmeé</cite>
         </blockquote>
-        <img src="https://theshortcut.org/wp-content/uploads/2020/09/esmee.png" alt=""/>
       </section>
 
       <section>
@@ -176,6 +155,7 @@ const SuccessStories = () => {
           {/* <span>6.</span> */}
           Chengjing Jounio
         </h3>
+        <img src="https://theshortcut.org/wp-content/uploads/2020/09/chengjing.jpg" alt=""/>
         <p>
           Chengjing Jounio, associated with The Shortcut as a student intern,
           has recently got her well-deserved job at Beneq Oy as a Controller.
@@ -193,7 +173,27 @@ const SuccessStories = () => {
           feedbacks still give me the power to go forward.
           <cite>Chengjing Jounio</cite>
         </blockquote>
-        <img src="https://theshortcut.org/wp-content/uploads/2020/09/chengjing.jpg" alt=""/>
+      </section>
+
+      <section>
+        <h3>
+          {/* <span>1.</span>  */}
+          Ekaterina
+        </h3>
+        <img src="https://theshortcut.org/wp-content/uploads/2019/01/Ekaterina.jpeg" alt=""/>
+        <p>
+          Originally from Russia, Ekaterina is a professional in International
+          Market Development. Two years ago, The Shortcut encouraged her to
+          develop a business idea during the Digital Prototyping Weekend –
+          little did she know that, soon after, she and her team would be
+          distinguished for her business idea at development runway Ultrahack.
+        </p>
+        <blockquote>
+          The Shortcut motivated me to give it a shot. I can’t say that I am not
+          confident about my skills – but entrepreneurship… I didn’t know it was
+          my thing, I didn’t know it was something I could try.
+          <cite>Ekaterina</cite>
+        </blockquote>
       </section>
     </div>
   );
