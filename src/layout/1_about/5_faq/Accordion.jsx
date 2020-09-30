@@ -79,7 +79,7 @@ const Accordion = () => {
           talent pool. Through collaborating with The Shortcut, we are not only
           able to connect your company to highly-skilled talent, but provide
           your brand with visibility. You can find out more about what we can do
-          for your company <a href="/">here</a>.
+          for your company <a href="/forpartners">here</a>.
         </p>
       </AccItem>
       <AccItem key={7} question="How do I join The Shortcut?">
@@ -118,16 +118,7 @@ const Accordion = () => {
           >
             LinkedIn
           </a>{" "}
-          — or by simply visiting our Lab at Maria01! You can also become a part
-          of our community through joining our community platform{" "}
-          <a
-            href="https://www.theshortcutcommunity.org/feed"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            here
-          </a>
-          .
+          !
         </p>
       </AccItem>
       <AccItem
@@ -138,7 +129,7 @@ const Accordion = () => {
           We post updates about upcoming events and workshops on our social
           media channels — but you can stay more easily updated about everything
           that’s going on at The Shortcut by subscribing to our{" "}
-          <a href="/">newsletter</a>.
+          <a href="#newsletter-subscription">newsletter</a>.
         </p>
       </AccItem>
       <AccItem key={9} question="How do I join your activities?">
@@ -149,27 +140,35 @@ const Accordion = () => {
         </p>
         <ul>
           <li>
-            Click <a href="/">here</a> to host your own event.
+            Click <a href="/contact">here</a> to host your own event.
           </li>
           <li>
-            Click <a href="/">here</a> to join as an intern.
+            Click{" "}
+            <a href="https://thehub.io/jobs?search=the%20shortcut&countryCode=FI">
+              here
+            </a>{" "}
+            to join as an intern if there are open position.
           </li>
           <li>
-            Click <a href="/">here</a> to attend our training programs.
+            Click <a href="/events">here</a> to attend our training programs.
           </li>
           <li>
-            Click <a href="/">here</a> for our latest job opportunities.
+            Click{" "}
+            <a href="https://thehub.io/jobs?search=the%20shortcut&countryCode=FI">
+              here
+            </a>{" "}
+            for our latest job opportunities.
           </li>
         </ul>
       </AccItem>
-      <AccItem key={10} question="Can I come to the office and say hi?">
+      {/* <AccItem key={10} question="Can I come to the office and say hi?">
         <p>
           Of course! You’ll find us at Maria 01 startup campus at
           Lapinlahdenkatu 16 (you’ll find us at entrance 15B in the courtyard).
           We’ve got a pretty cool lab space for the community and the team — we
           even have three dishwashers! :-)
         </p>
-      </AccItem>
+      </AccItem> */}
       <AccItem
         key={11}
         question="How can I volunteer at The Shortcut events and programs?"
@@ -206,7 +205,7 @@ const Accordion = () => {
           for using our space on a regular basis. We welcome recruiters and
           startup doers to also visit and network with our talent; that’s how
           serendipitous encounters can take place. Just drop us a line using our{" "}
-          <a href="/">contact form</a>.{" "}
+          <a href="/contact">contact form</a>.{" "}
         </p>
       </AccItem>
       <AccItem
@@ -219,13 +218,14 @@ const Accordion = () => {
           community space where you can come to work or have small group
           meetings but we cannot guarantee work desks, meeting rooms or other
           facilities. Inquiries about using our lab space can be made using our{" "}
-          <a href="/">contact form</a>.{" "}
+          <a href="/contact">contact form</a>.{" "}
         </p>
       </AccItem>
       <AccItem key={14} question="Can I be a coach or a workshop giver?">
         <p>
-          Definitely! Just get in touch with someone on our team, or drop us a
-          line using our <a href="/">contact form</a>.{" "}
+          Always happy to have generous people willing to give back! Just get in
+          touch with someone on our team, or drop us a line using our{" "}
+          <a href="/contact">contact form</a>.{" "}
         </p>
       </AccItem>
       <AccItem
@@ -298,6 +298,22 @@ const Accordion = () => {
         question="Can I send a job application to you? Are you hiring now?"
       >
         <p>Thank you for your interest in being part of our team!</p>
+        <p>
+          Our hiring process is on hold at the moment, please stay tuned. We are
+          currently looking for new additions to our team and welcome interns in
+          several areas. Full disclosure: our internships are unfortunately
+          unpaid. Having said that, they are the best way for people like you
+          who feel would not be given a chance to showcase what you are capable
+          of or given access to networks when you don’t have alumni networks,
+          previous experience in Finland or belong to relevant groups. Doing an
+          internship with us is a great way to test and showcase your skills,
+          open up your opportunities while contributing to the mission of The
+          Shortcut - click{" "}
+          <a href="https://thehub.io/jobs?search=the%20shortcut&countryCode=FI">
+            here
+          </a>{" "}
+          to apply!
+        </p>
       </AccItem>
     </div>
   );
