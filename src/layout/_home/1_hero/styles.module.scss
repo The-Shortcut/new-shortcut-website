@@ -2,19 +2,18 @@
 
 .hero {
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   background-image: linear-gradient(
       rgba(253, 200, 30, 0.1),
       rgba(0, 0, 0, 0.25)
     ),
-    url("../../../assets/photos/hero-img2.jpg");
-  // background-position: center;
+    url("../../../assets/photos/hero-img.jpg");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
   @include phone {
     background-position: center;
-    height: 80vh;
   }
 
   > div {
