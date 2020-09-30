@@ -3,7 +3,7 @@
 .container {
   @include container;
   @include page-transitions;
-  padding: 5em 0 0 0;
+  padding: 100px 0 0 0;
 
   // Header
   header {
