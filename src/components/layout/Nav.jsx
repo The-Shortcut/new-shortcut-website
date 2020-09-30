@@ -13,7 +13,7 @@ const Nav = () => {
 
   const toggleSubnav = (e) => {
     const { id, nextSibling } = e.target;
-    if (id === "about" || id === "resources") {
+    if (id === "about" || id ==="events" || id === "resources") {
       setSubnavActive(!subnavActive);
       !subnavActive
         ? nextSibling.classList.add("active")
@@ -42,6 +42,7 @@ const Nav = () => {
             </Link>
           </div>
         </div>
+        
         <nav>
           <ul className={navActive ? "menu active" : "menu"}>
             <li className="menu-item">
