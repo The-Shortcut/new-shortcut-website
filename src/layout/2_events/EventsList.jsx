@@ -36,7 +36,7 @@ const EventsList = () => {
   }
   return <div className={css.list}>
     {filteredEvents?.length === 0 
-      ? <p className="">No matching events... </p> 
+      ? <p className={css.noResult}>No matching events... </p> 
       : <>
          <Pagination />
           {currentItems?.map((event, index) => (

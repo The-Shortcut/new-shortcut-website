@@ -152,6 +152,22 @@
     width: 100%;
     margin-top: 5%;
 
+    // No results
+    .noResult {
+      font-family: $medium;
+      font-size: 1.25rem;
+      display: flex;
+      justify-content: center;        
+
+      @include phone {
+        font-size: 1.15rem;
+      }
+
+      @include big-desktop {
+        font-size: 1.5rem;
+      }
+    }
+
     // Event container
     .event {
       width: 100%;
