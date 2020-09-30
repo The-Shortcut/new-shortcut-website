@@ -6,8 +6,8 @@ import "react-notifications-component/dist/theme.css";
 
 const helper = (email, message, subject, name, API, invalid) => {
   if (name.length > 0 && message.length > 0 && email.length > 0 && !invalid) {
-    console.log("clicked submit btn");
-    console.log("data is ", name, email, subject, message);
+    // console.log("clicked submit btn");
+    // console.log("data is ", name, email, subject, message);
 
     let data = new FormData();
     data.append("your-name", name);
@@ -24,7 +24,7 @@ const helper = (email, message, subject, name, API, invalid) => {
 
     axios(config)
       .then(function (response) {
-        console.log(JSON.stringify(response.data));
+        // console.log(JSON.stringify(response.data));
         store.addNotification({
           title: `Thank you ${name}.`,
           message: "Your message has now been sent.",
@@ -44,7 +44,7 @@ const helper = (email, message, subject, name, API, invalid) => {
       });
     return true;
   } else {
-    console.log("falling in else");
+    // console.log("falling in else");
     store.addNotification({
       title: "Warning",
       message: "Please check if you have entered the right information!",

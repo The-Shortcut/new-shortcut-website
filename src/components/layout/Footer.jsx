@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { store } from "react-notifications-component";
+import "react-notifications-component/dist/theme.css";
 
 // Styles
 import css from "./Footer.module.scss";
@@ -11,7 +13,7 @@ const Footer = () => {
 
   const handleEmail = (e) => {
     e.preventDefault();
-    console.log("Email entered is ", email);
+    // console.log("Email entered is ", email);
     let config = {
       method: "post",
       url: "https://api.sendinblue.com/v3/contacts",
@@ -25,11 +27,31 @@ const Footer = () => {
     axios(config)
       .then(function (response) {
         console.log(JSON.stringify(response.data));
+        store.addNotification({
+          message: "Thank you for subscribing",
+          type: "success",
+          insert: "center",
+          container: "center",
+          dismiss: {
+            duration: 2000,
+            showIcon: true,
+          },
+        });
         document.getElementById("email").value = "";
         setEmail("");
       })
       .catch(function (error) {
         console.log(error);
+        store.addNotification({
+          message: "Subscribe with a different email",
+          type: "warning",
+          insert: "center",
+          container: "center",
+          dismiss: {
+            duration: 3000,
+            showIcon: true,
+          },
+        });
       });
   };
   return (
