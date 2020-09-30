@@ -167,7 +167,7 @@ const Footer = () => {
         </section>
 
         <section>
-          <div>
+          <div id="newsletter-form">
             <p className={css.text}>
               We equip talent with the skills and networks they need to become
               an entrepreneur or work for a high-growth company/startup.
