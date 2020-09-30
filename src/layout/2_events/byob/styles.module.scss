@@ -1,0 +1,126 @@
+@import "../../index.scss";
+
+.container {
+  @include container;
+  padding: 100px 0 50px;
+
+  header {
+    display: flex;
+    align-items: center;
+    padding: 25px 0 50px;
+
+    h2 {
+      font-family: $medium;
+      font-size: 3rem;
+
+      @include phone {
+        font-size: 2rem;
+      }
+
+      @include big-desktop {
+        font-size: 3.5rem;
+      }
+    }
+  }
+}
+
+.team,
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px 0;
+
+  h3 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0 0 50px;
+    font-family: "CircularStd-Medium", sans-serif;
+    font-size: 2rem;
+  }
+}
+
+.board {
+  .links {
+    a:first-child {
+      display: none;
+    }
+  }
+}
+
+.profile,
+i {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #dcdcdc;
+  box-shadow: 5px 5px 5px #f3f3f3;
+  border-radius: 5px;
+  margin: 25px 10px;
+  overflow: hidden;
+
+  @include phone {
+    width: 90%;
+    margin: 25px auto;
+    max-width: 17em;
+  }
+
+  @include tablet {
+    width: 30%;
+    max-width: 22em;
+  }
+
+  @include tablet-landscape {
+    width: 22.5%;
+  }
+
+  @include desktop {
+    width: 22.5%;
+  }
+
+  @include big-desktop {
+    width: 18%;
+  }
+
+  .info {
+    padding: 10px;
+  }
+
+  h4 {
+    font-family: "CircularStd-Medium", sans-serif;
+  }
+
+  h4,
+  p {
+    font-size: 1rem;
+    line-height: 1;
+  }
+
+  .links {
+    display: flex;
+    align-items: flex-start;
+    padding: 0;
+    > a {
+      margin-right: 15px;
+      // Letter icon
+      &:first-child {
+        width: 30px;
+      }
+
+      // Linkedin icon
+      &:nth-child(2) {
+        width: 20px;
+      }
+    }
+  }
+}
+
+i {
+  border: none;
+  box-shadow: none;
+  border-radius: none;
+
+  @include phone {
+    display: none;
+  }
+}

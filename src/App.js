@@ -32,6 +32,7 @@ import ForPartners from "./layout/4_ForPartners";
 
 // Events
 import Events from "./layout/2_events/index.jsx";
+import Byob from "./layout/2_events/byob/index.jsx"
 
 // Footer
 import PrivacyPolicies from "./layout/docs/PrivacyPolicies";
@@ -62,6 +63,7 @@ export class App extends Component {
 
           {/* All events */}
           <Route path="/events" component={Events} />
+          <Route path="/byob" component={Byob} />
 
           {/* Resources */}
           <Route path="/media" component={ForMedia} />

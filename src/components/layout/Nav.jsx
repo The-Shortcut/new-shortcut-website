@@ -111,10 +111,45 @@ const Nav = () => {
               </ul>
             </li>
 
+
             <li className="menu-item" id="events">
-              <Link className="btn" to="/events" onClick={toggleNav}>
+              <p
+                className="btn"
+                href="#events"
+                id="events"
+                onClick={(e) => toggleSubnav(e)}
+              >
                 Events
-              </Link>
+              </p>
+              <ul className="submenu">
+                <Link
+                    to="/events"
+                    className="submenu-item"
+                    onClick={toggleNav}
+                  >
+                    <div>
+                      <img
+                        src={require("../../assets/icons/nav/events.png")}
+                        alt="icon"
+                      />
+                    </div>
+                    <span>All Events</span>
+                  </Link>
+
+                  <Link
+                    to="/byob"
+                    className="submenu-item"
+                    onClick={toggleNav}
+                  >
+                    <div>
+                      <img
+                        src={require("../../assets/icons/nav/byob-icon.png")}
+                        alt="icon"
+                      />
+                    </div>
+                    <span>BYOB</span>
+                  </Link>
+              </ul>
             </li>
 
             <li className="menu-item" id="resources">
