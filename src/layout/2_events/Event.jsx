@@ -17,6 +17,7 @@ const Event = ({ event }) => {
   const venue = event.venue_id;
   const link = event.url;
   const img = event.logo;
+  const status = event.status;
 
   // date
   const formatDate = (e) => {
@@ -95,11 +96,7 @@ const Event = ({ event }) => {
           <p>{formatDate(start)}</p>
           <p>{formatMonth(start)}</p>
           <div>
-            {img !== null ? (
-              <img src={img.original.url} alt="" />
-            ) : (
-              <img src={defaultImage} alt="" />
-            )}
+            <img src={img ? img.original.url : defaultImage} alt="" />
           </div>
         </aside>
       ) : (
@@ -110,11 +107,7 @@ const Event = ({ event }) => {
           <p>{formatDate(end)}</p>
           <p>{formatMonth(end)}</p>
           <div>
-            {img !== null ? (
-              <img src={img.original.url} alt="" />
-            ) : (
-              <img src={defaultImage} alt="" />
-            )}
+              <img src={img ? img.original.url : defaultImage} alt="" />
           </div>
         </aside>
       )}
@@ -137,6 +130,7 @@ const Event = ({ event }) => {
           </span>{" "}
         </p>
         <p className={css.title}>{title}</p>
+        <p className={css.status}>{status}</p>
         <p className={css.summary}>{formatText(summary)}</p>
         {venue ? (
           <Venue id={venue} />
@@ -144,7 +138,7 @@ const Event = ({ event }) => {
           <p className={css.online}>{online ? "Online" : null}</p>
         )}
         <a href={link} target="_blank" rel="noopener noreferrer">
-          Learn more +
+          {(status === 'completed' || status === 'canceled') ? "Learn more +" : "Register" }
         </a>
       </div>
     </div>
