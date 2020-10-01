@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Axios from "axios";
+import axios from "axios";
 import { Link } from "react-router-dom";
 import moment from "moment";
 import SkeletonList from "../../../components/functional/SkeletonList";
@@ -15,23 +15,27 @@ const Events = () => {
   const [loading, setLoading] = useState(true);
   const API_TOKEN = `${process.env.REACT_APP_EVENT_API_TOKEN}`;
 
+  const getEvents = async () => {
+    const eventsResponse = await axios.get(
+      `https://www.eventbriteapi.com/v3/organizations/171778300477/events/?order_by=start_desc&token=${API_TOKEN}`
+    );
+    const draftsResponse = await axios.get(
+      `https://www.eventbriteapi.com/v3/organizations/171778300477/events/?order_by=start_desc&status=draft&token=${API_TOKEN}`
+    );
+    const response = eventsResponse.data.events.filter(
+      (event) => !draftsResponse.data.events.find(({ id }) => event.id === id)
+      );
+      
+      console.log(response)
+      setEvents(response);
+      setLoading(false);
+      return response;
+
+  };
+
   useEffect(() => {
     getEvents(); // eslint-disable-next-line
   }, []);
-
-  const getEvents = async () => {
-    await Axios.get(
-      `https://www.eventbriteapi.com/v3/organizations/171778300477/events/?order_by=start_desc&token=${API_TOKEN}`
-    )
-      .then((response) => {
-        console.log(response.status);
-        setEvents(response.data.events);
-        setLoading(false);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  };
 
   return (
     <div className={css.container}>
