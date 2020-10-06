@@ -1,4 +1,3 @@
-import React from "react";
 import axios from "axios";
 import FormData from "form-data";
 import { store } from "react-notifications-component";

@@ -26,6 +26,7 @@
     "react-icons": "^3.10.0",
     "react-loading-skeleton": "^2.0.1",
     "react-map-gl": "^5.2.3",
+    "react-modal": "^3.11.2",
     "react-notifications-component": "^2.4.1",
     "react-redux": "^7.2.1",
     "react-router-dom": "^5.1.2",

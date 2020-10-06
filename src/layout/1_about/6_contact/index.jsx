@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ReactNotification, { store } from "react-notifications-component";
+import ReactNotification from "react-notifications-component";
 import helper from "./handlerFunction";
 // Styles
 import css from "./styles.module.scss";

@@ -77,6 +77,19 @@ const Nav = () => {
                   </div>
                   <span>Success Stories</span>
                 </Link>
+                <Link
+                  to="/talent-pool"
+                  className="submenu-item"
+                  onClick={toggleNav}
+                >
+                  <div>
+                    <img
+                      src={require("../../assets/icons/icon_Intern.png")}
+                      alt="icon"
+                    />
+                  </div>
+                  <span>Talent Pool</span>
+                </Link>
                 <Link to="/team" className="submenu-item" onClick={toggleNav}>
                   <div>
                     <img

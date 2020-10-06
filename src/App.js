@@ -22,6 +22,7 @@ import Code from "./layout/1_about/4_code/index.jsx";
 import Values from "./layout/1_about/7_values/index.jsx"
 import FAQ from "./layout/1_about/5_faq/index.jsx";
 import Contact from "./layout/1_about/6_contact/index.jsx";
+import TalentPool from './layout/1_about/8_talent_pool/index.jsx';
 
 // Resources
 import ForMedia from "./layout/3_resources/3_for_media/index.jsx";
@@ -57,6 +58,7 @@ export class App extends Component {
           {/* About */}
           <Route path="/about" component={AboutUs} />
           <Route path="/success" component={SuccessStories} />
+          <Route path="/talent-pool" component={TalentPool} />
           <Route path="/team" component={Team} />
           <Route path="/faq" component={FAQ} />
           <Route path="/contact" component={Contact} />

@@ -4,6 +4,8 @@ import axios from "axios";
 import { store } from "react-notifications-component";
 import "react-notifications-component/dist/theme.css";
 
+import helper from "./helperFunctions";
+import ReactNotification from "react-notifications-component";
 // Styles
 import css from "./Footer.module.scss";
 
@@ -53,6 +55,8 @@ const Footer = () => {
           },
         });
       });
+    console.log("Email entered is ", email);
+    helper(API_TOKEN, email, setEmail);
   };
   return (
     <footer className={css.footer}>
@@ -187,7 +191,7 @@ const Footer = () => {
             © 2020, The Shortcut. All rights reserved.
           </p>
         </section>
-
+        <ReactNotification />
         <section>
           <div id="newsletter-subscription">
             <p className={css.text}>
