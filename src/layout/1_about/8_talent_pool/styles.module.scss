@@ -35,7 +35,7 @@
 
     .talent {
       display: flex;
-      flex-direction: column;
+
       border: 1px solid #dcdcdc;
       box-shadow: 5px 5px 5px #f3f3f3;
       border-radius: 5px;
@@ -63,43 +63,97 @@
       @include big-desktop {
         width: 18%;
       }
-    }
-    .info {
-      padding: 10px;
-    }
-
-    h4 {
-      font-family: "CircularStd-Medium", sans-serif;
-    }
-
-    h4,
-    p {
-      font-size: 1rem;
-      line-height: 1;
-    }
-
-    .links {
-      display: flex;
-      align-items: flex-start;
-      padding: 0;
-      > a {
-        margin-right: 15px;
-        // Letter icon
-        &:first-child {
-          width: 30px;
+      .talentCard {
+        .info {
+          padding: 10px;
         }
 
-        // Linkedin icon
-        &:nth-child(2) {
-          width: 20px;
+        h4 {
+          font-family: "CircularStd-Medium", sans-serif;
+        }
+
+        h4,
+        p {
+          font-size: 1rem;
+          line-height: 1;
+        }
+
+        .links {
+          display: flex;
+          align-items: flex-start;
+          padding: 0;
+          > a {
+            margin-right: 15px;
+            // Letter icon
+            &:first-child {
+              width: 30px;
+            }
+
+            // Linkedin icon
+            &:nth-child(2) {
+              width: 20px;
+            }
+          }
+        }
+        img {
+          width: 100%;
         }
       }
     }
-    img {
-      width: 100%;
-    }
   }
 }
+.modalContainer {
+  width: 80vw;
+  height: 60vh;
+  text-align: center;
+  .modalClose {
+    padding: 20px;
+    float: right;
+    border: none;
+    background-color: none;
+    // Box border/shadow effect
+    border: 1px solid #e5e5e5;
+    border-radius: 0.25rem;
+    box-shadow: 5px 5px 50px #f5f5f5;
+    transition: box-shadow 0.5s ease;
+    &:hover {
+      box-shadow: 0 2px 14px #d3d3d3;
+      border: 1px solid $yellow;
+    }
+  }
+  .modalName {
+    font-family: "CircularStd-Medium", sans-serif;
+    font-size: 2rem;
+    line-height: 1;
+    margin-top: 20px;
+  }
+  .modalLinks {
+    padding: 20px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+
+    > a {
+      margin: 15px;
+      // Letter icon
+      &:first-child {
+        width: 40px;
+      }
+
+      // Linkedin icon
+      &:nth-child(2) {
+        width: 30px;
+      }
+    }
+  }
+  .modalContent {
+    margin-top: 50px 3px;
+    padding: 10px;
+    font-size: 1.5rem;
+    line-height: 1.6;
+  }
+}
+
 .searchContainer {
   margin: 0;
   padding: 0;
@@ -114,20 +168,11 @@
     padding: 3px 10px;
     flex-direction: column;
   }
-  // Box border/shadow effect
-  // border: 1px solid #e5e5e5;
-  // border-radius: 0.25rem;
-  // box-shadow: 5px 5px 50px #f5f5f5;
-  // transition: box-shadow 0.5s ease;
-  // &:hover {
-  //   box-shadow: 0 2px 14px #d3d3d3;
-  //   border: 1px solid $yellow;
-  // }
 
   input {
     width: 100%;
     font-family: $medium;
-    // font-size: 1.25rem;
+
     border: none;
     padding: 0 10px;
     outline: none;
@@ -142,7 +187,7 @@
 .select {
   flex-basis: 30%;
   font-family: $medium;
-  // font-size: calc(8px + 1vw);
+
   margin: 0 10px 10px 0;
   padding: 5px 10px;
   cursor: pointer;
@@ -172,5 +217,12 @@
   &:hover {
     box-shadow: 0 2px 14px #d3d3d3;
     border: 1px solid $yellow;
+  }
+}
+
+.paginate {
+  margin: 40px 0px;
+  @include phone {
+    margin-top: 70px;
   }
 }

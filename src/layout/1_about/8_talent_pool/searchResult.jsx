@@ -1,7 +1,5 @@
 const searchResult = (search_value, talents, type) => {
-  console.log("within search result, talnets val ", talents);
   try {
-    // const search_value = await searchValue;
     const final = [];
     if (type === "All") {
       talents.forEach((each) => {
@@ -32,8 +30,7 @@ const searchResult = (search_value, talents, type) => {
         }
       });
     }
-    console.log("final is ", final);
-    console.log("takents array ", talents);
+
     return [...final];
   } catch (err) {
     console.log(err);

@@ -1,4 +1,6 @@
 import React from "react";
+// // Styles
+import css from "./styles.module.scss";
 
 const Pagination = ({
   perPage,
@@ -6,51 +8,41 @@ const Pagination = ({
   paginate,
   currentPage,
   previousButton,
-  nextButton
+  nextButton,
 }) => {
   const pageNumbers = [];
   for (let i = 1; i <= Math.ceil(totalItems / perPage); i++) {
     pageNumbers.push(i);
   }
 
-  const pag = pageNumbers.map(p => {
-    return (
-      <li key={p} className='page-item'>
-        <button className='page-link' onClick={paginate(p)}>
-          {p}
-        </button>
-      </li>
-    );
-  });
-
   return pageNumbers.length <= 1 ? null : (
-    <React.Fragment>
-      <div className='pagination-container row justify-content-center align-items-center'>
+    <div className={css.paginate}>
+      <div className="pagination-container row justify-content-center align-items-center">
         <ul className="pagination max-size=10">
-            <li className='page-item'>
-              <button className='page-link' onClick={()=>paginate(pageNumbers[0])}>
+          <li className="page-item">
+            <button
+              className="page-link"
+              onClick={() => paginate(pageNumbers[0])}
+            >
               {pageNumbers[0]}
-              </button>
-            </li>
-            <li className={`page-item${currentPage === 1 ? " disabled" : ""}`}>
+            </button>
+          </li>
+          <li className={`page-item${currentPage === 1 ? " disabled" : ""}`}>
             <button className="page-link" onClick={previousButton} href="#">
               {"<"}
             </button>
           </li>
-          {pageNumbers.map((number) => <li
+          {pageNumbers.map((number) => (
+            <li
               key={number}
               className={`page-item${currentPage === number ? "-active" : ""}`}
             >
-              <button
-                
-                href="#"
-                className="page-link"
-              >
+              <button href="#" className="page-link">
                 {number}
               </button>
             </li>
-          )}
-          
+          ))}
+
           <li
             className={`page-item${
               currentPage === pageNumbers[pageNumbers.length - 1]
@@ -71,12 +63,9 @@ const Pagination = ({
               {pageNumbers[pageNumbers.length - 1]}
             </button>
           </li>
-
-         
         </ul>
       </div>
-      
-    </React.Fragment>
+    </div>
   );
 };
 

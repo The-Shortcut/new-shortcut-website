@@ -4,41 +4,39 @@ import SearchBar from "./SearchBar";
 import searchResult from "./searchResult";
 import NoMatch from "./NoMatch";
 import Pagination from "./Pagination";
-import SkeletonList from "../../../components/functional/SkeletonList";
 import axios from "axios";
 
 // // Styles
 import css from "./styles.module.scss";
+import SkeletonTalents from "../../../components/functional/SkeletonTalents";
 
 const TalentList = () => {
   const [talents, setTalents] = useState("");
   const [mainData, setMainData] = useState("");
-  const [filteredTalent, setFilteredTalent] = useState("");
+
   const [noMatch, setNoMatch] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const [perPage, setPerPage] = useState(12);
+  const [perPage, setPerPage] = useState(10);
   let dataFromStore;
   let results;
   useEffect(() => {
     helper();
   }, []);
-  // const lastItem = currentPage * perPage;
-  // const firstItem = lastItem - perPage;
-  // let currentItems;
+  const lastItem = currentPage * perPage;
+  const firstItem = lastItem - perPage;
+  let currentItems;
 
-  // const paginate = (number) => setCurrentPage(number);
+  const paginate = (number) => setCurrentPage(number);
 
-  // const previousButton = () => {
-  //   console.log("current page is ", currentPage);
-  //   const toPage = currentPage - 1;
-  //   setCurrentPage(toPage <= 1 ? 1 : toPage);
-  // };
+  const previousButton = () => {
+    const toPage = currentPage - 1;
+    setCurrentPage(toPage <= 1 ? 1 : toPage);
+  };
 
-  // const nextButton = () => {
-  //   console.log("current page is ", currentPage);
-  //   const toPage = currentPage + 1;
-  //   setCurrentPage(toPage);
-  // };
+  const nextButton = () => {
+    const toPage = currentPage + 1;
+    setCurrentPage(toPage);
+  };
   const helper = async () => {
     const talentsData = await axios.get(
       `https://theshortcut.org/wp-json/wp/v2/talents?per_page=100&_embed`
@@ -53,7 +51,7 @@ const TalentList = () => {
         arrayTalents.linkedInProf = i.linkedin_profile;
         arrayTalents.email = i.email;
         arrayTalents.hashtags = i.hashtags;
-        arrayTalents.content = i.content;
+        arrayTalents.content = i.content.rendered;
         arrayTalents.image = i._embedded["wp:featuredmedia"]["0"].source_url;
         return arrayTalents;
       });
@@ -62,31 +60,26 @@ const TalentList = () => {
   };
 
   const searchProcess = async (searchValue, type, data) => {
-    console.log("data is ", data, "search vaue ", searchValue, "type ", type);
     results = await searchResult(searchValue, data, type);
     if (results.length < 1) {
       return setNoMatch(
         "There is no match, try other keywords or change the filter"
       );
     }
-    console.log("resukt is ", results);
+
     setNoMatch(null);
     setTalents(results);
   };
 
-  // if (results) {
-  //   currentItems = results.slice(firstItem, lastItem);
-  //   console.log("currentItems from res", currentItems);
-  // } else {
-  //   currentItems = talents.slice(firstItem, lastItem);
-  //   console.log("currentItems from ds", currentItems);
-  // }
+  if (results) {
+    currentItems = results.slice(firstItem, lastItem);
+  } else {
+    currentItems = talents.slice(firstItem, lastItem);
+  }
   return talents ? (
     <>
-      {/* {!filteredTalent ? (
-        <SearchBar searchProcess={searchProcess} talents={talents} />
-      ) : (
-        <SearchBar searchProcess={searchProcess} talents={filteredTalent} />
+      {talents && (
+        <SearchBar searchProcess={searchProcess} talents={mainData} />
       )}
       {noMatch ? (
         <NoMatch message={noMatch} />
@@ -100,12 +93,12 @@ const TalentList = () => {
             previousButton={previousButton}
             nextButton={nextButton}
           />
-
           <div className={css.list}>
             {currentItems &&
-              currentItems.map((talent, i) => <Talent key={i} data={talent} />)}
+              currentItems.map((talent, i) => (
+                <Talent key={i} data={talent} />
+              ))}{" "}
           </div>
-
           <Pagination
             perPage={perPage}
             totalItems={results ? results.length : talents.length}
@@ -115,21 +108,10 @@ const TalentList = () => {
             nextButton={nextButton}
           />
         </React.Fragment>
-      )} */}
-      {talents && (
-        <SearchBar searchProcess={searchProcess} talents={mainData} />
-      )}
-      {noMatch ? (
-        <NoMatch message={noMatch} />
-      ) : (
-        <div className={css.list}>
-          {talents &&
-            talents.map((talent, i) => <Talent key={i} data={talent} />)}{" "}
-        </div>
       )}
     </>
   ) : (
-    <SkeletonList />
+    <SkeletonTalents />
   );
 };
 
