@@ -126,7 +126,7 @@
         display: flex;
         flex-wrap: wrap;
 
-        padding: 50px 0;
+        //padding: 50px 0;
 
         .talent {
           display: flex;
@@ -194,62 +194,60 @@
               width: 100%;
             }
           }
-          .modal {
-            .modalContainer {
-              width: 80vw;
-              height: 60vh;
-              text-align: center;
-
-              .modalClose {
-                padding: 20px;
-                float: right;
-                border: none;
-                background-color: none;
-                // Box border/shadow effect
-                border: 1px solid #e5e5e5;
-                border-radius: 0.25rem;
-                box-shadow: 5px 5px 50px #f5f5f5;
-                transition: box-shadow 0.5s ease;
-                &:hover {
-                  box-shadow: 0 2px 14px #d3d3d3;
-                  border: 1px solid $yellow;
-                }
-              }
-              .modalName {
-                font-family: "CircularStd-Medium", sans-serif;
-                font-size: 2rem;
-                line-height: 1;
-                margin-top: 20px;
-              }
-              .modalLinks {
-                padding: 20px;
-                margin-top: 10px;
-                display: flex;
-                align-items: center;
-
-                > a {
-                  margin: 15px;
-                  // Letter icon
-                  .email {
-                    width: 40px;
-                  }
-
-                  // Linkedin icon
-                  .linkedin {
-                    width: 30px;
-                  }
-                }
-              }
-              .modalContent {
-                margin-top: 50px 3px;
-                padding: 10px;
-                font-size: 1.5rem;
-                line-height: 1.6;
-              }
-            }
-          }
         }
       }
     }
+  }
+}
+.modalContainer {
+  width: 80vw;
+  height: 60vh;
+  text-align: center;
+
+  .modalClose {
+    padding: 20px;
+    float: right;
+    border: none;
+    background-color: none;
+    // Box border/shadow effect
+    border: 1px solid #e5e5e5;
+    border-radius: 0.25rem;
+    box-shadow: 5px 5px 50px #f5f5f5;
+    transition: box-shadow 0.5s ease;
+    &:hover {
+      box-shadow: 0 2px 14px #d3d3d3;
+      border: 1px solid $yellow;
+    }
+  }
+  .modalName {
+    font-family: "CircularStd-Medium", sans-serif;
+    font-size: 2rem;
+    line-height: 1;
+    margin-top: 20px;
+  }
+  .modalLinks {
+    padding: 20px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+
+    > a {
+      margin: 15px;
+      // Letter icon
+      .email {
+        width: 40px;
+      }
+
+      // Linkedin icon
+      .linkedin {
+        width: 30px;
+      }
+    }
+  }
+  .modalContent {
+    margin-top: 50px 3px;
+    padding: 10px;
+    font-size: 1.5rem;
+    line-height: 1.6;
   }
 }
