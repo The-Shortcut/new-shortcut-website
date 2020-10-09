@@ -64,20 +64,20 @@ const Talent = ({ data }) => {
             </button>
             <h4 className={css.modalName}>{data.name}</h4>
             <div className={css.modalLinks}>
-              {/* <a href={`mailto: ${data.email}`} target="_blank">
-              <img
-                src="https://theshortcut.org/wp-content/uploads/2019/10/email-icon-01.png"
-                alt="mail-icon"
-                className={css.email}
-              ></img>
-            </a>
-            <a href={data.linkedInProf} target="_blank">
-              <img
-                src="https://theshortcut.org/wp-content/uploads/2019/10/linkedin-2.png"
-                alt="linkedin-icon"
-                className={css.linkedin}
-              />
-            </a> */}
+              <a href={`mailto: ${data.email}`} target="_blank">
+                <img
+                  src="https://theshortcut.org/wp-content/uploads/2019/10/email-icon-01.png"
+                  alt="mail-icon"
+                  className={css.email}
+                ></img>
+              </a>
+              <a href={data.linkedInProf} target="_blank">
+                <img
+                  src="https://theshortcut.org/wp-content/uploads/2019/10/linkedin-2.png"
+                  alt="linkedin-icon"
+                  className={css.linkedin}
+                />
+              </a>
             </div>
 
             <div className={css.modalContent}>{striptags(data.content)}</div>
