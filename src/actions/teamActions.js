@@ -1,4 +1,4 @@
-import { INIT_TEAM_MEMBERS, INIT_BOARD_MEMBERS } from './types'
+import { INIT_TEAM_MEMBERS, INIT_BOARD_MEMBERS, INIT_BYOB_SPEAKERS } from './types'
 import teamServices from '../services/teams'
 
 
@@ -20,5 +20,13 @@ export const boardMembers = () => async dispatch => {
     })
 }
 
+export const byobSpeakers = () => async dispatch => {
+    const byobSpeakers = await teamServices.getByobSpeakers()
+    
+    dispatch({
+        type: INIT_BYOB_SPEAKERS,
+        payload: byobSpeakers
+    })
+}
 
 

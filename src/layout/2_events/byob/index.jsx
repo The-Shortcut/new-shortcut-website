@@ -6,6 +6,7 @@ import "./styles.scss";
 
 // Children
 import Accordion from "./Accordion";
+import Speakers from "./Speakers";
 
 const Byob = () => {
   return (
@@ -33,10 +34,11 @@ const Byob = () => {
           Join us!
           <br />
           <a href="https://docs.google.com/forms/d/1FXzJdAgfB0d0-FOfEV1PzbpVtH8uoF2KplpZt6cqavI/viewform?edit_requested=true" target="_blank">
-            <button>Apply Now</button>
           </a>
         </p>
       </section>
+      <Speakers />  
+      <button>Apply Now</button>
 
       <h3>FAQ:</h3>
 
