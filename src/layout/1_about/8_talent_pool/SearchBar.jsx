@@ -8,13 +8,6 @@ const SearchBar = ({ talents, searchProcess }) => {
   const [keyword, setKeyword] = React.useState("");
   const [typeSelect, setTypeSelect] = React.useState("All");
 
-  // Search terms
-  const options = [
-    { value: "All", label: "All" },
-    { value: "Name", label: "Name" },
-    { value: "Content", label: "Content" },
-    { value: "Hashtags", label: "Hash Tags" },
-  ];
   const handleKeyDown = (e) => {
     console.log("in key down");
     if (e.key === "Enter" || e.target.value.length === 0) {
@@ -37,13 +30,16 @@ const SearchBar = ({ talents, searchProcess }) => {
     <div>
       <form onSubmit={handleSubmit}>
         <div className={css.searchContainer}>
-          <Select
-            className={css.select}
-            options={options}
-            onChange={(e) => setTypeSelect(e.value)}
-            placeholder="Search by"
-            defaultValue={{ label: "All", value: "All" }}
-          />
+          <select
+            name="subjects"
+            defaultValue={"All"}
+            onChange={({ target }) => setTypeSelect(target.value)}
+          >
+            <option value="All">All</option>
+            <option value="Name">Name</option>
+            <option value="Content">Content</option>
+            <option value="Hashtags">Hashtags</option>
+          </select>
           <div className={css.search}>
             <input
               type="text"
@@ -51,7 +47,9 @@ const SearchBar = ({ talents, searchProcess }) => {
               onKeyDown={handleKeyDown}
               className={css.text}
             />
-            <input type="submit" className={css.submit} value="Submit" />
+            <button type="submit" className={css.submit}>
+              Submit
+            </button>
           </div>
         </div>
       </form>

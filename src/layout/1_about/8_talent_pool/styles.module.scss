@@ -24,79 +24,176 @@
       }
     }
   }
-
-  .list {
-    width: 100%;
-    margin-top: 5%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 50px 0;
-
-    .talent {
+  .subContainer {
+    .searchContainer {
+      margin: 0;
+      padding: 0;
+      position: relative;
       display: flex;
-
-      border: 1px solid #dcdcdc;
-      box-shadow: 5px 5px 5px #f3f3f3;
-      border-radius: 5px;
-      margin: 25px 10px;
-      overflow: hidden;
+      min-width: 60vw;
+      height: 5vh;
+      width: 100%;
+      //border-width: 2;
       @include phone {
-        width: 90%;
-        margin: 25px auto;
-        max-width: 17em;
+        min-width: 80vw;
+        padding: 3px 10px;
+        flex-direction: column;
       }
 
-      @include tablet {
-        width: 30%;
-        max-width: 22em;
-      }
+      .search {
+        display: flex;
 
-      @include tablet-landscape {
-        width: 22.5%;
-      }
-
-      @include desktop {
-        width: 22.5%;
-      }
-
-      @include big-desktop {
-        width: 18%;
-      }
-      .talentCard {
-        .info {
-          padding: 10px;
-        }
-
-        h4 {
-          font-family: "CircularStd-Medium", sans-serif;
-        }
-
-        h4,
-        p {
-          font-size: 1rem;
-          line-height: 1;
-        }
-
-        .links {
-          display: flex;
-          align-items: flex-start;
-          padding: 0;
-          > a {
-            margin-right: 15px;
-            // Letter icon
-            &:first-child {
-              width: 30px;
-            }
-
-            // Linkedin icon
-            &:nth-child(2) {
-              width: 20px;
-            }
+        flex-direction: row;
+        .text {
+          margin-right: 10px;
+          font-size: 1.25rem;
+          padding: 10px 10px;
+          outline: none;
+          font-family: $medium;
+          flex: 1;
+          &::placeholder {
+            font-family: $book;
+            color: gray;
+          }
+          border: 1px solid #e5e5e5;
+          border-radius: 0.25rem;
+          box-shadow: 5px 5px 50px #f5f5f5;
+          transition: box-shadow 0.5s ease;
+          &:hover {
+            box-shadow: 0 2px 14px #d3d3d3;
+            border: 1px solid $yellow;
           }
         }
-        img {
-          width: 100%;
+        .submit {
+          width: 125px;
+          background: #e5e5e5;
+          border: 1px solid #e5e5e5;
+          border-radius: 10px;
+          font-family: $book;
+          font-size: 1.25rem;
+          padding: 10px 0;
+          transition: all 0.25s ease;
+          outline: none;
+
+          &:hover {
+            background-color: $yellow;
+            border: 1px solid $yellow;
+          }
+
+          &:active {
+            background-color: white;
+            border: 1px solid $yellow;
+          }
+        }
+        @include phone {
+          display: flex;
+          flex-direction: column;
+          .submit {
+            margin-top: 10px;
+          }
+        }
+      }
+      select {
+        flex-basis: 30%;
+        width: 100%;
+        border: none;
+        border: 1px solid #e5e5e5;
+        border-radius: 2px;
+        background-color: white;
+        font-size: 1.25rem;
+        margin-right: 10px;
+        outline-color: $yellow;
+        outline-width: 1px;
+        @include phone {
+          margin-bottom: 15px;
+          padding: 10px;
+        }
+      }
+    }
+    .displayContainer {
+      @include phone {
+        margin-top: 200px;
+      }
+      .paginate {
+        margin: 40px 0px;
+        @include phone {
+          margin-top: auto;
+        }
+      }
+      .list {
+        width: 100%;
+        margin-top: 5%;
+        display: flex;
+        flex-wrap: wrap;
+
+        //padding: 50px 0;
+
+        .talent {
+          display: flex;
+
+          border: 1px solid #dcdcdc;
+          box-shadow: 5px 5px 5px #f3f3f3;
+          border-radius: 5px;
+          margin: 25px 10px;
+          overflow: hidden;
+          @include phone {
+            width: 90%;
+            margin: 25px auto;
+            max-width: 17em;
+          }
+
+          @include tablet {
+            width: 30%;
+            max-width: 22em;
+          }
+
+          @include tablet-landscape {
+            width: 22.5%;
+          }
+
+          @include desktop {
+            width: 22.5%;
+          }
+
+          @include big-desktop {
+            width: 18%;
+          }
+          .talentCard {
+            .info {
+              padding: 10px;
+            }
+
+            h4 {
+              font-family: "CircularStd-Medium", sans-serif;
+            }
+
+            h4,
+            p {
+              font-size: 1rem;
+              line-height: 1;
+            }
+
+            .links {
+              display: flex;
+              align-items: flex-start;
+              padding: 0;
+              > a {
+                margin-right: 15px;
+                // Letter icon
+                &:first-child {
+                  width: 30px;
+                }
+
+                // Linkedin icon
+                &:nth-child(2) {
+                  width: 20px;
+                }
+              }
+            }
+            img {
+              width: 100%;
+            }
+          }
         }
       }
     }
@@ -106,6 +203,7 @@
   width: 80vw;
   height: 60vh;
   text-align: center;
+
   .modalClose {
     padding: 20px;
     float: right;
@@ -136,12 +234,12 @@
     > a {
       margin: 15px;
       // Letter icon
-      &:first-child {
+      .email {
         width: 40px;
       }
 
       // Linkedin icon
-      &:nth-child(2) {
+      .linkedin {
         width: 30px;
       }
     }
@@ -151,78 +249,5 @@
     padding: 10px;
     font-size: 1.5rem;
     line-height: 1.6;
-  }
-}
-
-.searchContainer {
-  margin: 0;
-  padding: 0;
-  position: relative;
-  display: flex;
-  min-width: 60vw;
-  height: 5vh;
-  width: 100%;
-
-  @include phone {
-    min-width: 80vw;
-    padding: 3px 10px;
-    flex-direction: column;
-  }
-
-  input {
-    width: 100%;
-    font-family: $medium;
-
-    border: none;
-    padding: 0 10px;
-    outline: none;
-    flex: 1;
-    &::placeholder {
-      font-family: $book;
-      color: gray;
-    }
-  }
-}
-
-.select {
-  flex-basis: 30%;
-  font-family: $medium;
-
-  margin: 0 10px 10px 0;
-  padding: 5px 10px;
-  cursor: pointer;
-  border: none;
-  @include phone {
-    font-size: 1rem;
-    padding: 0px;
-  }
-}
-.search {
-  display: flex;
-  padding: 10px 0px;
-  flex-direction: row;
-  .text {
-    flex-basis: 70%;
-  }
-  .submit {
-    height: 100%;
-    &:hover {
-      background-color: $yellow;
-    }
-  }
-  border: 1px solid #e5e5e5;
-  border-radius: 0.25rem;
-  box-shadow: 5px 5px 50px #f5f5f5;
-  transition: box-shadow 0.5s ease;
-  &:hover {
-    box-shadow: 0 2px 14px #d3d3d3;
-    border: 1px solid $yellow;
-  }
-}
-
-.paginate {
-  margin: 40px 0px;
-  @include phone {
-    margin-top: 70px;
   }
 }

@@ -77,14 +77,14 @@ const TalentList = () => {
     currentItems = talents.slice(firstItem, lastItem);
   }
   return talents ? (
-    <>
+    <div className={css.subContainer}>
       {talents && (
         <SearchBar searchProcess={searchProcess} talents={mainData} />
       )}
       {noMatch ? (
         <NoMatch message={noMatch} />
       ) : (
-        <React.Fragment>
+        <div className={css.displayContainer}>
           <Pagination
             perPage={perPage}
             totalItems={results ? results.length : talents.length}
@@ -107,9 +107,9 @@ const TalentList = () => {
             previousButton={previousButton}
             nextButton={nextButton}
           />
-        </React.Fragment>
+        </div>
       )}
-    </>
+    </div>
   ) : (
     <SkeletonTalents />
   );
