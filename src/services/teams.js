@@ -11,7 +11,13 @@ const getBoardMembers = async() => {
     return response.data
 }
 
+const getByobSpeakers = async() => {
+    const response = await axios.get('https://theshortcut.org/wp-json/wp/v2/byob_speakers/?per_page=100')
+    return response.data
+}
+
 export default {
     getTeamMembers,
-    getBoardMembers
+    getBoardMembers,
+    getByobSpeakers
 }
