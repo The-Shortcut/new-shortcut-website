@@ -4,10 +4,10 @@ import ReactModal from "react-modal";
 import css from "./styles.module.scss";
 import { MdClose } from "react-icons/md";
 import striptags from "striptags";
+import he from "he";
 
 const Talent = ({ data }) => {
   const [modalIsOpen, setIsOpen] = React.useState(false);
-  const [resultData, setResultData] = useState("");
   const openModal = () => {
     setIsOpen(true);
   };
@@ -80,7 +80,9 @@ const Talent = ({ data }) => {
               </a>
             </div>
 
-            <div className={css.modalContent}>{striptags(data.content)}</div>
+            <div className={css.modalContent}>
+              {he.decode(striptags(data.content))}
+            </div>
           </div>
         </ReactModal>
       </div>
