@@ -24,24 +24,27 @@
   }
 }
 
-.team,
-.board {
+.speaker {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 50px 0;
+  padding: 0.5em 0 0 0;
 
   h3 {
     display: block;
     width: 100%;
     text-align: center;
-    padding: 0 0 50px;
+    // padding: 0 0 50px;
     font-family: "CircularStd-Medium", sans-serif;
     font-size: 2rem;
+
+    @include phone {
+      font-size: 1.5rem;
+    }
   }
 }
 
-.board {
+.speaker {
   .links {
     a:first-child {
       display: none;
