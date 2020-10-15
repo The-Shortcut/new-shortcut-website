@@ -33,12 +33,15 @@ const Byob = () => {
           teachings, and navigate the ecosystem. So, what are you waiting for?
           Join us!
           <br />
-          <a href="https://docs.google.com/forms/d/1FXzJdAgfB0d0-FOfEV1PzbpVtH8uoF2KplpZt6cqavI/viewform?edit_requested=true" target="_blank">
-          </a>
         </p>
       </section>
-      <Speakers />  
-      <button>Apply Now</button>
+      <Speakers />
+      <a
+        href="https://docs.google.com/forms/d/1FXzJdAgfB0d0-FOfEV1PzbpVtH8uoF2KplpZt6cqavI/viewform?edit_requested=true"
+        target="_blank"
+      >
+        <button>Apply Now</button>
+      </a>
 
       <h3>FAQ:</h3>
 
