@@ -179,7 +179,7 @@ const Nav = () => {
                 <a
                   className="submenu-item"
                   onClick={toggleNav}
-                  href="https://theshortcut.org/blog/"
+                  href="https://admin.theshortcut.org/blog/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -195,7 +195,7 @@ const Nav = () => {
                 <a
                   className="submenu-item"
                   onClick={toggleNav}
-                  href="https://theshortcut.org/wp-content/uploads/2019/11/white-paper-diversity-and-inclusion-in-tech.pdf"
+                  href="https://admin.theshortcut.org/wp-content/uploads/2019/11/white-paper-diversity-and-inclusion-in-tech.pdf"
                   rel="noopener noreferrer"
                   target="_blank"
                 >

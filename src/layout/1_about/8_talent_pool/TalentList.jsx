@@ -39,7 +39,7 @@ const TalentList = () => {
   };
   const helper = async () => {
     const talentsData = await axios.get(
-      `https://theshortcut.org/wp-json/wp/v2/talents?per_page=100&_embed`
+      `https://admin.theshortcut.org/wp-json/wp/v2/talents?per_page=100&_embed`
     );
     dataFromStore =
       talentsData &&

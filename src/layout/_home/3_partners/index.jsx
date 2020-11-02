@@ -23,7 +23,7 @@ const Partners = () => {
           rel="noopener noreferrer"
         >
           <img
-            src="https://theshortcut.org/wp-content/uploads/2019/08/About-Us-section-logos_EU-logos-600x424.png"
+            src="https://admin.theshortcut.org/wp-content/uploads/2019/08/About-Us-section-logos_EU-logos-600x424.png"
             alt="partner-logo"
           />
         </a>
@@ -34,7 +34,7 @@ const Partners = () => {
           rel="noopener noreferrer"
         >
           <img
-            src="https://theshortcut.org/wp-content/uploads/2019/08/About-Us-section-logos_Helsinki-logo-600x424.png "
+            src="https://admin.theshortcut.org/wp-content/uploads/2019/08/About-Us-section-logos_Helsinki-logo-600x424.png "
             alt="partner-logo"
           ></img>
         </a>
@@ -45,7 +45,7 @@ const Partners = () => {
           rel="noopener noreferrer"
         >
           <img
-            src="https://theshortcut.org/wp-content/uploads/2019/08/About-Us-section-logos_Microsoft-logo-600x424.png "
+            src="https://admin.theshortcut.org/wp-content/uploads/2019/08/About-Us-section-logos_Microsoft-logo-600x424.png "
             alt="partner-logo"
           />
         </a>
@@ -56,7 +56,7 @@ const Partners = () => {
           rel="noopener noreferrer"
         >
           <img
-            src="https://theshortcut.org/wp-content/uploads/2019/08/About-Us-section-logos_Maria-01-logo-1.png"
+            src="https://admin.theshortcut.org/wp-content/uploads/2019/08/About-Us-section-logos_Maria-01-logo-1.png"
             alt="partner-logo"
           ></img>
         </a>
@@ -67,7 +67,7 @@ const Partners = () => {
           rel="noopener noreferrer"
         >
           <img
-            src="https://theshortcut.org/wp-content/uploads/2019/08/About-Us-section-logos_Slush-logo-1.png"
+            src="https://admin.theshortcut.org/wp-content/uploads/2019/08/About-Us-section-logos_Slush-logo-1.png"
             alt="partner-logo"
           />
         </a>
@@ -78,7 +78,7 @@ const Partners = () => {
           rel="noopener noreferrer"
         >
           <img
-            src="https://theshortcut.org/wp-content/uploads/2019/08/About-Us-section-logos_Junction-logo.png"
+            src="https://admin.theshortcut.org/wp-content/uploads/2019/08/About-Us-section-logos_Junction-logo.png"
             alt="partner-logo"
           />
         </a>
@@ -89,7 +89,7 @@ const Partners = () => {
           rel="noopener noreferrer"
         >
           <img
-            src="https://theshortcut.org/wp-content/uploads/2019/08/About-Us-section-logos_Wave-Ventures-logo-2.png"
+            src="https://admin.theshortcut.org/wp-content/uploads/2019/08/About-Us-section-logos_Wave-Ventures-logo-2.png"
             alt="partner-logo"
           />
         </a>

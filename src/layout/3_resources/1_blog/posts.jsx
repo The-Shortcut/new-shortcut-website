@@ -8,7 +8,7 @@ const Post = () => {
   const [posts, setPosts] = useState([]);
   const [stripPost, setStripPost] = useState([]);
 
-  const URL = "https://theshortcut.org/wp-json/wp/v2/posts";
+  const URL = "https://admin.theshortcut.org/wp-json/wp/v2/posts";
 
   useEffect(() => {
     getPosts();

@@ -15,14 +15,14 @@ const Profile = (props) => {
         <div className={css.links}>
           <a href={`mailto:${email}`}>
             <img
-              src="https://theshortcut.org/wp-content/uploads/2019/10/email-icon-01.png"
+              src="https://admin.theshortcut.org/wp-content/uploads/2019/10/email-icon-01.png"
               alt="mail-icon"
             ></img>
           </a>
           <a href={linkedin}>
             {" "}
             <img
-              src="https://theshortcut.org/wp-content/uploads/2019/10/linkedin-2.png"
+              src="https://admin.theshortcut.org/wp-content/uploads/2019/10/linkedin-2.png"
               alt="linkedin-icon"
             />
           </a>

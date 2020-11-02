@@ -176,7 +176,7 @@ export default function Press() {
               <li>
                 {" "}
                 <a
-                  href="https://theshortcut.org/wp-content/uploads/2017/02/Press-release_International.pdf"
+                  href="https://admin.theshortcut.org/wp-content/uploads/2017/02/Press-release_International.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -192,7 +192,7 @@ export default function Press() {
               </li>
               <li>
                 <a
-                  href="https://theshortcut.org/wp-content/uploads/2017/02/Press-release_Finnish.pdf"
+                  href="https://admin.theshortcut.org/wp-content/uploads/2017/02/Press-release_Finnish.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -209,7 +209,7 @@ export default function Press() {
               </li>
               <li>
                 <a
-                  href="https://theshortcut.org/wp-content/uploads/2017/02/Background_The_Shortcut.pdf"
+                  href="https://admin.theshortcut.org/wp-content/uploads/2017/02/Background_The_Shortcut.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

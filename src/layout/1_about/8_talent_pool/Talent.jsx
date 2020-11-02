@@ -37,14 +37,14 @@ const Talent = ({ data }) => {
           <div className={css.links}>
             <a href={`mailto:${data.email}`} target="_blank">
               <img
-                src="https://theshortcut.org/wp-content/uploads/2019/10/email-icon-01.png"
+                src="https://admin.theshortcut.org/wp-content/uploads/2019/10/email-icon-01.png"
                 alt="mail-icon"
               ></img>
             </a>
             <a href={data.linkedInProf} target="_blank">
               {" "}
               <img
-                src="https://theshortcut.org/wp-content/uploads/2019/10/linkedin-2.png"
+                src="https://admin.theshortcut.org/wp-content/uploads/2019/10/linkedin-2.png"
                 alt="linkedin-icon"
               />
             </a>
@@ -66,14 +66,14 @@ const Talent = ({ data }) => {
             <div className={css.modalLinks}>
               <a href={`mailto: ${data.email}`} target="_blank">
                 <img
-                  src="https://theshortcut.org/wp-content/uploads/2019/10/email-icon-01.png"
+                  src="https://admin.theshortcut.org/wp-content/uploads/2019/10/email-icon-01.png"
                   alt="mail-icon"
                   className={css.email}
                 ></img>
               </a>
               <a href={data.linkedInProf} target="_blank">
                 <img
-                  src="https://theshortcut.org/wp-content/uploads/2019/10/linkedin-2.png"
+                  src="https://admin.theshortcut.org/wp-content/uploads/2019/10/linkedin-2.png"
                   alt="linkedin-icon"
                   className={css.linkedin}
                 />
