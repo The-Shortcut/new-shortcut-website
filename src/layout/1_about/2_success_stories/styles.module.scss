@@ -32,7 +32,7 @@
   // Story container
   section {
     margin-bottom: 3em;
-    display:grid;
+    display: grid;
     grid-template: 1fr / 1fr;
 
     @include phone {
@@ -46,7 +46,6 @@
 
     // Heading
     h3 {
-
       font-family: $book;
       font-size: 1.5rem;
       font-weight: bold;
@@ -59,7 +58,6 @@
       @include phone {
         width: 100%;
       }
-
 
       // Numbering styling
       // span {

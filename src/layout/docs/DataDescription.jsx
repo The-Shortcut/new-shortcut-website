@@ -20,16 +20,22 @@ export default function DataDescription() {
         </h3>
         <p>
           The Startup Shortcut Oy <span>(Business ID 2759222-9)</span>
-          <br/>Lapinlahdenkatu 16, 15B
-          <br/>00180 Helsinki
+          <br />
+          Lapinlahdenkatu 16, 15B
+          <br />
+          00180 Helsinki
         </p>
 
         <h3>
           <span>2.</span> Contact person
         </h3>
-        <p>Anne Badan
-        <br/>Contact Information
-        <br/><a href="mailto:anne@theshortcut.org">anne@theshortcut.org</a></p>
+        <p>
+          Anne Badan
+          <br />
+          Contact Information
+          <br />
+          <a href="mailto:anne@theshortcut.org">anne@theshortcut.org</a>
+        </p>
 
         <h3>
           <span>3.</span> Name of the register

@@ -13,7 +13,7 @@ const Nav = () => {
 
   const toggleSubnav = (e) => {
     const { id, nextSibling } = e.target;
-    if (id === "about" || id ==="events" || id === "resources") {
+    if (id === "about" || id === "events" || id === "resources") {
       setSubnavActive(!subnavActive);
       !subnavActive
         ? nextSibling.classList.add("active")
@@ -42,7 +42,7 @@ const Nav = () => {
             </Link>
           </div>
         </div>
-        
+
         <nav>
           <ul className={navActive ? "menu active" : "menu"}>
             <li className="menu-item">
@@ -125,7 +125,6 @@ const Nav = () => {
               </ul>
             </li>
 
-
             <li className="menu-item" id="events">
               <p
                 className="btn"
@@ -136,33 +135,25 @@ const Nav = () => {
                 Events
               </p>
               <ul className="submenu">
-                <Link
-                    to="/events"
-                    className="submenu-item"
-                    onClick={toggleNav}
-                  >
-                    <div>
-                      <img
-                        src={require("../../assets/icons/nav/events.png")}
-                        alt="icon"
-                      />
-                    </div>
-                    <span>All Events</span>
-                  </Link>
+                <Link to="/events" className="submenu-item" onClick={toggleNav}>
+                  <div>
+                    <img
+                      src={require("../../assets/icons/nav/events.png")}
+                      alt="icon"
+                    />
+                  </div>
+                  <span>All Events</span>
+                </Link>
 
-                  <Link
-                    to="/byob"
-                    className="submenu-item"
-                    onClick={toggleNav}
-                  >
-                    <div>
-                      <img
-                        src={require("../../assets/icons/nav/byob-icon.png")}
-                        alt="icon"
-                      />
-                    </div>
-                    <span>BYOB</span>
-                  </Link>
+                <Link to="/byob" className="submenu-item" onClick={toggleNav}>
+                  <div>
+                    <img
+                      src={require("../../assets/icons/nav/byob-icon.png")}
+                      alt="icon"
+                    />
+                  </div>
+                  <span>BYOB</span>
+                </Link>
               </ul>
             </li>
 
@@ -266,6 +257,11 @@ const Nav = () => {
                   <span>Open Positions</span>
                 </a>
               </ul>
+            </li>
+            <li className="menu-item" id="visit">
+              <Link className="btn" to="/visit" onClick={toggleNav}>
+                Book a Visit
+              </Link>
             </li>
           </ul>
         </nav>

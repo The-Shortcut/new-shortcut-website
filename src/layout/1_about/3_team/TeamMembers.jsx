@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 
 // Redux
-import { useSelector, useDispatch } from 'react-redux'
-import { teamMembers } from '../../../actions/teamActions'
+import { useSelector, useDispatch } from "react-redux";
+import { teamMembers } from "../../../actions/teamActions";
 
 // Styles
 import css from "./styles.module.scss";
@@ -12,13 +12,13 @@ import Profile from "./Profile";
 import SkeletonGrid from "../../../components/functional/SkeletonGrid";
 
 const TeamMembers = () => {
-  const teammates = useSelector(state => state.team.members)
-  const isLoading = useSelector(state => state.team.isLoading)
+  const teammates = useSelector((state) => state.team.members);
+  const isLoading = useSelector((state) => state.team.isLoading);
 
-   const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(teamMembers())
+    dispatch(teamMembers());
   }, [dispatch]);
 
   return (

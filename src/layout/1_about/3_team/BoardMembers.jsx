@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 
 // Redux
-import { useSelector, useDispatch } from 'react-redux'
-import { boardMembers } from '../../../actions/teamActions'
+import { useSelector, useDispatch } from "react-redux";
+import { boardMembers } from "../../../actions/teamActions";
 
 //Styles
 import css from "./styles.module.scss";
@@ -11,12 +11,12 @@ import css from "./styles.module.scss";
 import Profile from "./Profile";
 
 const BoardMembers = () => {
-  const board = useSelector(state => state.team.boards)
+  const board = useSelector((state) => state.team.boards);
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(boardMembers())
+    dispatch(boardMembers());
   }, [dispatch]);
 
   return (

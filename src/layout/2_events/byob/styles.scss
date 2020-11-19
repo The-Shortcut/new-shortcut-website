@@ -45,7 +45,7 @@
     padding: 1em 0 0 0;
     display: flex;
     // flex-direction: column;
-    
+
     @include phone {
       font-size: 1.15rem;
       flex-direction: column;
@@ -54,11 +54,11 @@
     @include big-desktop {
       width: 90%;
     }
-    
+
     p {
       font-size: 1.25rem;
       line-height: 1.5;
-      
+
       @include phone {
         font-size: 1.15rem;
       }
@@ -96,11 +96,11 @@
     }
   }
 
-  // Question Section 
+  // Question Section
   h3 {
     @include phone {
-    font-size: 1.25rem;
-  }
+      font-size: 1.25rem;
+    }
   }
 
   // Accordion container

@@ -250,12 +250,12 @@ const Accordion = () => {
         </div>
       </AccItem>
 
-      <AccItem
-        key={19}
-        question="How can I find out more about the program?"
-      >
+      <AccItem key={19} question="How can I find out more about the program?">
         <div>
-          <p>You can always contact our program manager at <a href="mailto:events@theshortcut.org">events@theshortcut.org</a></p>
+          <p>
+            You can always contact our program manager at{" "}
+            <a href="mailto:events@theshortcut.org">events@theshortcut.org</a>
+          </p>
         </div>
       </AccItem>
     </div>

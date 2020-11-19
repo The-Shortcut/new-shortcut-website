@@ -127,7 +127,7 @@ $red: rgb(232, 89, 46);
     display: flex;
 
     .menu-item {
-      // border: 1px solid red;
+      //border: 1px solid red;
       margin: 0 25px;
       padding: 0;
       height: 75px;
@@ -155,7 +155,8 @@ $red: rgb(232, 89, 46);
 
     #events,
     #join,
-    #forpartners {
+    #forpartners,
+    #visit {
       a {
         cursor: pointer;
         outline: none;

@@ -2,16 +2,15 @@ import React from "react";
 import "./Pagination.scss";
 
 // Redux
-import { useSelector, useDispatch } from 'react-redux'
-import { paginate, nextPage, prevPage } from '../../actions/eventActions'
-
+import { useSelector, useDispatch } from "react-redux";
+import { paginate, nextPage, prevPage } from "../../actions/eventActions";
 
 const Pagination = () => {
-  const perPage = useSelector(state => state.events.perPage)
-  const currentPage = useSelector(state => state.events.currentPage)
-  const totalItems = useSelector(state => state.events.totalItems)
+  const perPage = useSelector((state) => state.events.perPage);
+  const currentPage = useSelector((state) => state.events.currentPage);
+  const totalItems = useSelector((state) => state.events.totalItems);
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const pageNumbers = [];
   for (let i = 1; i <= Math.ceil(totalItems / perPage); i++) {
@@ -19,14 +18,14 @@ const Pagination = () => {
   }
 
   const handleNext = () => {
-    dispatch(nextPage())
-    dispatch(paginate(currentPage))
-  }
+    dispatch(nextPage());
+    dispatch(paginate(currentPage));
+  };
 
   const handlePrev = () => {
-    dispatch(prevPage())
-    dispatch(paginate(currentPage))
-  }
+    dispatch(prevPage());
+    dispatch(paginate(currentPage));
+  };
 
   return pageNumbers.length <= 1 ? null : (
     <>
@@ -47,7 +46,8 @@ const Pagination = () => {
               {"<"}
             </button>
           </li>
-          {pageNumbers.map((number) => <li
+          {pageNumbers.map((number) => (
+            <li
               key={number}
               className={`page-item${currentPage === number ? "-active" : ""}`}
             >
@@ -59,7 +59,7 @@ const Pagination = () => {
                 {number}
               </button>
             </li>
-          )}
+          ))}
           <li
             className={`page-item${
               currentPage === pageNumbers[pageNumbers.length - 1]
@@ -74,7 +74,9 @@ const Pagination = () => {
           <li className="page-item">
             <button
               className="page-link"
-              onClick={() => dispatch(paginate(pageNumbers[pageNumbers.length - 1]))}
+              onClick={() =>
+                dispatch(paginate(pageNumbers[pageNumbers.length - 1]))
+              }
               href="#"
             >
               {pageNumbers[pageNumbers.length - 1]}

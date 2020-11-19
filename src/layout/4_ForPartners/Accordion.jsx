@@ -10,7 +10,7 @@ const Accordion = () => {
   return (
     <div className="accordion">
       <AccItem key={1} question="Talent Pool / Recruitment Service">
-      <div>
+        <div>
           <p>Are you recruiting? Look no further.</p>
           <p>
             The Shortcut is the largest Talent Accelerator in the Nordics. Our
@@ -27,7 +27,7 @@ const Accordion = () => {
         </div>
       </AccItem>
       <AccItem key={2} question="Talent Heist">
-      <div>
+        <div>
           <p>
             Are you looking for an innovative and disruptive recruitment
             solution?{" "}
@@ -55,8 +55,11 @@ const Accordion = () => {
           </p>
         </div>
       </AccItem>
-      <AccItem key={3} question="Skills Training, Workshops &amp; Webinars by Startup Doers">
-      <div>
+      <AccItem
+        key={3}
+        question="Skills Training, Workshops &amp; Webinars by Startup Doers"
+      >
+        <div>
           <p>
             We are strong believers that knowledge is not only exchanged at
             universities or schools but also through communities. All our
@@ -82,11 +85,8 @@ const Accordion = () => {
           </blockquote>
         </div>
       </AccItem>
-      <AccItem
-        key={4}
-        question="Tech Training"
-      >
-<div>
+      <AccItem key={4} question="Tech Training">
+        <div>
           <p>
             At The Shortcut, we believe in fast hands-on learning, building our
             skills, and adaptation. We are not a school, but we do take learning
@@ -98,10 +98,7 @@ const Accordion = () => {
           </p>
         </div>
       </AccItem>
-      <AccItem
-        key={5}
-        question="Entrepreneurial Mindset"
-      >
+      <AccItem key={5} question="Entrepreneurial Mindset">
         <div>
           <p>
             From Idea Development to Digital Prototyping, an entrepreneurial
@@ -126,11 +123,8 @@ const Accordion = () => {
         </div>
       </AccItem>
 
-      <AccItem
-        key={6}
-        question="Integration Success Program"
-      >
-<div>
+      <AccItem key={6} question="Integration Success Program">
+        <div>
           <p>
             When it comes to the realities of the job market, there is a very
             serious and real shortage of high-skilled workers, especially in the
@@ -139,7 +133,8 @@ const Accordion = () => {
             success Program (ISP). The Shortcut Integration Success Program
             connects international talent, including the spouses of
             international knowledge workers, with their new, local, social and
-            professional environment in a community-driven way.<br/>
+            professional environment in a community-driven way.
+            <br />
             For the local business community, The Shortcut Integration Success
             Program improves talent retention and bridges the gap between
             businesses that need talented, skilled employees and highly-skilled

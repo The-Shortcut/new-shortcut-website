@@ -18,7 +18,6 @@ const Event = ({ event }) => {
   const link = event.url;
   const img = event.logo;
 
-
   // date
   const formatDate = (e) => {
     const date = new Date(e);

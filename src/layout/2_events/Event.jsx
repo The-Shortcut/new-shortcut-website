@@ -107,7 +107,7 @@ const Event = ({ event }) => {
           <p>{formatDate(end)}</p>
           <p>{formatMonth(end)}</p>
           <div>
-              <img src={img ? img.original.url : defaultImage} alt="" />
+            <img src={img ? img.original.url : defaultImage} alt="" />
           </div>
         </aside>
       )}
@@ -138,7 +138,9 @@ const Event = ({ event }) => {
           <p className={css.online}>{online ? "Online" : null}</p>
         )}
         <a href={link} target="_blank" rel="noopener noreferrer">
-          {(status === 'completed' || status === 'canceled') ? "Learn more +" : "Register" }
+          {status === "completed" || status === "canceled"
+            ? "Learn more +"
+            : "Register"}
         </a>
       </div>
     </div>

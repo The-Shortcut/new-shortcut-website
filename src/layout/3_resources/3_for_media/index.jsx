@@ -165,10 +165,9 @@ export default function Press() {
                   Talouseläma article on diversity and inclusion
                 </a>
               </li>
-
             </ul>
           </div>
-          
+
           <div className={css.materials}>
             {" "}
             <h3>Press Materials</h3>
