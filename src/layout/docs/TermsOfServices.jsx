@@ -145,7 +145,7 @@ export default function TermsOfServices() {
           commitment to update the materials.
         </p>
         <h3>
-        <span>6.</span> Links
+          <span>6.</span> Links
         </h3>
         <p>
           The Startup Shortcut Oy has not reviewed all of the sites linked to
@@ -155,7 +155,7 @@ export default function TermsOfServices() {
           the user&rsquo;s own risk.
         </p>
         <h3>
-        <span>7.</span> Modifications
+          <span>7.</span> Modifications
         </h3>
         <p>
           The Startup Shortcut Oy may revise these terms of service for its
@@ -164,7 +164,7 @@ export default function TermsOfServices() {
           service.
         </p>
         <h3>
-        <span>8.</span> Governing Law
+          <span>8.</span> Governing Law
         </h3>
         <p>
           These terms and conditions are governed by and construed in accordance

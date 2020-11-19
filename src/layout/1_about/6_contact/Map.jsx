@@ -12,14 +12,15 @@ export default function Map() {
     zoom: 12,
   });
 
-  
   return (
     <ReactMapGL
       {...viewport}
       mapboxApiAccessToken={TOKEN}
       mapStyle="mapbox://styles/theshortcut/ck9zsj3703njw1isa34hx4jzy"
       onViewportChange={(viewport) => {
-        (window.innerWidth <= `768` ) ? viewport.width = "90vw" : viewport.width = viewport.width
+        window.innerWidth <= `768`
+          ? (viewport.width = "90vw")
+          : (viewport.width = viewport.width);
         setViewport(viewport);
       }}
     >

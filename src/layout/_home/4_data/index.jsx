@@ -63,7 +63,7 @@ const Data = () => {
           }
           stepPrecision={0}
           duration={1000}
-          formatValue = {n => `${n}/10`}
+          formatValue={(n) => `${n}/10`}
         />
         <p>Average Event Rating</p>
       </div>

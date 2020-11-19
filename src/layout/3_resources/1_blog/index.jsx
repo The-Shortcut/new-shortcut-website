@@ -1,13 +1,12 @@
-import React from 'react';
-import Post from './posts.jsx';
-
+import React from "react";
+import Post from "./posts.jsx";
 
 const Blog = () => {
-  return(
+  return (
     <div>
-    <Post/>
+      <Post />
     </div>
   );
-}
+};
 
 export default Blog;
