@@ -13,7 +13,7 @@ const AboutUs = () => {
         </header>
         <p>
           The Shortcut is the largest talent accelerator in the Nordics. We
-          equip foreign talent with the skills and networks they need to drive
+          equip talent with the skills and networks they need to drive
           growth and innovation, and to kickstart their entry into the Finnish
           startup world.{" "}
         </p>

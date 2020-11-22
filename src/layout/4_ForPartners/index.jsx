@@ -22,7 +22,7 @@ const ForPartners = () => {
           growth and innovation. Our partners range from leading tech companies
           to governmental organisations and NGOs. With their help, we’re able to
           train and connect talent to the tech industry. <br />
-          If you are intrested in partnering with us, get in touch with{" "}
+          If you are interested in partnering with us, get in touch with{" "}
           <a href="mailto:piia@theshortcut.org">Piia Kuosmanen</a>.
         </p>
         <div>

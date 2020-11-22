@@ -40,12 +40,12 @@ const Partners = () => {
         </a>
 
         <a
-          href="https://pulse.microsoft.com/fi-fi/microsoft-flux-all-about-people/"
+          href="https://newcohelsinki.fi/en/"
           target="_blank"
           rel="noopener noreferrer"
         >
           <img
-            src="https://theshortcut.org/wp-content/uploads/2019/08/About-Us-section-logos_Microsoft-logo-600x424.png "
+            src="https://theshortcut.org/wp-content/uploads/2020/11/newco.png"
             alt="partner-logo"
           />
         </a>
