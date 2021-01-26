@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
+
 import axios from "axios";
+
 import { Link } from "react-router-dom";
 import moment from "moment";
 import SkeletonList from "../../../components/functional/SkeletonList";
@@ -13,7 +15,7 @@ import Event from "./Event";
 const Events = () => {
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
-  const API_TOKEN = `${process.env.REACT_APP_EVENT_API_TOKEN}`;
+  const API_TOKEN = process.env.REACT_APP_EVENT_API_TOKEN;
 
   const getEvents = async () => {
     const eventsResponse = await axios.get(
