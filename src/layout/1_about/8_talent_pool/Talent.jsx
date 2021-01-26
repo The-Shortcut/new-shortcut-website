@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import ReactModal from "react-modal";
 // // Styles
 import css from "./styles.module.scss";
@@ -35,13 +35,21 @@ const Talent = ({ data }) => {
           <h4 className={css.name}>{data.name}</h4>
           <p>{data.hashtags}</p>
           <div className={css.links}>
-            <a href={`mailto:${data.email}`} target="_blank">
+            <a
+              href={`mailto:${data.email}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src="https://theshortcut.org/wp-content/uploads/2019/10/email-icon-01.png"
                 alt="mail-icon"
               ></img>
             </a>
-            <a href={data.linkedInProf} target="_blank">
+            <a
+              href={data.linkedInProf}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {" "}
               <img
                 src="https://theshortcut.org/wp-content/uploads/2019/10/linkedin-2.png"

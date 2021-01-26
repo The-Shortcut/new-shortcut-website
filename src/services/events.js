@@ -1,6 +1,6 @@
 import axios from "axios";
 
-let API_TOKEN = `${process.env.REACT_APP_EVENT_API_TOKEN}`;
+let API_TOKEN = process.env.REACT_APP_EVENT_API_TOKEN;
 
 const getEvents = async () => {
   const eventsResponse = await axios.get(
