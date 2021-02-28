@@ -13,6 +13,7 @@
     "@types/react-router-dom": "^5.1.5",
     "axios": "^0.21.1",
     "bootstrap": "^4.5.0",
+    "caniuse-lite": "^1.0.30001192",
     "dotenv": "^8.2.0",
     "font-awesome": "^4.7.0",
     "form-data": "^3.0.0",
