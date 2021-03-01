@@ -28,14 +28,3 @@ const SkeletonTalents = () => {
 };
 
 export default SkeletonTalents;
-{
-  /* <Skeleton height={160} />
-            <aside className={css.single}>
-              <p>
-                <Skeleton height={120} width={50} />{" "}
-              </p>
-            </aside>
-            <p>
-              <Skeleton count={6} height={10} width={250} />
-            </p> */
-}

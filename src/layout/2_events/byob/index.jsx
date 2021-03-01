@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 // Styles
 import "./styles.scss";
@@ -39,6 +38,7 @@ const Byob = () => {
       <a
         href="https://docs.google.com/forms/d/1FXzJdAgfB0d0-FOfEV1PzbpVtH8uoF2KplpZt6cqavI/viewform?edit_requested=true"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <button>Apply Now</button>
       </a>
