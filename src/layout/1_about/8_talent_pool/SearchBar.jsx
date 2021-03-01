@@ -1,5 +1,4 @@
 import React from "react";
-import Select from "react-select";
 
 // Styles
 import css from "./styles.module.scss";

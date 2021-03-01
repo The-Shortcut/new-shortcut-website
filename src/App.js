@@ -59,33 +59,33 @@ export class App extends Component {
           <Route exact path="/" component={Home} />
 
           {/* About */}
-          <Route path="/about" component={AboutUs} />
-          <Route path="/success" component={SuccessStories} />
-          <Route path="/talent-pool" component={TalentPool} />
-          <Route path="/team" component={Team} />
-          <Route path="/faq" component={FAQ} />
-          <Route path="/contact" component={Contact} />
+          <Route exact path="/about" component={AboutUs} />
+          <Route exact path="/success" component={SuccessStories} />
+          <Route exact path="/talent-pool" component={TalentPool} />
+          <Route exact path="/team" component={Team} />
+          <Route exact path="/faq" component={FAQ} />
+          <Route exact path="/contact" component={Contact} />
 
           {/* All events */}
-          <Route path="/events" component={Events} />
-          <Route path="/byob" component={Byob} />
+          <Route exact path="/events" component={Events} />
+          <Route exact path="/byob" component={Byob} />
 
           {/* Resources */}
-          <Route path="/media" component={ForMedia} />
-          <Route path="/blog" component={Blog} />
+          <Route exact path="/media" component={ForMedia} />
+          <Route exact path="/blog" component={Blog} />
 
           {/* For partners */}
-          <Route path="/forpartners" component={ForPartners} />
+          <Route exact path="/forpartners" component={ForPartners} />
 
           {/* Visit */}
-          <Route path="/visit" component={Visit} />
+          <Route exact path="/visit" component={Visit} />
 
           {/* Footer */}
-          <Route path="/privacy" component={PrivacyPolicies} />
-          <Route path="/code" component={Code} />
-          <Route path="/values" component={Values} />
-          <Route path="/terms" component={TermsOfServices} />
-          <Route path="/data-description" component={DataDescription} />
+          <Route exact path="/privacy" component={PrivacyPolicies} />
+          <Route exact path="/code" component={Code} />
+          <Route exact path="/values" component={Values} />
+          <Route exact path="/terms" component={TermsOfServices} />
+          <Route exact path="/data-description" component={DataDescription} />
         </Switch>
         <Footer />
       </Router>
