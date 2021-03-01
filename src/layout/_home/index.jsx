@@ -6,6 +6,7 @@ import Data from "./4_data/index.jsx";
 
 export default class LandingPage extends React.Component {
   render() {
+    console.log('langing page')
     return (
       <div>
         <Hero />

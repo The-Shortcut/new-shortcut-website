@@ -28,7 +28,6 @@ const Events = () => {
       (event) => !draftsResponse.data.events.find(({ id }) => event.id === id)
     );
 
-    console.log(response);
     setEvents(response);
     setLoading(false);
     return response;
