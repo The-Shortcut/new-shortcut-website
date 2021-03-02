@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
-import axios from "axios";
+import axios from 'axios';
 
-import { Link } from "react-router-dom";
-import moment from "moment";
-import SkeletonList from "../../../components/functional/SkeletonList";
+import { Link } from 'react-router-dom';
+import moment from 'moment';
+import SkeletonList from '../../../components/functional/SkeletonList';
 
 // Styles
-import css from "./styles.module.scss";
+import css from './styles.module.scss';
 
 // Children
-import Event from "./Event";
+import Event from './Event';
 
 const Events = () => {
   const [events, setEvents] = useState([]);
@@ -47,14 +47,13 @@ const Events = () => {
         {events
           // .slice(0, 3)
           .map((event, i) =>
-            moment(event.start.local).isAfter() ||
-            moment(event.end.local).isAfter() ? (
+            moment(event.start.local).isAfter() || moment(event.end.local).isAfter() ? (
               <Event key={i} event={event} />
             ) : null
           )}
         <footer>
-          <Link to="/events">
-            <span>See All Events</span>
+          <Link to='/events'>
+            <span>See All Events here</span>
           </Link>
         </footer>
       </div>
