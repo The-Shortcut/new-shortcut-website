@@ -53,7 +53,7 @@ const Events = () => {
           )}
         <footer>
           <Link to='/events'>
-            <span>See All Events here</span>
+            <span>See All Events</span>
           </Link>
         </footer>
       </div>

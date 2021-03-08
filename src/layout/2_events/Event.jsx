@@ -18,6 +18,7 @@ const Event = ({ event }) => {
   const link = event.url;
   const img = event.logo;
   const status = event.status;
+  const venueCMS = event.venue
 
   // date
   const formatDate = (e) => {
@@ -107,7 +108,7 @@ const Event = ({ event }) => {
           <p>{formatDate(end)}</p>
           <p>{formatMonth(end)}</p>
           <div>
-            <img src={img ? img.original.url : defaultImage} alt="" />
+            <img style={{maxHeight:'244px', maxWidth:'433px'}} src={img ? img.original.url : defaultImage} alt="programme-logo" />
           </div>
         </aside>
       )}
@@ -132,7 +133,7 @@ const Event = ({ event }) => {
         <p className={css.title}>{title}</p>
         <p className={css.status}>{status}</p>
         <p className={css.summary}>{formatText(summary)}</p>
-        {venue ? (
+        {venueCMS ? <p className={css.online}>{venueCMS}</p> : venue ? (
           <Venue id={venue} />
         ) : (
           <p className={css.online}>{online ? "Online" : null}</p>

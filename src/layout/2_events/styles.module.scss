@@ -1,4 +1,4 @@
-@import "../index.scss";
+@import '../index.scss';
 
 .container {
   @include container;
@@ -138,7 +138,7 @@
           }
 
           // Search icon
-          background-image: url("../../assets/icons/search.png");
+          background-image: url('../../assets/icons/search.png');
           background-position: 95% 40%;
           background-size: 1em;
           background-repeat: no-repeat;

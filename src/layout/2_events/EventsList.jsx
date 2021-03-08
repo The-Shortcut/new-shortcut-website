@@ -40,7 +40,7 @@ const EventsList = () => {
         <p className={css.noResult}>No matching events... </p>
       ) : (
         <>
-          <Pagination />
+            <Pagination />
           {currentItems?.map((event, index) => (
             <Event key={index} event={event} />
           ))}
