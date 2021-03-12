@@ -1,12 +1,12 @@
-import React from "react";
-import defaultImage from "../../assets/photos/defaultImage.png";
-import moment from "moment";
+import React from 'react';
+import defaultImage from '../../assets/photos/defaultImage.png';
+import moment from 'moment';
 
 // Styles
-import css from "./styles.module.scss";
+import css from './styles.module.scss';
 
 // Children
-import Venue from "../../components/functional/Venue";
+import Venue from '../../components/functional/Venue';
 
 const Event = ({ event }) => {
   const start = event.start.local;
@@ -18,7 +18,8 @@ const Event = ({ event }) => {
   const link = event.url;
   const img = event.logo;
   const status = event.status;
-  const venueCMS = event.venue
+  const venueCMS = event.venue;
+  const isVideo = event.isVideo;
 
   // date
   const formatDate = (e) => {
@@ -37,9 +38,9 @@ const Event = ({ event }) => {
   // time
   const formatTime = (e) => {
     const date = new Date(e);
-    const eventTime = date.toLocaleString("en-US", {
-      hour: "numeric",
-      minute: "numeric",
+    const eventTime = date.toLocaleString('en-US', {
+      hour: 'numeric',
+      minute: 'numeric',
       hour12: true,
     });
     return eventTime;
@@ -47,15 +48,7 @@ const Event = ({ event }) => {
 
   // day
   const formatDay = (e) => {
-    const days = [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-    ];
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const date = new Date(e);
     const eventDay = days[date.getDay()].substring(0, 3);
     return eventDay;
@@ -64,18 +57,18 @@ const Event = ({ event }) => {
   // month
   const formatMonth = (e) => {
     const months = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December",
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+      'July',
+      'August',
+      'September',
+      'October',
+      'November',
+      'December',
     ];
 
     const date = new Date(e);
@@ -85,63 +78,103 @@ const Event = ({ event }) => {
 
   // month
   const formatText = (e) => {
-    const eventText = e + " ...";
+    const eventText = e;
     return eventText;
+  };
+
+  const setStatus = (status) => {
+    if (status.includes('Video')) {
+      return 'watch now';
+    } else if (status.includes('completed') || status.includes('canceled')) {
+      return 'Learn more +';
+    } else {
+      return 'register ';
+    }
   };
 
   return (
     <div className={css.event}>
       {moment(end.substring(0, 10)).isSame(start.substring(0, 10)) ? (
-        <aside className={css.single}>
-          <p>{formatDay(start)}</p>
-          <p>{formatDate(start)}</p>
-          <p>{formatMonth(start)}</p>
-          <div>
-            <img src={img ? img.original.url : defaultImage} alt="" />
-          </div>
-        </aside>
+          <aside className={css.single}>
+            <p>{formatDay(start)}</p>
+            <p>{formatDate(start)}</p>
+            <p>{formatMonth(start)}</p>
+            <div>
+              <img
+                src={img ? img.original.url : defaultImage}
+                alt=''
+                style={{
+                  maxHeight: '244px',
+                  maxWidth: '433px',
+                  minHeight: '243px',
+                  minWidth: '432px',
+                }}
+              />
+            </div>
+          </aside>
       ) : (
         <aside className={css.continuous}>
-          <p>{formatDate(start)}</p>
-          <p>{formatMonth(start)}</p>
-          <p> - </p>
-          <p>{formatDate(end)}</p>
-          <p>{formatMonth(end)}</p>
-          <div>
-            <img style={{maxHeight:'244px', maxWidth:'433px'}} src={img ? img.original.url : defaultImage} alt="programme-logo" />
-          </div>
+          {isVideo ? (
+            <div>
+              <p>always available</p>
+              <div>
+                <img
+                  style={{ maxHeight: '244px', maxWidth: '433px' }}
+                  src={img ? img.original.url : defaultImage}
+                  alt='programme-logo'
+                />
+              </div>
+            </div>
+          ) : (
+            <div>
+              <p>{formatDate(start)}</p>
+              <p>{formatMonth(start)}</p>
+              <p> - </p>
+              <p>{formatDate(end)}</p>
+              <p>{formatMonth(end)}</p>
+              <div>
+                <img
+                  style={{ maxHeight: '244px', maxWidth: '433px' }}
+                  src={img ? img.original.url : defaultImage}
+                  alt='programme-logo'
+                />
+              </div>
+            </div>
+          )}
         </aside>
       )}
       <div>
-        <p className={css.date}>
-          <span>
-            {formatMonth(start)}, {formatDate(start)}, {formatYear(start)}
-          </span>
-          {moment(end.substring(0, 10)).isSame(
-            start.substring(0, 10)
-          ) ? null : (
+        {isVideo ? (
+          <p> always available</p>
+        ) : (
+          <p className={css.date}>
             <span>
-              {" "}
-              - {formatMonth(end)}, {formatDate(end)}, {formatYear(start)}
+              {formatMonth(start)}, {formatDate(start)}, {formatYear(start)}
             </span>
-          )}
-          <span>
-            {" "}
-            @{formatTime(start)} - {formatTime(end)}
-          </span>{" "}
-        </p>
+            {moment(end.substring(0, 10)).isSame(start.substring(0, 10)) ? null : (
+              <span>
+                {' '}
+                - {formatMonth(end)}, {formatDate(end)}, {formatYear(start)}
+              </span>
+            )}
+            <span>
+              {' '}
+              @{formatTime(start)} - {formatTime(end)}
+            </span>{' '}
+          </p>
+        )}
         <p className={css.title}>{title}</p>
         <p className={css.status}>{status}</p>
         <p className={css.summary}>{formatText(summary)}</p>
-        {venueCMS ? <p className={css.online}>{venueCMS}</p> : venue ? (
+        {venueCMS ? (
+          <p className={css.online}>{venueCMS}</p>
+        ) : venue ? (
           <Venue id={venue} />
         ) : (
-          <p className={css.online}>{online ? "Online" : null}</p>
+          <p className={css.online}>{online ? 'Online' : null}</p>
         )}
-        <a href={link} target="_blank" rel="noopener noreferrer">
-          {status === "completed" || status === "canceled"
-            ? "Learn more +"
-            : "Register"}
+        <a href={link} target='_blank' rel='noopener noreferrer'>
+          {setStatus(status)}
         </a>
       </div>
     </div>

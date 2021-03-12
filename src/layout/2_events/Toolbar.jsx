@@ -21,11 +21,8 @@ const Toolbar = ({ setSearch }) => {
     { value: "training", label: "Training" },
     { value: "certification", label: "Certification" },
     { value: "club", label: "Clubs" },
-    { value: "my startup debut", label: "My Startup Debut" },
-    { value: "python", label: "Python" },
-    { value: "javascript", label: "JavaScript" },
-    { value: "talent heist", label: "Talent Heist" },
-    { value: "school of startup", label: "School of Startups" },
+    { value: "video record", label: "Video Record" },
+    { value: "completed", label: "Completed" },
   ];
 
   const handleSearch = (term) => {

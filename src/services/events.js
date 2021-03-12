@@ -3,6 +3,14 @@ import axios from 'axios';
 let API_TOKEN = process.env.REACT_APP_EVENT_API_TOKEN;
 
 const formatDate = (date, time) => {
+  /* if (date === '') {
+    let currDate = new Date();
+    let theDate = currDate.toLocaleDateString().split(/\D/);
+    let theTime = currDate.toLocaleTimeString().split(' ');
+    let month = theDate[0] < 10 ? 0 + theDate[0] : theDate[0];
+    let day = theDate[1] < 10 ? 0 + theDate[1] : theDate[1];
+    return `${theDate[2]}-${month}-${day}T${theTime[0]}`;
+  } */
   let dateArr = date.split(/\D/);
   let result = `${dateArr[2]}-${dateArr[1]}-${dateArr[0]}T${time}`;
   return result;
@@ -18,6 +26,8 @@ const getEvents = async () => {
   const response = eventsResponse.data.events.filter(
     (event) => !draftsResponse.data.events.find(({ id }) => event.id === id)
   );
+  response.forEach(event => event.status === 'live' ? Object.assign(event, { status: 'upcoming' }) : event.status)
+  
   const eventsByCMS = await axios.get('https://theshortcut.org/wp-json/wp/v2/events/?per_page=100');
   let data = eventsByCMS.data.map((data) => data.acf);
   let modifiedData = [];
@@ -32,11 +42,16 @@ const getEvents = async () => {
       url: item.url,
       status: item.status,
       online_event: item.online_event,
+      isVideo: item.video,
     };
     return modifiedData.push(dataObj);
   });
-  console.log(response.concat(modifiedData).reverse());
-  return [...modifiedData, ...response];
+
+  const allEvents = [...modifiedData, ...response].sort((a, b) =>
+    new Date(a.start.local).getTime() < new Date(b.start.local).getTime() ? 1 : -1
+  );
+  allEvents.forEach( event => event.status === 'live' && 'upcoming')
+  return allEvents;
 };
 
 export default {
