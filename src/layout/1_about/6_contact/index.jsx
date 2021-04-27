@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReactNotification from "react-notifications-component";
 import helper from "./handlerFunction";
 // Styles
@@ -8,12 +8,25 @@ import "react-notifications-component/dist/theme.css";
 // Children
 import Map from "./Map";
 
+import TagManager from 'react-gtm-module';
+
 const Contact = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const API = `${process.env.REACT_APP_CONTACT_US_API}`;
+
+  useEffect(() => {
+    TagManager.dataLayer({
+      dataLayer: {
+        event: 'pageView',
+        url: `${window.location.pathname}${window.location.search}`,
+        page: 'contact',
+        path: '/contact',
+      },
+    });
+  }, []);
 
   const handleContactUs = (e) => {
     e.preventDefault();

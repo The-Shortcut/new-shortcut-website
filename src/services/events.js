@@ -26,8 +26,10 @@ const getEvents = async () => {
   const response = eventsResponse.data.events.filter(
     (event) => !draftsResponse.data.events.find(({ id }) => event.id === id)
   );
-  response.forEach(event => event.status === 'live' ? Object.assign(event, { status: 'upcoming' }) : event.status)
-  
+  response.forEach((event) =>
+    event.status === 'live' ? Object.assign(event, { status: 'upcoming' }) : event.status
+  );
+
   const eventsByCMS = await axios.get('https://theshortcut.org/wp-json/wp/v2/events/?per_page=100');
   let data = eventsByCMS.data.map((data) => data.acf);
   let modifiedData = [];
@@ -47,10 +49,20 @@ const getEvents = async () => {
     return modifiedData.push(dataObj);
   });
 
-  const allEvents = [...modifiedData, ...response].sort((a, b) =>
-    new Date(a.start.local).getTime() < new Date(b.start.local).getTime() ? 1 : -1
-  );
-  allEvents.forEach( event => event.status === 'live' && 'upcoming')
+  const allEvents = [...modifiedData, ...response].sort((a, b) => {
+    let aa = new Date(a.start.local).getTime();
+    let bb = new Date(b.start.local).getTime();
+    aa = isNaN(aa) ? 0 : aa;
+    bb = isNaN(bb) ? 0 : bb;
+    if (aa < bb) {
+      return 1;
+    }
+    if (bb < aa) {
+      return -1;
+    }
+    return 0;
+  });
+
   return allEvents;
 };
 

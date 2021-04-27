@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 
 // Styles
 import "./faq.scss";
@@ -6,7 +6,19 @@ import "./faq.scss";
 // Children
 import Accordion from "./Accordion";
 
+import TagManager from 'react-gtm-module';
+
 const FAQ = () => {
+  useEffect(() => {
+    TagManager.dataLayer({
+      dataLayer: {
+        event: 'pageView',
+        url: `${window.location.pathname}${window.location.search}`,
+        page: 'FAQ',
+        path: '/faq',
+      },
+    });
+  }, []);
   return (
     <div className="faq">
       <header>

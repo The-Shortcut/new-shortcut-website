@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // Styles
 import css from './styles.module.scss';
@@ -7,8 +7,21 @@ import css from './styles.module.scss';
 import EventsList from './EventsList';
 import Toolbar from './Toolbar';
 
+import TagManager from 'react-gtm-module';
+
 const Events = () => {
   const [search, setSearch] = useState('');
+
+  useEffect(() => {
+    TagManager.dataLayer({
+      dataLayer: {
+        event: 'pageView',
+        url: `${window.location.pathname}${window.location.search}`,
+        page: 'events',
+        path: '/events',
+      },
+    });
+  }, []);
 
   return (
     <div className={css.container}>
@@ -31,8 +44,9 @@ const Events = () => {
         <p>Curious about what’s up and coming? Take a look at our events calendar.</p>
         <p>
           "Hey hey, we don’t want you to miss out. So if you are interested in participating in any
-          of these activities, past, present or future, please drop us a message at
-          <a href="mailto:info@theshortcut.org">info@theshortcut.org</a> , we’d love to hear from you"
+          of these activities, past, present or future, please drop us a message at{' '}
+          <a href='mailto:info@theshortcut.org'>info@theshortcut.org</a> , we’d love to hear from
+          you"
         </p>
       </section>
       <h3>Search Events</h3>
