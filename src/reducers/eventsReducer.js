@@ -33,7 +33,10 @@ const reducer = (state = initState, action) => {
         filterEvents = state.allEvents.filter((event) => event.status === 'completed');
       }
       if (payload === 'video record') {
-        filterEvents = state.events.filter((event) => event.status.includes('record'));
+        filterEvents = state.events.filter((event) => event.status.includes('Video'));
+      }
+      if (payload === 'audio record') {
+        filterEvents = state.events.filter((event) => event.status.includes('Audio'));
       }
       return { ...state, filteredEvents: filterEvents, currentPage: 1 };
 

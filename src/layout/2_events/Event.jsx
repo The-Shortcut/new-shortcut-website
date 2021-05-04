@@ -84,34 +84,36 @@ const Event = ({ event }) => {
 
   const setStatus = (status) => {
     if (status.includes('Video')) {
-      return 'watch now';
+      return 'WATCH NOW';
     } else if (status.includes('completed') || status.includes('canceled')) {
-      return 'Learn more +';
+      return 'LEARN MORE +';
+    } else if (status.includes('Audio')) {
+      return 'LISTEN NOW ';
     } else {
-      return 'register ';
+      return 'REGISTER';
     }
   };
 
   return (
     <div className={css.event}>
       {moment(end.substring(0, 10)).isSame(start.substring(0, 10)) ? (
-          <aside className={css.single}>
-            <p>{formatDay(start)}</p>
-            <p>{formatDate(start)}</p>
-            <p>{formatMonth(start)}</p>
-            <div>
-              <img
-                src={img ? img.original.url : defaultImage}
-                alt=''
-                style={{
-                  maxHeight: '244px',
-                  maxWidth: '433px',
-                  minHeight: '243px',
-                  minWidth: '432px',
-                }}
-              />
-            </div>
-          </aside>
+        <aside className={css.single}>
+          <p>{formatDay(start)}</p>
+          <p>{formatDate(start)}</p>
+          <p>{formatMonth(start)}</p>
+          <div>
+            <img
+              src={img ? img.original.url : defaultImage}
+              alt=''
+              style={{
+                maxHeight: '244px',
+                maxWidth: '433px',
+                minHeight: '243px',
+                minWidth: '432px',
+              }}
+            />
+          </div>
+        </aside>
       ) : (
         <aside className={css.continuous}>
           {isVideo ? (

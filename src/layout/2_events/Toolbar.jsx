@@ -22,6 +22,7 @@ const Toolbar = ({ setSearch }) => {
     { value: "certification", label: "Certification" },
     { value: "club", label: "Clubs" },
     { value: "video record", label: "Video Record" },
+    { value: "audio record", label: "Audio Record" },
     { value: "completed", label: "Completed" },
   ];
 
