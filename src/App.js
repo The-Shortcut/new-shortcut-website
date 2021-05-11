@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Redirect } from 'react-router';
 
 import ReactGA from 'react-ga';
 import TagManager from 'react-gtm-module';
@@ -43,6 +44,7 @@ import Visit from './layout/5_visit/index.jsx';
 import PrivacyPolicies from './layout/docs/PrivacyPolicies';
 import TermsOfServices from './layout/docs/TermsOfServices';
 import DataDescription from './layout/docs/DataDescription';
+
 
 // Google Tag Manager
 const tagManagerArgs = {
@@ -94,6 +96,7 @@ export class App extends Component {
           <Route exact path='/values' component={Values} />
           <Route exact path='/terms' component={TermsOfServices} />
           <Route exact path='/data-description' component={DataDescription} />
+          <Route exact render={() => <Redirect to='/' />} />
         </Switch>
         <Footer />
       </Router>
