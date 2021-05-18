@@ -13,6 +13,8 @@ import Footer from './components/layout/Footer';
 import ScrollTopArrow from './components/functional/ScrollTopArrow';
 import ScrollToTop from './components/functional/ScrollToTop';
 
+import ReactNotification from 'react-notifications-component';
+
 // Home
 import Home from './layout/_home/index.jsx';
 
@@ -61,6 +63,7 @@ export class App extends Component {
   render() {
     return (
       <Router>
+        <ReactNotification />
         <ScrollToTop />
         <ScrollTopArrow />
         <Nav />
