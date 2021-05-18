@@ -18,17 +18,20 @@ const reducer = (state = initState, action) => {
 
   switch (type) {
     case INIT_EVENTS:
-      const incompleted = payload.filter(ev => ev.status !== 'completed');
+      const incompleted = payload.filter((ev) => ev.status !== 'completed');
 
-      return { ...state, events: incompleted, allEvents: payload,  isLoading: false };
+      return { ...state, events: incompleted, allEvents: payload, isLoading: false };
     case SEARCH_EVENTS:
       console.log(payload);
       let filterEvents = [];
-      filterEvents = state.events.filter(
+      filterEvents = state.allEvents.filter(
         (event) =>
-          (String(event.name.text).toLowerCase().includes(payload.toLowerCase()) ||
-            String(event.summary).toLowerCase().includes(payload.toLowerCase()))
+          String(event.name.text).toLowerCase().includes(payload.toLowerCase()) ||
+          String(event.summary).toLowerCase().includes(payload.toLowerCase())
       );
+      if (payload === '') {
+        filterEvents = state.events;
+      }
       if (payload === 'completed') {
         filterEvents = state.allEvents.filter((event) => event.status === 'completed');
       }

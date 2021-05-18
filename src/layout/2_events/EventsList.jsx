@@ -34,7 +34,7 @@ const EventsList = () => {
       </div>
     );
   }
-  console.log(currentItems)
+/*   console.log(currentItems) */
   return (
     <div className={css.list}>
       {filteredEvents?.length === 0 ? (

@@ -124,8 +124,13 @@ const Nav = () => {
                 </Link>
               </ul>
             </li>
-
+            {/* this is a temporary menu item until B.Y.O.B 2021 makes ready */}
             <li className="menu-item" id="events">
+              <Link className="btn" to="/events" onClick={toggleNav}>
+                Events
+              </Link>
+            </li>
+            {/* <li className="menu-item" id="events">
               <p
                 className="btn"
                 href="#events"
@@ -155,7 +160,7 @@ const Nav = () => {
                   <span>BYOB</span>
                 </Link>
               </ul>
-            </li>
+            </li> */}
 
             <li className="menu-item" id="resources">
               <p
