@@ -81,7 +81,7 @@ export class App extends Component {
 
           {/* All events */}
           <Route exact path='/events' component={Events} />
-          {/* <Route exact path='/byob' component={Byob} /> */}
+          <Route exact path='/byob' component={Byob} />
 
           {/* Resources */}
           <Route exact path='/media' component={ForMedia} />
