@@ -34,7 +34,7 @@ const ForPartners = () => {
           organisations and NGOs. With their help, we’re able to train and connect talent to the
           tech industry. <br />
           If you are interested in partnering with us, get in touch with{' '}
-          <a href='mailto:piia@theshortcut.org'>Piia Kuosmanen</a>.
+          <a href='mailto:aurelia.lorents@theshortcut.org'>Aurelia Lorents</a>.
         </p>
         <div>
           <img src={require('../../assets/illustrations/4.png')} alt='illustration' />
@@ -47,7 +47,7 @@ const ForPartners = () => {
       <div className='contact'>
         <p>
           If you are intrested in partnering with us, get in touch with{' '}
-          <a href='mailto:piia@theshortcut.org'>Piia Kuosmanen</a>.
+          <a href='mailto:aurelia.lorents@theshortcut.org'>Aurelia Lorents</a>.
         </p>
       </div>
     </div>
